@@ -51,7 +51,7 @@ a.clickable, .clickable a {
 .currency-input > input::-webkit-input-placeholder{
 	color: #606366;
 }
-.currency-input > input::-moz-placeholder{
+.currency-input > input:::-moz-placeholder{
 	color: #606366;
 }
 .currency-input > input:-ms-input-placeholder{
@@ -88,7 +88,6 @@ a.clickable, .clickable a {
 	min-height: 38px;
 	font-size: 14px;
 }
-.button-set .btn .btn-positive
 /*Tetris override*/
 .button-set .btn-negative{
 	color: #C41F3F;
@@ -387,9 +386,6 @@ section.page-title:before{
 #drawer-menu ul li#li-upcoming a {
 	background-image: url('images/drawer/Upcoming-Transactions-icon.png');
 }
-#drawer-menu ul li.li-sso a#RAF-link {
-	background-image: url('images/drawer/RAF-icon.png');
-}
 #drawer-menu ul li#li-upcoming a.active {
 	background-image: url('images/drawer/Upcoming-Transactions-icon-active.png');
 }
@@ -430,6 +426,9 @@ section.page-title:before{
 }
 #drawer-menu ul li#li-client-services a.active {
 	background-image: url('images/drawer/Client-Services-icon-active.png');
+}
+#drawer-menu ul #security-guarantee-link {
+	background-image: url('images/drawer/Security-Guarantee-icon.ico');
 }
 #drawer-menu .drawer-icon-cog {
 	height: 1.8em;
@@ -645,29 +644,4 @@ fieldset.vis-division, .vis-division li, .details-line {
 	color: #666666;
 	margin-top: -15px;
 	padding-bottom: 10px;
-}
-
-section#signoff div#sub-msg {color: #606366}
-
-fieldset.bank-details-input {margin-bottom:0px!important;}
-
-input#bankInstitutionNo,input#bankTransitNo, input#reenteraccountNumber,fieldset#bankAccountNo ,select#language-select , input#requestRecipient {margin-bottom:20px!important;}
-
-section#e-transfer-details input#reenteraccountNumber {
-    margin-bottom: 25px !important;
-}
-
-/* global.css */
-
-label{
-	color: #C41F3E;
-}
-
-.smart-help-icon{
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-	margin-left: 5px;
-	position: relative;
-	top: 5px;
 }

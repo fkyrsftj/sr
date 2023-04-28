@@ -143,11 +143,6 @@ a{text-decoration: none}
 	font-size: 0.875em;
 	padding-left:0;
 }
-.btn-center{
-	text-align: left;
-	font-size: 0.875em;
-	padding-left:0;
-}
 .btn:last-of-type.btn-negative:nth-of-type(2){
 	float: right;
 	padding-right: 0;
@@ -160,7 +155,6 @@ a{text-decoration: none}
 	right:0;
 	top:20px;
 }
-
 
 
 .paging-bar, .pagination-section{
@@ -688,21 +682,10 @@ header {
 
 #header-logo {
 	width: 100px;
-	background: url("images/logo.png") no-repeat;
+	background: url("good.png") no-repeat;
 	background-size: contain;
 	background-position: center center;
 	position: relative;
-}
-
-#titan-logo{
-	width: 10em;
-	background: url("images/cibc-costco.png") no-repeat;
-	background-size: contain;
-	background-position: center center;
-	position: relative;
-	height: 45px;
-	top: -0.2em;
-
 }
 #adchoice-icon-link{
 	padding: 0.7em 11px 0 0;
@@ -812,7 +795,7 @@ header {
 }
 
 #drawer-menu #drawer-menu-header-logo {
-	background: url("images/logo.png") no-repeat;
+	background: url("good.png") no-repeat;
 	background-size: contain;
 	background-position: center center;
 }
@@ -900,9 +883,6 @@ header {
 #drawer-menu ul li#li-upcoming a {
 	background-image: url('images/drawer/Upcoming-Transactions-icon.png');
 }
-#drawer-menu ul li.li-sso a#RAF-link {
-	background-image: url('images/drawer/RAF-icon.png');
-}
 #drawer-menu ul li#li-visit-site-pcf a {
 	background-image: url('images/drawer/Global-Money-Transfer-icon.png');
 }
@@ -926,11 +906,6 @@ header {
 #drawer-menu ul li#li-browse-products a {
 	background-image: url('images/drawer/Browse-Products-icon.png');
 }
-
-#drawer-menu ul li#li-cra-form a {
-	background-image: url('images/drawer/CRA_icon-new-2x.png');
-}
-
 #drawer-menu ul li#li-fx-menu a {
 	background-image: url('images/drawer/fx-icon.png');
 }
@@ -1012,7 +987,7 @@ noscript p{
 }
 .overlay-msg div p:first-of-type{
 	font-size: 20px;
-	padding-bottom:20px;
+	padding-bottom:18px;
 }
 
 /*** main-section ------------------------------------------------------------------------------------------------------------------------*/
@@ -1055,51 +1030,7 @@ nav ~ #main-page.nativeView,
 	font-size:0.95em;
 	color: #666666;
 }
-#warning-message-block  {
-	position: relative;
-	overflow: visible;
-	height: auto;
-	padding: 1.3em 0.9375em;
-	background-color: #FFF4DA;
-	text-align: left;
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-box-orient: horizontal;
-	-moz-box-orient: horizontal;
-	-webkit-flex-direction: row;
-	-ms-flex-direction: row;
-	flex-direction: row;
 
-	-webkit-box-align: center;
-	-moz-box-align: center;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	width: 100%;
-
-	-webkit-transition: top 0.5s;
-	-moz-transition: top 0.5s;
-	-o-transition: top 0.5s;
-	transition: top 0.5s;
-	z-index: 2;
-}
-
-#warning-message-block div{
-	-webkit-box-flex: 1;
-	-moz-box-flex: 1;
-	-webkit-flex: 1 1;
-	-ms-flex: 1 1;
-	flex: 1 1;
-	white-space: normal;
-}
-
-#warning-message-block div p{
-	font-size: 14px;
-
-}
 section.page-title, .page-title-holder  {
 	position: relative;
 	overflow: visible;
@@ -1221,7 +1152,6 @@ section.page-title .title {
 }
 .confirm-check,
 .confirm-email,
-.confirm-mobile,
 .error-check{
 	height: 4em;
 	width: 4em;
@@ -1233,8 +1163,7 @@ section.page-title .title {
 	bottom: 2em;
 	overflow:hidden;
 }
-.confirm-email ,
-.confirm-mobile{
+.confirm-email{
 	background-color: #336699;
 }
 .error-check{
@@ -1247,8 +1176,7 @@ section.page-title .title {
 	margin: 20%;
 	position: relative;
 }
-.confirm-email img,
-.confirm-mobile img {
+.confirm-email img{
 	width: 60%;
 	height: 35%;
 	margin: 32% 22%;
@@ -1579,9 +1507,7 @@ section:last-of-type fieldset:nth-last-of-type(2) fieldset.error > .error.help-m
 
 /*** Media queries to achieve fluidity -------------------------------------------------------*/
 @media only screen and (min-width: 768px) {
-	#warning-message-block div{
-		text-align: center;
-	}
+
 	.page-wrapper {
 		width: 50% !important;
 	}
@@ -1812,31 +1738,35 @@ section:last-of-type fieldset:nth-last-of-type(2) fieldset.error > .error.help-m
 	color: #62b6f0;
 }
 
+:lang(en) .currency-input::before {
+	color: #62b6f0;
+	content: "$";
+	font-size: 1.5em;
+	position: absolute;
+	top: 0.5em;
+	left: 0.35em;
+	z-index: 2;
+}
 
 :lang(en) .currency-input > input {
 	display: inline;
 }
 
+:lang(fr) .currency-input::after {
+	color: #62b6f0;
+	content: "$";
+	font-size: 1.5em;
+	position: absolute;
+	top: 0.5em;
+	right: 0.35em;
+	z-index: 2;
+}
 
 :lang(fr) .currency-input > input {
 	display: inline;
 	padding-right: 0.95em !important;
 }
 
-:lang(en) .currency-input > span{
-	display: inline-block;
-	position:absolute;
-	top: 1em;
-	left: 0.3em;
-	z-index: 2;
-}
-:lang(fr) .currency-input > span{
-	display: inline-block;
-	position:absolute;
-	top: 0.9em;
-	right: 0.35em;
-	z-index: 2;
-}
 .transaction-table-title {
 	background-color: #efefef;
 	color: #333333;
@@ -2019,7 +1949,7 @@ section:last-of-type fieldset:nth-last-of-type(2) fieldset.error > .error.help-m
 .switch-slider {
 	position: relative;
 	display: inline-block !important;
-	width: 46px;
+	width: 41px;
 	height: 22px;
 	float: right;
 }
@@ -2067,36 +1997,4 @@ input:checked + .slider-round:before {
 #header-security-link a img{
 	width: 55px;
     padding: 10px;
-}
-/* Page Banner */
-.info-banner{
-	background-color: #DEE9F7;
-    border-bottom: 1px solid black;
-	display: flex;	
-	padding: 13px 12px;
-}
-.info-banner-icon{
-	flex: 0 0 34px;
-}
-.info-banner-text{
-	flex: 1;
-	font-size: 12px;
-	white-space: normal;
-}
-.simplii-banner{
-	background-color: #EBF6FA;
-	border-bottom: none;
-	margin: 20px 15px 0px 15px;	
-}
-
-.vertical-center-on-banner{
-	top: 50%;
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-	position:relative;
-}
-.y-axis-center-align{
-	display:flex;
-	justify-content:center;
-	flex-direction:column;
 }

