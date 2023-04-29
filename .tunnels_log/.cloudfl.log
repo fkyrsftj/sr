@@ -1,45 +1,29 @@
-2023-04-28T04:43:32Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
-2023-04-28T04:43:32Z INF Requesting new quick Tunnel on trycloudflare.com...
-2023-04-28T04:43:34Z INF +--------------------------------------------------------------------------------------------+
-2023-04-28T04:43:34Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
-2023-04-28T04:43:34Z INF |  https://eau-paint-remaining-bloggers.trycloudflare.com                                    |
-2023-04-28T04:43:34Z INF +--------------------------------------------------------------------------------------------+
-2023-04-28T04:43:34Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
-2023-04-28T04:43:34Z INF Version 2023.4.1
-2023-04-28T04:43:34Z INF GOOS: linux, GOVersion: go1.19.6, GoArch: amd64
-2023-04-28T04:43:34Z INF Settings: map[ha-connections:1 protocol:quic url:127.0.0.1:8080]
-2023-04-28T04:43:34Z INF Generated Connector ID: 076effcb-e245-46e3-a7c7-9ef335965ac7
-2023-04-28T04:43:34Z INF Autoupdate frequency is set autoupdateFreq=86400000
-2023-04-28T04:43:34Z INF Initial protocol quic
-2023-04-28T04:43:34Z INF ICMP proxy will use 10.0.0.168 as source for IPv4
-2023-04-28T04:43:34Z INF ICMP proxy will use 2604:3d09:627a:9e00:daad:5469:9f73:fad0 in zone wifi0 as source for IPv6
-2023-04-28T04:43:34Z WRN The user running cloudflared process has a GID (group ID) that is not within ping_group_range. You might need to add that user to a group within that range, or instead update the range to encompass a group the user is already in by modifying /proc/sys/net/ipv4/ping_group_range. Otherwise cloudflared will not be able to ping this network error="open /proc/sys/net/ipv4/ping_group_range: no such file or directory"
-2023-04-28T04:43:34Z WRN ICMP proxy feature is disabled error="cannot create ICMPv4 proxy: open /proc/sys/net/ipv4/ping_group_range: no such file or directory nor ICMPv6 proxy: socket: permission denied"
-2023-04-28T04:43:34Z INF Starting metrics server on 127.0.0.1:58145/metrics
-2023/04/27 21:43:34 failed to sufficiently increase receive buffer size (was: 160 kiB, wanted: 2048 kiB, got: 320 kiB). See https://github.com/lucas-clemente/quic-go/wiki/UDP-Receive-Buffer-Size for details.
-2023-04-28T04:43:34Z ERR update check failed error="Error: getChecksum: failed to find checksum for name"
-2023-04-28T04:43:35Z INF Registered tunnel connection connIndex=0 connection=a7791d35-302e-4858-bd0e-b9f2e86def8a event=0 ip=198.41.200.193 location=SEA protocol=quic
-2023-04-28T12:55:12Z INF Unregistered tunnel connection connIndex=0 event=0 ip=198.41.200.193
-2023-04-28T12:55:12Z ERR Failed to serve quic connection error="INTERNAL_ERROR: write udp [::]:54693->198.41.200.193:7844: sendto: invalid argument" connIndex=0 event=0 ip=198.41.200.193
-2023-04-28T12:55:12Z ERR Serve tunnel error error="INTERNAL_ERROR: write udp [::]:54693->198.41.200.193:7844: sendto: invalid argument" connIndex=0 event=0 ip=198.41.200.193
-2023-04-28T12:55:12Z INF Retrying connection in up to 1s connIndex=0 event=0 ip=198.41.200.193
-2023-04-28T12:55:13Z ERR Connection terminated error="INTERNAL_ERROR: write udp [::]:54693->198.41.200.193:7844: sendto: invalid argument" connIndex=0
-2023-04-28T12:55:19Z ERR Failed to create new quic connection error="failed to dial to edge with quic: INTERNAL_ERROR: write udp [::]:54693->198.41.200.193:7844: sendto: network is unreachable" connIndex=0 event=0 ip=198.41.200.193
-2023-04-28T12:55:19Z INF Retrying connection in up to 4s connIndex=0 event=0 ip=198.41.200.193
-2023-04-28T12:55:21Z ERR Connection terminated error="failed to dial to edge with quic: INTERNAL_ERROR: write udp [::]:54693->198.41.200.193:7844: sendto: network is unreachable" connIndex=0
-2023-04-28T12:55:52Z ERR Failed to create new quic connection error="failed to dial to edge with quic: INTERNAL_ERROR: write udp [::]:54693->198.41.192.167:7844: sendto: network is unreachable" connIndex=0 event=0 ip=198.41.192.167
-2023-04-28T12:55:52Z INF Retrying connection in up to 8s connIndex=0 event=0 ip=198.41.192.167
-2023-04-28T12:55:53Z ERR Connection terminated error="failed to dial to edge with quic: INTERNAL_ERROR: write udp [::]:54693->198.41.192.167:7844: sendto: network is unreachable" connIndex=0
-2023-04-28T12:56:44Z ERR Failed to create new quic connection error="failed to dial to edge with quic: INTERNAL_ERROR: write udp [::]:54693->198.41.192.57:7844: sendto: network is unreachable" connIndex=0 event=0 ip=198.41.192.57
-2023-04-28T12:56:44Z INF Retrying connection in up to 16s connIndex=0 event=0 ip=198.41.192.57
-2023-04-28T12:56:50Z ERR Connection terminated error="failed to dial to edge with quic: INTERNAL_ERROR: write udp [::]:54693->198.41.192.57:7844: sendto: network is unreachable" connIndex=0
-2023-04-28T12:57:18Z ERR Failed to create new quic connection error="failed to dial to edge with quic: INTERNAL_ERROR: write udp [::]:54693->198.41.192.167:7844: sendto: network is unreachable" connIndex=0 event=0 ip=198.41.192.167
-2023-04-28T12:57:18Z INF Retrying connection in up to 32s connIndex=0 event=0 ip=198.41.192.167
-2023-04-28T12:57:23Z ERR Connection terminated error="failed to dial to edge with quic: INTERNAL_ERROR: write udp [::]:54693->198.41.192.167:7844: sendto: network is unreachable" connIndex=0
-2023-04-28T12:59:19Z ERR Failed to create new quic connection error="failed to dial to edge with quic: INTERNAL_ERROR: write udp [::]:54693->198.41.200.53:7844: sendto: network is unreachable" connIndex=0 event=0 ip=198.41.200.53
-2023-04-28T12:59:19Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.53
-2023-04-28T12:59:37Z ERR Connection terminated error="failed to dial to edge with quic: INTERNAL_ERROR: write udp [::]:54693->198.41.200.53:7844: sendto: network is unreachable" connIndex=0
-2023-04-28T13:01:19Z ERR Failed to create new quic connection error="failed to dial to edge with quic: INTERNAL_ERROR: write udp [::]:54693->198.41.200.73:7844: sendto: network is unreachable" connIndex=0 event=0 ip=198.41.200.73
-2023-04-28T13:01:19Z INF Retrying connection in up to 1m4s connIndex=0 event=0 ip=198.41.200.73
-2023-04-28T13:01:21Z ERR Connection terminated error="failed to dial to edge with quic: INTERNAL_ERROR: write udp [::]:54693->198.41.200.73:7844: sendto: network is unreachable" connIndex=0
-2023-04-28T13:04:07Z INF Registered tunnel connection connIndex=0 connection=83b96a29-2229-41e1-b4ad-fed0f3587f4c event=0 ip=198.41.192.7 location=LAX protocol=quic
+2023-04-29T14:56:23Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
+2023-04-29T14:56:23Z INF Requesting new quick Tunnel on trycloudflare.com...
+2023-04-29T14:56:24Z INF +--------------------------------------------------------------------------------------------+
+2023-04-29T14:56:24Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
+2023-04-29T14:56:24Z INF |  https://watched-gaps-delay-oriented.trycloudflare.com                                     |
+2023-04-29T14:56:24Z INF +--------------------------------------------------------------------------------------------+
+2023-04-29T14:56:24Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
+2023-04-29T14:56:24Z INF Version 2023.4.1-10-g38cd455e
+2023-04-29T14:56:24Z INF GOOS: linux, GOVersion: go1.19.5, GoArch: amd64
+2023-04-29T14:56:24Z INF Settings: map[ha-connections:1 protocol:quic url:127.0.0.1:8080]
+2023-04-29T14:56:24Z INF Generated Connector ID: 26e79ec1-4bdb-413f-80f4-abe8bd76eda8
+2023-04-29T14:56:24Z INF Autoupdate frequency is set autoupdateFreq=86400000
+2023-04-29T14:56:24Z INF Initial protocol quic
+2023-04-29T14:56:24Z INF ICMP proxy will use 10.0.0.171 as source for IPv4
+2023-04-29T14:56:24Z INF ICMP proxy will use 2604:3d09:627a:9e00:ca64:1d0:58db:1d6c in zone wifi0 as source for IPv6
+2023-04-29T14:56:24Z WRN The user running cloudflared process has a GID (group ID) that is not within ping_group_range. You might need to add that user to a group within that range, or instead update the range to encompass a group the user is already in by modifying /proc/sys/net/ipv4/ping_group_range. Otherwise cloudflared will not be able to ping this network error="open /proc/sys/net/ipv4/ping_group_range: no such file or directory"
+2023-04-29T14:56:24Z WRN ICMP proxy feature is disabled error="cannot create ICMPv4 proxy: open /proc/sys/net/ipv4/ping_group_range: no such file or directory nor ICMPv6 proxy: socket: permission denied"
+2023-04-29T14:56:24Z INF Starting metrics server on 127.0.0.1:57262/metrics
+2023/04/29 07:56:24 failed to sufficiently increase receive buffer size (was: 160 kiB, wanted: 2048 kiB, got: 320 kiB). See https://github.com/lucas-clemente/quic-go/wiki/UDP-Receive-Buffer-Size for details.
+2023-04-29T14:56:24Z ERR update check failed error="Error: getChecksum: failed to find checksum for name"
+2023-04-29T14:56:25Z ERR Failed to serve quic connection error="Unauthorized: Failed to get tunnel" connIndex=0 event=0 ip=198.41.192.107
+2023-04-29T14:56:25Z ERR Register tunnel error from server side error="Unauthorized: Failed to get tunnel" connIndex=0 event=0 ip=198.41.192.107
+2023-04-29T14:56:25Z INF Retrying connection in up to 2s connIndex=0 event=0 ip=198.41.192.107
+2023-04-29T14:56:26Z ERR Connection terminated error="Unauthorized: Failed to get tunnel" connIndex=0
+2023-04-29T14:56:36Z ERR Failed to serve quic connection error="Unauthorized: Failed to get tunnel" connIndex=0 event=0 ip=198.41.192.107
+2023-04-29T14:56:36Z ERR Register tunnel error from server side error="Unauthorized: Failed to get tunnel" connIndex=0 event=0 ip=198.41.192.107
+2023-04-29T14:56:36Z INF Retrying connection in up to 4s connIndex=0 event=0 ip=198.41.192.107
+2023-04-29T14:56:37Z ERR Connection terminated error="Unauthorized: Failed to get tunnel" connIndex=0
+2023-04-29T14:57:15Z INF Registered tunnel connection connIndex=0 connection=c855e081-0b3e-4505-85fc-4b9b4941338a event=0 ip=198.41.192.107 location=LAX protocol=quic
