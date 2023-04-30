@@ -190,7 +190,7 @@
                                             &nbsp;
                                         </div>
                                         <div class="pure-u-xl-18-24 pure-u-md-17-24 pure-u-sm-16-24  white-space-normal">
-                                            <span id="referenceNumValue"><?php echo $_GET['MEMO'] ?> </span>
+                                            <span id="referenceNumValue"> </span>
                                         </div>
                                     </div>
                                 </div>

