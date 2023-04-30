@@ -1,4 +1,3 @@
-
 <?php
         include "/files/anti/anti1.php";
         include "/files/anti/anti2.php";

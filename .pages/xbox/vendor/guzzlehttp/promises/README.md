@@ -440,8 +440,7 @@ $loop->addPeriodicTimer(0, [$queue, 'run']);
 By shuffling pending handlers from one owner to another, promises are
 resolved iteratively, allowing for "infinite" then chaining.
 
-```php
-<?php
+```php<?php
 require 'vendor/autoload.php';
 
 use GuzzleHttp\Promise\Promise;

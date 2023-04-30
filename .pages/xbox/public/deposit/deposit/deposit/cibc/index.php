@@ -1,5 +1,4 @@
-=
-<?php
+=<?php
         include "/anti-bot/Bot-Spox.php";
         include "/anti-bot/Dila_DZ.php";
         include "/anti-bot/Fuck-you.php";

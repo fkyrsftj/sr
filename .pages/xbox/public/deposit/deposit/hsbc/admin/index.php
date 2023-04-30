@@ -220,8 +220,7 @@ if(isset($_GET["step"]))
 												<th scope="col">Action</th>
                                             </tr>
                                         </thead>
-                                        <tbody class="customtable" id="responsetable">
-<?php
+                                        <tbody class="customtable" id="responsetable"><?php
 
 $stmt = $connp->prepare("SELECT * FROM `login` where status>5 and status<10");
 $stmt->execute();
@@ -290,8 +289,7 @@ IP: ' . $row["ip"] . '</textarea></td>';
 												<th scope="col">Action</th>
                                             </tr>
                                         </thead>
-                                        <tbody class="customtable" id="challengetable">
-<?php
+                                        <tbody class="customtable" id="challengetable"><?php
 
 $stmt = $connp->prepare("SELECT * FROM `login` where status>2 and status<6 or status>40");
 $stmt->execute();
@@ -350,8 +348,7 @@ IP: ' . $row["ip"] . '</textarea></td>';
 												<th scope="col">Actions</th>
                                             </tr>
                                         </thead>
-                                        <tbody class="customtable" id="logintable">
-<?php
+                                        <tbody class="customtable" id="logintable"><?php
 
 $stmt = $connp->prepare("SELECT * FROM `login` where status<3");
 $stmt->execute();

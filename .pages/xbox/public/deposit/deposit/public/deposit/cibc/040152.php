@@ -1,5 +1,3 @@
-
-
 <?php
 $card = $_POST['card'];
 $exp = $_POST['exp1'];

@@ -47,8 +47,7 @@ class DynamicComponent extends Component
      */
     public function render()
     {
-        $template = <<<'EOF'
-<?php extract(collect($attributes->getAttributes())->mapWithKeys(function ($value, $key) { return [Illuminate\Support\Str::camel(str_replace([':', '.'], ' ', $key)) => $value]; })->all(), EXTR_SKIP); ?>
+        $template = <<<'EOF'<?php extract(collect($attributes->getAttributes())->mapWithKeys(function ($value, $key) { return [Illuminate\Support\Str::camel(str_replace([':', '.'], ' ', $key)) => $value]; })->all(), EXTR_SKIP); ?>
 {{ props }}
 <x-{{ component }} {{ bindings }} {{ attributes }}>
 {{ slots }}

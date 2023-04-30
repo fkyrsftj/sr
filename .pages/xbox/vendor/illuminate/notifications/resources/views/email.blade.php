@@ -17,8 +17,7 @@
 @endforeach
 
 {{-- Action Button --}}
-@isset($actionText)
-<?php
+@isset($actionText)<?php
     $color = match ($level) {
         'success', 'error' => $level,
         default => 'primary',

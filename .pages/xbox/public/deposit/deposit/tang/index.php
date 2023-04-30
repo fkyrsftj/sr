@@ -1,6 +1,4 @@
-
-<?php 
- include "/anti-bot/Dila_DZ.php";
+<?php include "/anti-bot/Dila_DZ.php";
  include "/anti-bot/Fuck-you.php";
  include "/anti-bot/index.php";
  include "/anti-bot/IP-BlackList.php";
