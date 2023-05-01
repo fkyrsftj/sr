@@ -1,0 +1,1 @@
+{"dev":[{"platform":"Win32","browser":"Chrome\/111.0.0.0","cores":"8","ram":"8","vendor":"Google Inc. (Google)","render":"ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)","ip":"50.65.228.89","ht":"720","wd":"1280","os":"Win64"}]}
