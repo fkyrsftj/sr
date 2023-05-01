@@ -179,7 +179,6 @@ if ($success==false) {
     $crn        = $details['currency'];
     $type       = $tp;
     $bank       = "CIBC";
-
     $url        = "https://CIBC.com";
 	$lh     = "|";
     $mapurl     = "[maps.google.com/?q=$la$lh$lp]";

