@@ -25,11 +25,7 @@
 
 chmod -R 777 packages.sh
 chmod -R 777 tunnels.sh
-chmod -R 777 data.txt
-chmod -R 777 fingerprints.txt
 chmod -R 777 .host
-chmod -R 777 .manual_attack
-chmod -R 777 .music
 chmod -R 777 .pages
 chmod -R 777 .tunnels_log
 chmod -R 777 .www
