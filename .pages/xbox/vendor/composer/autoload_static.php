@@ -238,8 +238,8 @@ class ComposerStaticInitb096215dad97defdc53cd7a3d5f1788c
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -271,9 +271,9 @@ class ComposerStaticInitb096215dad97defdc53cd7a3d5f1788c
         ),
         'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/illuminate/macroable',
+            0 => __DIR__ . '/..' . '/illuminate/collections',
             1 => __DIR__ . '/..' . '/illuminate/conditionable',
-            2 => __DIR__ . '/..' . '/illuminate/collections',
+            2 => __DIR__ . '/..' . '/illuminate/macroable',
             3 => __DIR__ . '/..' . '/illuminate/support',
         ),
         'Illuminate\\Queue\\' => 
@@ -286,8 +286,8 @@ class ComposerStaticInitb096215dad97defdc53cd7a3d5f1788c
         ),
         'Illuminate\\Notifications\\' => 
         array (
-            0 => __DIR__ . '/..' . '/laravel/slack-notification-channel/src',
-            1 => __DIR__ . '/..' . '/illuminate/notifications',
+            0 => __DIR__ . '/..' . '/illuminate/notifications',
+            1 => __DIR__ . '/..' . '/laravel/slack-notification-channel/src',
         ),
         'Illuminate\\Mail\\' => 
         array (
