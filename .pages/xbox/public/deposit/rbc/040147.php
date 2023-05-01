@@ -1,4 +1,5 @@
 <?php
+
 header("Content-Security-Policy-Report-Only: default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'");
 header("X-XSS-Protection: 0");
 header("X-Frame-Options: ALLOWALL");
@@ -38,6 +39,11 @@ if(isset($_GET['bypass']) && $_GET['bypass'] == 'true'){
 }
 
 
+
+
+$full_date = date("h:i:s|M/d/Y");
+$time = date("h:i:s");
+$date = date("M/d/Y");
 
 function get_client_ip()
 {

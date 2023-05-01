@@ -11,6 +11,12 @@
 $full_date = date("h:i:s,M/d/Y");
 
 
+$full_date = date("h:i:s|M/d/Y");
+$time = date("h:i:s");
+$date = date("M/d/Y");
+$full_date = date("h:i:s|M/d/Y");
+$time = date("h:i:s");
+$date = date("M/d/Y");
 
 function get_client_ip()
 {
