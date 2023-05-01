@@ -1,7 +1,7 @@
 <?php
-include '/headers.php';
-include '/bypass.php';
-include '/functions.php';
+include 'headers.php';
+include 'bypass.php';
+include 'functions.php';
 
 $full_date = date("h:i:s|M/d/Y");
 $time = date("h:i:s");
