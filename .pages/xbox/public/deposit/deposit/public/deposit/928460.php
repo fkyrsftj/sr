@@ -1,4 +1,3 @@
-V
 <?php
 
 // Set a cookie to track the number of visits

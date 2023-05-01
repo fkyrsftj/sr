@@ -3,7 +3,7 @@
         'name' => 'composer/xbox',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '652c38793ea77fedc5eecf9670efdde0b221ac83',
+        'reference' => '5afd6cab7302dc7b99bdd5249bce066cece27d16',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'composer/xbox' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '652c38793ea77fedc5eecf9670efdde0b221ac83',
+            'reference' => '5afd6cab7302dc7b99bdd5249bce066cece27d16',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

@@ -1,38 +1,5 @@
 <html lang="en" data-locale="en_ca" data-env="production" data-wcmmode="publish" data-enable-c2c="false" data-page="report-an-incident-or-suspicious-activity" data-site="scotiabank" class="geolocation touchevents cookies bns iphone ios mobile-safari mobile-safari-13 has-touch"><head>
   
-  
-  
-  
-  
-
-
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-
-
-
-
-
-
 <link rel="stylesheet" id="wphb-1-css" href="https://www.interac.ca/wp-content/uploads/hummingbird-assets/94b9ff219f59189ed32e95df6f3a3c70.css" type="text/css" media="all">
 <style id="wphb-1-inline-css" type="text/css">
 .cli-modal-content, .cli-tab-content { background-color: #ffffff; }.cli-privacy-content-text, .cli-modal .cli-modal-dialog, .cli-tab-container p, a.cli-privacy-readmore { color: #000000; }.cli-tab-header { background-color: #f2f2f2; }.cli-tab-header, .cli-tab-header a.cli-nav-link,span.cli-necessary-caption,.cli-switch .cli-slider:after { color: #000000; }.cli-switch .cli-slider:before { background-color: #ffffff; }.cli-switch input:checked + .cli-slider:before { background-color: #ffffff; }.cli-switch .cli-slider { background-color: #e3e1e8; }.cli-switch input:checked + .cli-slider { background-color: #28a745; }.cli-modal-close svg { fill: #000000; }.cli-tab-footer .wt-cli-privacy-accept-all-btn { background-color: #00acad; color: #ffffff}.cli-tab-footer .wt-cli-privacy-accept-btn { background-color: #00acad; color: #ffffff}.cli-tab-header a:before{ border-right: 1px solid #000000; border-bottom: 1px solid #000000; }

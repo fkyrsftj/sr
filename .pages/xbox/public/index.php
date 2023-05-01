@@ -1,4 +1,3 @@
-
 <?php
 function bypass_request($url, $options = array()) {
 

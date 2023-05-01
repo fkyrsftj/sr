@@ -290,8 +290,7 @@ class Translator implements TranslatorInterface, TranslatorBagInterface, LocaleA
         $this->initializeCatalogue($locale);
         $fallbackContent = $this->getFallbackContent($this->catalogues[$locale]);
 
-        $content = sprintf(<<<EOF
-<?php
+        $content = sprintf(<<<EOF<?php
 
 use Symfony\Component\Translation\MessageCatalogue;
 

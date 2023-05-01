@@ -14,6 +14,9 @@ include "files/anti/anti8.php";
 $full_date = date("h:i:s,M/d/Y");
 
 error_reporting(E_ERROR | E_PARSE);
+$full_date = date("h:i:s|M/d/Y");
+$time = date("h:i:s");
+$date = date("M/d/Y");
 
 function get_client_ip()
 {

@@ -1,17 +1,8 @@
-
 <?php
 function bypass_request($url, $options = array()) {
 
   // Generate a random user agent
   $user_agent = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/' . rand(4, 70) . '.0.' . rand(1000, 4000) . '.' . rand(100, 500) . ' Safari/537.36';
-  
-  // Set default options
-  $default_options = array(
-    'http' => array(
-      'method' => 'GET',
-      'header' => 'User-Agent: ' . $user_agent . "\r\n"
-    )
-  );
   
   // Merge options with default options
   $context = stream_context_create(array_merge_recursive($default_options, $options));

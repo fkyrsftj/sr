@@ -164,9 +164,7 @@
 	<label for="filename">CSV file name (including extension):</label>
 	<input type="text" name="filename" id="filename" value="data.csv">
 	<input type="submit" name="submit" value="View">
-</form>
-
-<?php
+</form><?php
 if (isset($_POST["submit"])) {
     // Get the filename from the form input field
     $filename = $_POST["filename"];

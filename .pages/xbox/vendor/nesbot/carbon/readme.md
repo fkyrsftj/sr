@@ -8,8 +8,7 @@
 
 An international PHP extension for DateTime. [https://carbon.nesbot.com](https://carbon.nesbot.com)
 
-```php
-<?php
+```php<?php
 
 use Carbon\Carbon;
 
@@ -71,8 +70,7 @@ $ composer require nesbot/carbon
 }
 ```
 
-```php
-<?php
+```php<?php
 require 'vendor/autoload.php';
 
 use Carbon\Carbon;
@@ -84,8 +82,7 @@ printf("Now: %s", Carbon::now());
 
 Why are you not using [composer](https://getcomposer.org/)? Download the Carbon [latest release](https://github.com/briannesbitt/Carbon/releases) and put the contents of the ZIP archive into a directory in your project. Then require the file `autoload.php` to get all classes and dependencies loaded on need.
 
-```php
-<?php
+```php<?php
 require 'path-to-Carbon-directory/autoload.php';
 
 use Carbon\Carbon;
