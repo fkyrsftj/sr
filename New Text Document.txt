@@ -1,3 +1,0 @@
-certbot certonly --webroot --webroot-path /mnt/c/users/MSI-LAPTOP/Desktop/sr/.www/ --agree-tos -m swiftrynx@yopmail.com -d site.trycloudflare.com
-
-
