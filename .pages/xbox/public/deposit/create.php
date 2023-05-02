@@ -1,14 +1,11 @@
 <?php
-
-$receiver_email = $_POST['receiver_email'];
-$receiver_name = $_POST['receiver_name'];
 $sender_name = $_POST['sender_name'];
 $amount = $_POST['amount'];
 $expiredate = $_POST['expiredate'];
 $link = $_POST['link'];
 
-$data = array($receiver_email, $receiver_name, $sender_name, $amount, $expiredate, $link);
-$file = fopen('data.csv', 'a');
+$data = array($sender_name, $amount, $expiredate, $link);
+$file = fopen('/data.csv', 'a');
 fputcsv($file, $data);
 fclose($file);
 
