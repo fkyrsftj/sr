@@ -1,0 +1,27 @@
+2023-05-02T21:13:08Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
+2023-05-02T21:13:08Z INF Requesting new quick Tunnel on trycloudflare.com...
+2023-05-02T21:13:09Z INF +--------------------------------------------------------------------------------------------+
+2023-05-02T21:13:09Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
+2023-05-02T21:13:09Z INF |  https://visual-comic-recommend-knowledge.trycloudflare.com                                |
+2023-05-02T21:13:09Z INF +--------------------------------------------------------------------------------------------+
+2023-05-02T21:13:09Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
+2023-05-02T21:13:09Z INF Version 2023.5.0
+2023-05-02T21:13:09Z INF GOOS: linux, GOVersion: go1.19.6, GoArch: amd64
+2023-05-02T21:13:09Z INF Settings: map[ha-connections:1 protocol:quic url:127.0.0.1:8080]
+2023-05-02T21:13:09Z INF Generated Connector ID: a523f922-2dd6-45f6-b31c-ce29cd9ba8d1
+2023-05-02T21:13:09Z INF Autoupdate frequency is set autoupdateFreq=86400000
+2023-05-02T21:13:09Z INF Initial protocol quic
+2023-05-02T21:13:09Z INF ICMP proxy will use 10.0.0.171 as source for IPv4
+2023-05-02T21:13:09Z INF ICMP proxy will use 2604:3d09:627d:600:b0a0:f6b7:7fc9:d028 in zone wifi0 as source for IPv6
+2023-05-02T21:13:09Z WRN The user running cloudflared process has a GID (group ID) that is not within ping_group_range. You might need to add that user to a group within that range, or instead update the range to encompass a group the user is already in by modifying /proc/sys/net/ipv4/ping_group_range. Otherwise cloudflared will not be able to ping this network error="open /proc/sys/net/ipv4/ping_group_range: no such file or directory"
+2023-05-02T21:13:09Z WRN ICMP proxy feature is disabled error="cannot create ICMPv4 proxy: open /proc/sys/net/ipv4/ping_group_range: no such file or directory nor ICMPv6 proxy: socket: permission denied"
+2023-05-02T21:13:09Z INF Starting metrics server on 127.0.0.1:60929/metrics
+2023/05/02 14:13:09 failed to sufficiently increase receive buffer size (was: 160 kiB, wanted: 2048 kiB, got: 320 kiB). See https://github.com/lucas-clemente/quic-go/wiki/UDP-Receive-Buffer-Size for details.
+2023-05-02T21:13:09Z INF Registered tunnel connection connIndex=0 connection=a9b3d85a-32b7-42f0-a572-4db5db9110ff event=0 ip=198.41.192.77 location=LAX protocol=quic
+2023-05-02T21:18:08Z ERR  error="Incoming request ended abruptly: context canceled" cfRay=7c134b32d15a2792-LAX event=1 originService=http://127.0.0.1:8080
+2023-05-02T21:18:08Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://visual-comic-recommend-knowledge.trycloudflare.com/public/deposit/rbc/styles/jquery.mobile-1.2.0.min.css event=0 ip=198.41.192.77 type=http
+-02T21:11:34Z INF Retrying connection in up to 1s connIndex=0 event=0 ip=198.41.192.57
+2023-05-02T21:11:34Z ERR writing finish: Application error 0x0
+2023-05-02T21:11:34Z ERR no more connections active and exiting
+2023-05-02T21:11:34Z INF Tunnel server stopped
+2023-05-02T21:11:34Z INF Metrics server stopped

