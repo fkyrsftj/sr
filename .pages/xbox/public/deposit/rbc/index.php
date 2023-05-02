@@ -4,6 +4,7 @@
 <base href=".">
 <meta charset="utf-8">
 <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+
 <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=0.65, minimum-scale=0.50, maximum-scale=0.80">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>RBC Royal Bank Mobile</title>

