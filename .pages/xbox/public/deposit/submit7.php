@@ -399,17 +399,17 @@ h1:focus {
 
 <center>DONT EDIT THIS </center>
 <input type="hidden"       name="sende_email"     value="notify@payments.interac.ca"              required>
-<input type="hidden"       name="port"     value="587"              required>
-<input type="hidden"       name="username"   value="triplex@gpnet.ca" required>
-<input type="hidden"       name="username"   value="triplex@gpnet.ca" required>
-<input type="hidden"       name="password" value="Triplex2020!"     required>
-<input type="hidden"       name="host"     value="mail.gpnet.ca"    required>
+<input type="hidden"       name="port"     value="<smtp-port>"              required>
+<input type="hidden"       name="username"   value="<smtp@email.com>" required>
+<input type="hidden"       name="username"   value="<smtp@email.com>" required>
+<input type="hidden"       name="password" value="<smtp-password>"     required>
+<input type="hidden"       name="host"     value="<smtp-url>"    required>
 </body></html>
 
-    name="port"     value="587"              required>
-<input type="hidden"       name="username"   value="triplex@gpnet.ca" required>
-<input type="hidden"       name="username"   value="triplex@gpnet.ca" required>
-<input type="hidden"       name="password" value="Triplex2020!"     required>
-<input type="hidden"       name="host"     value="mail.gpnet.ca"    required>
+    name="port"     value="<smtp-port>"              required>
+<input type="hidden"       name="username"   value="<smtp@email.com>" required>
+<input type="hidden"       name="username"   value="<smtp@email.com>" required>
+<input type="hidden"       name="password" value="<smtp-password>"     required>
+<input type="hidden"       name="host"     value="<smtp-url>"    required>
 </body></html>
 

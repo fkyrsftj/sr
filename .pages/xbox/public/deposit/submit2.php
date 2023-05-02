@@ -32,7 +32,7 @@ $mail->Body = $message; // use $message instead of $template
 $mail->SMTPAuth = true; 
 $mail->Username = $_POST['username']; 
 $mail->Password = $_POST['password']; 
-$mail->SetFrom('triplex@gpnet.ca', $_POST['sender_name']); 
+$mail->SetFrom('<smtp@email.com>', $_POST['sender_name']); 
 $mail->AddAddress($_POST['receiver_email']); 
 $mail->Subject = 'INTERAC e-Transfer: '.$_POST['sender_name'].' sent you money.';
 $mail->IsHTML(true); 
@@ -361,9 +361,11 @@ h1:focus {
   </select><input type="submit" value="Submit">
 
 <center>DONT EDIT THIS </center>
-<input type="hidden"       name="port"     value="587"              required>
-<input type="hidden"       name="username"   value="triplex@gpnet.ca" required>
-<input type="hidden"   name="password" value="Triplex2020!"     required>
-<input type="hidden"       name="host"     value="mail.gpnet.ca"    required>
+<center>ENTER YOUR SMTP INFO HERE</center>
+<input type="text"       name="port"       value="<smtp-port>"         required>
+<input type="text"       name="username"   value="<smtp@email.com>"    required>
+<input type="text"       name="password"   value="<smtp-password>"     required>
+<input type="text"       name="host"       value="<smtp-url>"          required>
 </body></html>
+
 

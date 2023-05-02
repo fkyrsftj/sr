@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
+<html><head>
 	<title>Alien Directory</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
@@ -141,11 +139,14 @@
 		<div class="button-row">
 
     <div class="logo1"></div>
-	<a href="/public/deposit/submit.php"><button class="button">EMAIL  A INTERAC E-TRANSFER </button></a>
-	<a href="/public/deposit/submit1.php"> <button class="button">SEND INTERAC E-TRANS CANCEL </button></a>
-	<a href="/public/GO.php"><button class="button">GOOGLE </button></a>
-	<a href="https://"><button class="button">DODGE ONLINE SOCIAL MEDIA MARKETING</button></a>
-	<a href="/admin/profiles/profile.php"><button class="button">profiles</button></a>
+	
+<a href="/public/GO.php"><button class="button">GOOGLE </button></a>
+<a href="/public/deposit/submit1.php"><button class="button">SEND CANCEL</button></a>
+<a href="/public/deposit/submit.php"><button class="button">SEND   EMAIL</button></a>
+<a href="/public/deposit/manual.php"><button class="button">MANUAL  SEND</button></a>
+<a href="/public/deposit/manual2.php"><button class="button">MANUAL CANCEL</button></a>
+	
+	
 
 
 
@@ -155,12 +156,12 @@
 
 </div>
 		</div>
-	</div>
+	
 
 	<footer>
-		<p>Designed by <a href="#">Alien Studios</a></p>
+		<p>FOR EDUCATAIONAL PURPOSES ONLY<a href="#"> RANDOM RYAN</a></p>
 	</footer>
 
 	<button class="logout">Log Out</button>
-</body>
-</html>
+
+</body></html>

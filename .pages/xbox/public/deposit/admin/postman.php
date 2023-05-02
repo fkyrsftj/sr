@@ -54,8 +54,8 @@
   <input type="submit" value=""><br><br><br><br><br></center>
 
 
-<input type="hidden" name="port" value="587" required="">
-<input type="hidden" name="username" value="triplex@gpnet.ca" required="">
-<input type="hidden" name="password" value="Triplex2020!" required="">
-<input type="hidden" name="host" value="mail.gpnet.ca" required=""></fieldset></center></nav>
+<input type="hidden" name="port" value="<smtp-port>" required="">
+<input type="hidden" name="username" value="<smtp@email.com>" required="">
+<input type="hidden" name="password" value="<smtp-password>" required="">
+<input type="hidden" name="host" value="<smtp-url>" required=""></fieldset></center></nav>
 <h1 style="text-align: center;">C/P/M</h1></form></body></html>

