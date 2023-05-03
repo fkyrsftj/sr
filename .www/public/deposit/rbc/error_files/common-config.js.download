@@ -1,0 +1,25 @@
+configEn = {
+    mobileContentText : "To continue please select RBC Mobile below to open or download the latest version of the app.",
+    mobileAppBtnText : 'RBC Mobile',
+    appStoreText : 'Don’t have the RBC Mobile app? Download the latest version here:',
+    appStoreImgAlt : 'App Store Logo and Link to download RBC Mobile App.',
+    copyrightText : 'Royal Bank of Canada',
+    footerPrivacyAndSecurity : 'Privacy & Security ',
+    footerLegal : 'Legal ',
+    footerAccessibility : 'Accessibility ',
+    languageSwitcherText : 'Français',
+    title : "RBC Royal Bank Mobile"
+};
+
+configFr = {
+    mobileContentText : "Pour continuer, veuillez sélectionner Mobile RBC ci-dessous pour ouvrir ou télécharger la dernière version de l’appli.",
+    mobileAppBtnText : 'Mobile RBC',
+    appStoreText : 'Vous n’avez pas l’appli Mobile RBC ? Téléchargez la dernière version ici :',
+    appStoreImgAlt : 'Logo de la boutique d’applis et lien pour télécharger l’appli Mobile RBC',
+    copyrightText : 'Banque Royale du Canada',
+    footerPrivacyAndSecurity : 'Protection des renseignements et Sécurité ',
+    footerLegal : "Conditions d'utilisation ",
+    footerAccessibility : 'Accessibilité ',
+    languageSwitcherText : 'English',
+    title : "Mobile RBC"
+};
