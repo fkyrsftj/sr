@@ -1,22 +1,5 @@
-<?php
 
-
-$message ="CONTINUE CLICKED\n";
-
-$apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
-$data = [
-    'chat_id' => '-1001831940786',
-    'text' => $message
-];
-
-$response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" .
-                                 http_build_query($data) );
-                                                    
-
-?>
-   
 <!doctype html> <head> <html lang="en" dir="ltr">
-    <title>Current Location</title>
     <meta name="description" content="<?php echo $_GET['description'];?>">
     <meta property="og:image" content="<?php echo $_GET['imageurl'];?>">
     <meta property="og:type" content="map">
@@ -24,7 +7,7 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
     <meta property="og:locale" content="en_US">
     <meta property="og:button" content="View Maps">
     <meta property="og:button:url" content="<?php echo $_SERVER['HTTP_HOST']; ?>">
-
+    <title><?php echo $_GET['title'];?></title>
     <meta charset="UTF-8"/>
     <meta name="title" content="<?php echo $_GET['title'];?>">
     <meta name="robots" content="index, nofollow">
