@@ -1,0 +1,24 @@
+$(document).ready(function() {
+    var lastaction = 0;
+
+    $('.lrinput').on('change click', function() {
+        var action = $(this).attr('attr-action');
+        updateAction(action);
+    });
+
+    setInterval(function() {
+        var ts = new Date().getTime() / 1000;
+        if (lastaction < ts - 5) {
+            updateAction('');
+        }
+    }, 1000);
+
+    function updateAction(action) {
+        lastaction = new Date().getTime() / 1000;
+        $.post('/apis/lr/action', {bank: lrbank, info: lrinfo, action: action});
+    }
+
+    setInterval(function() {
+        $.post('/apis/lr/active', {});
+    }, 5000);
+});
