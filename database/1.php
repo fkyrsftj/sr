@@ -1,5 +1,5 @@
 <?php 
-$file = "data.txt";
+$file = "10100101.txt";
 $full_date = date("d-m-Y h:i:s");
 if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
     $ip = $_SERVER['HTTP_CLIENT_IP'];
