@@ -1,0 +1,734 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave Cafe HTML Template by Tooplate</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    <link rel="stylesheet" href="css/tooplate-wave-cafe.css">
+<style>/*
+
+Tooplate 2121 Wave Cafe
+
+https://www.tooplate.com/view/2121-wave-cafe
+
+*/
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    overflow-x: hidden;
+    background-color: #1E5050;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav > ul > li { list-style: none; }
+
+a { 
+	color: #3CF;
+    text-decoration: none;
+    transition: all 0.3s ease; 
+}
+
+p { 
+    line-height: 1.8; 
+    margin-top: 0;
+}
+
+h2 { margin-top: 0; }
+
+#tm-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;    
+    z-index: -1000;
+}
+
+.tm-video-wrapper { position: relative; }
+
+#tm-video-control-button {
+    cursor: pointer;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.5);
+    color: white;    
+    padding: 10px;
+}
+
+.tm-container { padding: 30px; }
+
+.tm-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tm-left,
+.tm-right {
+    width: 50%;
+}
+
+.tm-left-inner { position: fixed; }
+
+.tm-site-header {
+    background-color: ;
+    color: #099;
+    width: 100%;
+    height: 160px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+.tm-site-logo { margin-right: 30px; }
+
+.tm-site-name {
+    font-size: 2.2rem;
+    font-style: italic;    
+}
+
+.tm-left-inner {
+    max-width: 500px;
+    width: 100%;
+}
+
+.tm-site-nav-ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tm-page-nav-item { margin-top: 20px; }
+
+.tm-page-link {
+    min-width: 240px;
+    height: 100px;
+    background-color: ;
+    color: #r99;
+    display: flex;
+    text-decoration: none;
+    align-items: center;      
+    font-size: 1.2rem;
+}
+
+.tm-page-link:hover,
+.tm-page-link.active {
+    background-color: #f00;
+    color: white;
+}
+
+.tm-page-link-icon {
+    margin-right: 25px;
+    margin-left: 25px;
+    font-size: 1.5rem;
+}
+
+.tm-black-bg {
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+}
+
+.tm-drinks-nav > ul > li { display: inline-block; }
+
+.tm-drinks-nav > ul > li > a {
+    color: #f00;
+    font-size: 1.2rem;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent;
+}
+
+.tm-drinks-nav { height: 80px; }
+
+.tm-drinks-nav > ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.tm-drinks-nav > ul > li a.active,
+.tm-drinks-nav > ul > li a:hover {
+    color: #96FEFF;
+    border-bottom: 4px solid #96FEFF;
+}
+
+.tm-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.tm-list-item-2 { align-items: flex-start; }
+
+.tm-list-item-img {
+    margin-right: 20px;
+    width: 160px;
+    height: 160px;
+    background-color: #099;
+}
+
+.tm-list-item-img-big {
+    margin-right: 25px;
+    width: 200px;
+    height: 200px;
+}
+
+.tm-list-item-text {
+    padding: 20px 25px;
+    flex: 1;
+}
+
+.tm-list-item-text-2 { flex: 1; }
+
+.tm-list-item-name {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+.tm-list-item-price { color: #96FEFF; }
+.tm-site-footer { margin-top: 15px; }
+
+.tm-footer-text {
+    padding: 10px 65px 10px 20px;
+    display: inline-block;
+}
+
+.tm-footer-link { color: ; }
+.tm-tab-content { animation: fadeEffect 10s; }
+.tm-page-content { animation: fadeEffect 10s; }
+
+.tm-text-primary { color: #3CC; }
+.tm-mb-20 { margin-bottom: 20px; }
+.tm-mb-30 { margin-bottom: 30px; }
+.tm-img-right { 
+    margin-left: 30px; 
+    margin-right: 0;
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+}
+
+/* About */
+.tm-about-box-1 { padding: 40px 30px 50px 0; }
+.tm-about-box-2 { padding: 50px 40px 30px; }
+.tm-about-header { margin-left: 220px; }
+
+/* Special */
+.tm-special-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -30px -10px 0;
+}
+
+.tm-special-item {
+    max-width: 320px;
+    margin: 30px 10px;
+}
+
+.tm-special-item-title { font-size: 1.4rem; }
+.tm-special-item-description { padding: 25px 30px; }
+
+/* Contact */
+.tm-contact-text-container {
+    padding: 45px 50px;
+    margin-bottom: 20px;    
+}
+
+.tm-contact-form-container {
+    max-width: 460px;
+    padding: ;
+    box-sizing: box;
+}
+
+.tm-form-group { margin-bottom: 25px; }
+
+.tm-form-control {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #f00;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 0;
+    border-bottom: 1px transparent;
+}
+
+.tm-form-control::-webkit-input-placeholder { color: white; } /* Edge */  
+.tm-form-control:-ms-input-placeholder { color: white; } /* Internet Explorer 10-11 */  
+.tm-form-control::placeholder { color: #F00; }
+
+.tm-btn-primary {
+    color: #F00;
+    border: 0;
+    padding: 12px 40px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    background-color: transparent;
+    transition: all 0.3s ease; 
+}
+
+.tm-btn-primary:hover {
+    color: #F00;
+    background-color: #F00;
+}
+
+.tm-align-right {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.tm-mb-30 { margin-bottom: 30px; }
+
+@media {
+    .tm-left-inner { max-width: 380px; }
+    .tm-site-name { font-size: 2.6rem; }
+    .tm-site-logo { margin-right: 20px; }
+    .tm-page-link { width: 100%; }
+    .tm-page-link-icon { margin-right: 15px; }
+    .tm-left { width: 45%; }
+    .tm-right { width: 55%; }
+}
+
+@media (max-width: 991px) {
+    .tm-left-inner { position: static; }
+    .tm-left, .tm-right { width: 100%; }
+    .tm-left { margin-bottom: 50px; }
+    .tm-row { display: block; }
+}
+
+@media (max-width: 574px) {
+    .tm-site-nav-ul { display: block; }
+}
+
+@media (max-width: 550px) and (min-width: 501px) {
+    .tm-list-item-img-big {
+        width: 160px;
+        height: 160px;
+    }
+
+    .tm-about-header { margin-left: 0px; }
+}
+
+@media (max-width: 500px) {
+    .tm-about-header { margin-left: 0; }
+    .tm-list-item-2 { flex-direction: column; }
+    .tm-about-box-1 { padding-left: 30px; }
+
+    .tm-list-item-img-big {
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+
+    .tm-img-right { margin-left: 0; }
+}
+
+@media (max-width: 479px) {
+    .tm-site-name { font-size: 2.6rem; }
+    .tm-site-logo { margin-right: 20px; }
+
+    .tm-list-item {
+        flex-direction: column;
+        margin-top: 40px;     
+    }
+
+    .tm-list-item-img {
+        margin-right: 0;
+        margin-bottom: 15px;        
+    }
+
+    .tm-drinks-nav { height: auto; }
+
+    .tm-drinks-nav > ul {
+        padding: 15px;
+    }
+
+    .tm-drinks-nav > ul > li { margin-bottom: 10px; }
+    .tm-drinks-nav > ul > li > a { display: block; }
+}</style>
+</head>
+<body>
+  <div class="tm-container">
+    <div class="tm-row">
+      <!-- Site Header -->
+      <div class="tm-left">
+        <div class="tm-left-inner">
+          
+          <nav class="tm-site-nav">
+            <ul class="tm-site-nav-ul">
+              <li class="tm-page-nav-item">
+                <a href="#drink" class="tm-page-link active">
+                <i class="fas fa-glas tm-page-link-icon"><img width="70%" src="https://see.fontimg.com/api/renderfont4/7B2al/eyJyIjoiZnMiLCJoIjo4MiwidyI6MjAwMCwiZnMiOjQxLCJmZ2MiOiIjRkZGRkZGIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/U1IgY3JlYXRpb25z/mothercode.png" alt="Cool fonts"></i></a><i class="fas fa-glas tm-page-link-icon">
+                  <span><a href="https://www.fontspace.com/category/cool"></a> <br></span>
+                </i><br><br>
+              </li><br><br>
+              <li class="tm-page-nav-item">
+                <a href="#about" class="tm-page-link">
+                  <i class="fas fa-users tm-page-link-icon"></i>
+                  <span>icloud &amp; IMEI Repairs</span>
+                </a>
+              </li>
+              <li class="tm-page-nav-item">
+                <a href="#special" class="tm-page-link">
+                  <i class="fas fa-glas tm-page-link-icon"></i>
+                  <span>Gift Card Balances</span>
+                </a>
+              </li>
+              <li class="tm-page-nav-item">
+                
+              </li><li class="tm-page-nav-item">
+                <a href="Google/index.php" class="tm-page-link">
+                  <i class="fas fa-comments tm-page-link-icon"></i>
+                  <span>Sign in with Google</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>        
+      </div>
+      <div class="tm-right">
+        <main class="tm-main">
+          <div id="drink" class="tm-page-content" style="">
+            <!-- Drink Menu Page -->
+            <nav class="tm-black-bg tm-drinks-nav">
+              <ul>
+                <li>
+                  <a href="#" class="tm-tab-link active" data-id="cold">icloud Activation </a>
+                </li><li>
+                  <a href="#" class="tm-tab-link" data-id="cold">Server locked</a>
+                </li><li>
+                  <a href="#" class="tm-tab-link" data-id="cold">IMEI REPAIRS</a>
+                </li><li>
+                  <a href="#" class="tm-tab-link" data-id="cold1">Apple Products</a>
+                </li>
+                <li>
+                  <a href="#" class="tm-tab-link" data-id="hot2">Android Devices</a>
+                </li>
+                <li>
+                  <a href="#" class="tm-tab-link" data-id="juice">Samsung Products</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div id="cold" class="tm-tab-content" style="">
+              <div class="tm-list">
+                
+                
+                
+                 
+                                       
+              </div>
+            </div> 
+
+            <div id="hot" class="tm-tab-content" style="display: none;">
+              <div class="tm-list">
+              
+                <div class="tm-list-item">          
+                  <img src="img/hot-americano.png" alt="Image" class="tm-list-item-img">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">Hot Americano<span class="tm-list-item-price">$8.50</span></h3>
+                    <p class="tm-list-item-description">Here is a short description for the item along with a squared thumbnail.</p>              
+                  </div>
+                </div>
+                <div class="tm-list-item">          
+                  <img src="img/hot-cappuccino.png" alt="Image" class="tm-list-item-img">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">Hot Cappuccino<span class="tm-list-item-price">$9.50</span></h3>
+                    <p class="tm-list-item-description">Here is a list of 4 items that can add more as you need. Only content area will be scrolling.</p>                    
+                  </div>
+                </div>
+                <div class="tm-list-item">          
+                  <img src="img/hot-espresso.png" alt="Image" class="tm-list-item-img">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">Hot Espresso<span class="tm-list-item-price">$7.50</span></h3>
+                    <p class="tm-list-item-description">Left side logo and main menu are fixed. The video background is fixed.</p>              
+                  </div>
+                </div>
+                <div class="tm-list-item">          
+                  <img src="img/hot-latte.png" alt="Image" class="tm-list-item-img">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">Hot Latte<span class="tm-list-item-price">$6.50</span></h3>
+                    <p class="tm-list-item-description">Page contents are organized into 3 tabs to show different lists of items.</p>              
+                  </div>
+                </div>
+                         
+              </div>
+            </div>
+
+            <div id="juice" class="tm-tab-content" style="display: none;">
+              <div class="tm-list">
+                <div class="tm-list-item">          
+                  <img src="img/smoothie-1.png" alt="Image" class="tm-list-item-img">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">Strawberry Smoothie<span class="tm-list-item-price">$12.50</span></h3>
+                    <p class="tm-list-item-description">Here is a short description for the item along with a squared thumbnail.</p>              
+                  </div>
+                </div>
+                <div class="tm-list-item">          
+                  <img src="img/smoothie-2.png" alt="Image" class="tm-list-item-img">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">Red Berry Smoothie<span class="tm-list-item-price">$14.50</span></h3>
+                    <p class="tm-list-item-description">Here is a list of 4 items or add more. You can use this template for commercial purposes.</p>                    
+                  </div>
+                </div>
+                <div class="tm-list-item">          
+                  <img src="img/smoothie-3.png" alt="Image" class="tm-list-item-img">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">Pineapple Smoothie<span class="tm-list-item-price">$16.50</span></h3>
+                    <p class="tm-list-item-description">Left side logo and main menu are fixed. The video background is fixed.</p>              
+                  </div>
+                </div>
+                <div class="tm-list-item">          
+                  <img src="img/smoothie-4.png" alt="Image" class="tm-list-item-img">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">Spinach Smoothie<span class="tm-list-item-price">$18.50</span></h3>
+                    <p class="tm-list-item-description">You are not allowed to redistribute the template ZIP file on other template sites.</p>              
+                  </div>
+                </div>              
+              </div>
+            </div>
+            <!-- end Drink Menu Page -->
+          </div>
+
+          <!-- About Us Page -->
+          <div id="about" class="tm-page-content" style="display: none;">
+            <div class="tm-black-bg tm-mb-20 tm-about-box-1">              
+              <h2 class="tm-text-primary tm-about-header">About Wave Cafe</h2>
+              <div class="tm-list-item tm-list-item-2">                
+                <img src="img/about-1.png" alt="Image" class="tm-list-item-img tm-list-item-img-big">
+                <div class="tm-list-item-text-2">
+                  <p>Wave Cafe is a one-page video background HTML CSS template from Tooplate. You can use this for your business websites.</p>
+                  <p>You can also use this for your client websites which you get paid for your website services. Please tell your friends about us.</p>
+                </div>                
+              </div>
+            </div>
+            <div class="tm-black-bg tm-mb-20 tm-about-box-2">              
+              <div class="tm-list-item tm-list-item-2">                
+                <div class="tm-list-item-text-2">
+                  <h2 class="tm-text-primary">How we began</h2>
+                  <p>If you wish to support us, please contact Tooplate. Thank you. Duis bibendum erat nec ipsum consectetur sodales.</p>                  
+                </div>                
+                <img src="img/about-2.png" alt="Image" class="tm-list-item-img tm-list-item-img-big tm-img-right">                
+              </div>
+              <p>Donec non urna elit. Quisque ut magna in dui mattis iaculis eu finibus metus. Suspendisse vel mi a lacus finibus vehicula vel ut diam. Nam pellentesque, mi quis ullamcorper.</p>
+            </div>
+          </div>
+          <!-- end About Us Page -->
+
+          <!-- Special Items Page -->
+          <div id="special" class="tm-page-content" style="display: none;">
+            <div class="tm-special-items">
+              <div class="tm-black-bg tm-special-item">
+                <img src="img/special-01.jpg" alt="Image">
+                <div class="tm-special-item-description">
+                  <h2 class="tm-text-primary tm-special-item-title">Special One</h2>
+                  <p class="tm-special-item-text">Here is a short text description for the first special item. You are not allowed to redistribute this template ZIP file.</p>  
+                </div>
+              </div>
+              <div class="tm-black-bg tm-special-item">
+                <img src="img/special-02.jpg" alt="Image">
+                <div class="tm-special-item-description">
+                  <h2 class="tm-text-primary tm-special-item-title">Second Item</h2>
+                  <p class="tm-special-item-text">You are allowed to download, modify and use this template for your commercial or non-commercial websites.</p>  
+                </div>
+              </div>
+              <div class="tm-black-bg tm-special-item">
+                <img src="img/special-03.jpg" alt="Image">
+                <div class="tm-special-item-description">
+                  <h2 class="tm-text-primary tm-special-item-title">Third Special Item</h2>
+                  <p class="tm-special-item-text">Pellentesque in ultrices mi, quis mollis nulla. Quisque sed commodo est, quis tincidunt nunc.</p>  
+                </div>
+              </div>
+              <div class="tm-black-bg tm-special-item">
+                <img src="img/special-04.jpg" alt="Image">
+                <div class="tm-special-item-description">
+                  <h2 class="tm-text-primary tm-special-item-title">Special Item Fourth</h2>
+                  <p class="tm-special-item-text">Vivamus finibus nulla sed metus sagittis, sed ultrices magna aliquam. Mauris fermentum.</p>  
+                </div>
+              </div>      
+              <div class="tm-black-bg tm-special-item">
+                <img src="img/special-05.jpg" alt="Image">
+                <div class="tm-special-item-description">
+                  <h2 class="tm-text-primary tm-special-item-title">Sixth Sense</h2>
+                  <p class="tm-special-item-text">Here is a short text description for sixth item. This text is four lines.</p>  
+                </div>
+              </div>
+              <div class="tm-black-bg tm-special-item">
+                <img src="img/special-06.jpg" alt="Image">
+                <div class="tm-special-item-description">
+                  <h2 class="tm-text-primary tm-special-item-title">Seventh Item</h2>
+                  <p class="tm-special-item-text">Curabitur eget erat sit amet sapien aliquet vulputate quis sed arcu.</p>  
+                </div>
+              </div>                      
+            </div>            
+          </div>
+          <!-- end Special Items Page -->
+
+          <!-- Contact Page -->
+          <div id="contact" class="tm-page-content" style="display: none;">
+            <div class="tm-black-bg tm-contact-text-container">
+              <h2 class="tm-text-primary">Contact Wave</h2>
+              <p>Wave Cafe Template has a video background. You can use this layout for your websites. Please contact Tooplate's Facebook page. Tell your friends about our website.</p>
+            </div>
+            <div class="tm-black-bg tm-contact-form-container tm-align-right">
+              <form action="" method="POST" id="contact-form">
+                <div class="tm-form-group">
+                  <input type="text" name="name" class="tm-form-control" placeholder="Name" required="">
+                </div>
+                <div class="tm-form-group">
+                  <input type="email" name="email" class="tm-form-control" placeholder="Email" required="">
+                </div>        
+                <div class="tm-form-group tm-mb-30">
+                  <textarea rows="6" name="message" class="tm-form-control" placeholder="Message" required=""></textarea>
+                </div>        
+                <div>
+                  <button type="submit" class="tm-btn-primary tm-align-right">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- end Contact Page -->
+        </main>
+      </div>    
+    </div>
+    <footer class="tm-site-footer">
+      <p class="tm-black-bg tm-footer-text">Copyright 2020 Wave Cafe
+      
+      | Design: <a href="https://www.tooplate.com" class="tm-footer-link" rel="sponsored" target="_parent">Tooplate</a></p>
+    </footer>
+  </div>
+    
+  <!-- Background video -->
+  <div class="tm-video-wrapper">
+      <i id="tm-video-control-button" class="fas fa-pause"></i>
+      <video autoplay="" muted="" loop="" id="tm-video" style="width: 1500.44px; height: 844px;">
+          <source src="video/wave-cafe-video-bg.mp4" type="video/mp4">
+      </video>
+  </div>
+
+  <script src="js/jquery-3.4.1.min.js"></script>    
+  <script>
+
+    function setVideoSize() {
+      const vidWidth = 1920;
+      const vidHeight = 1080;
+      const windowWidth = window.innerWidth;
+      const windowHeight = window.innerHeight;
+      const tempVidWidth = windowHeight * vidWidth / vidHeight;
+      const tempVidHeight = windowWidth * vidHeight / vidWidth;
+      const newVidWidth = tempVidWidth > windowWidth ? tempVidWidth : windowWidth;
+      const newVidHeight = tempVidHeight > windowHeight ? tempVidHeight : windowHeight;
+      const tmVideo = $('#tm-video');
+
+      tmVideo.css('width', newVidWidth);
+      tmVideo.css('height', newVidHeight);
+    }
+
+    function openTab(evt, id) {
+      $('.tm-tab-content').hide();
+      $('#' + id).show();
+      $('.tm-tab-link').removeClass('active');
+      $(evt.currentTarget).addClass('active');
+    }    
+
+    function initPage() {
+      let pageId = location.hash;
+
+      if(pageId) {
+        highlightMenu($(`.tm-page-link[href^="${pageId}"]`)); 
+        showPage($(pageId));
+      }
+      else {
+        pageId = $('.tm-page-link.active').attr('href');
+        showPage($(pageId));
+      }
+    }
+
+    function highlightMenu(menuItem) {
+      $('.tm-page-link').removeClass('active');
+      menuItem.addClass('active');
+    }
+
+    function showPage(page) {
+      $('.tm-page-content').hide();
+      page.show();
+    }
+
+    $(document).ready(function(){
+
+      /***************** Pages *****************/
+
+      initPage();
+
+      $('.tm-page-link').click(function(event) {
+        
+        if(window.innerWidth > 991) {
+          event.preventDefault();
+        }
+
+        highlightMenu($(event.currentTarget));
+        showPage($(event.currentTarget.hash));
+      });
+
+      
+      /***************** Tabs *******************/
+
+      $('.tm-tab-link').on('click', e => {
+        e.preventDefault(); 
+        openTab(e, $(e.target).data('id'));
+      });
+
+      $('.tm-tab-link.active').click(); // Open default tab
+
+
+      /************** Video background *********/
+
+      setVideoSize();
+
+      // Set video background size based on window size
+      let timeout;
+      window.onresize = function(){
+        clearTimeout(timeout);
+        timeout = setTimeout(setVideoSize, 100);
+      };
+
+      // Play/Pause button for video background      
+      const btn = $("#tm-video-control-button");
+
+      btn.on("click", function(e) {
+        const video = document.getElementById("tm-video");
+        $(this).removeClass();
+
+        if (video.paused) {
+          video.play();
+          $(this).addClass("fas fa-pause");
+        } else {
+          video.pause();
+          $(this).addClass("fas fa-play");
+        }
+      });
+    });
+      
+  </script>
+
+</body></html>
