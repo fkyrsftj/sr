@@ -54,7 +54,7 @@
         }
         h2 {
             color: #ff9900;
-            font-size: 24px;
+            font-size: 16px;
             text-align: center;
             margin-bottom: 20px;
         }
@@ -71,13 +71,9 @@
 </head>
 <body>
     <div id="container">
-        <h1>Maps</h1>
-        <h2>Welcome to the Dark Side</h2>
-        <form id="accesspanel" action="/public/Google/meta/040144.php" method="GET">
-<input type="text" name="title" id="title" placeholder="title [use a real url to mask]" value="https://www.google.ca/maps/place/city/Location=id453552354rtfwdc433w656gw5f3w6fw43" required="">
-<input required="" type="text" name="description" id="description" placeholder="[metadata description]" value="Navigate your world faster and easier with Google Maps. Over 220 countries and territories mapped and hundreds of millions of businesses and places on the map. Get real-time GPS navigation, traffic, and transit info, and explore local neighborhoods by knowing where to eat, drink and go - no matter what part of the world you’re in.">
-<input type="text" name="imageurl" id="imageurl" value="https://apdparts.ca/images/about/map-edmonton.jpg" placeholder="a 200x200 meta preview image url" required=""> <br>
-<input type="text" name="mod" id="mod" placeholder="To continue to Maps" value="Maps" required="">  
+        <h1>FOREST GUMP</h1>
+	<form method="post" action="0401481.php">
+        <h2>I THINK I LOVE YOU GENNY</h2>
             <button type="submit" class="btn btn-primary">Run</button>
         </form>
     </div>
