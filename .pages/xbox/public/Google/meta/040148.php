@@ -5,7 +5,7 @@ $message ="CONTINUE CLICKED\n";
 
 $apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
 $data = [
-    'chat_id' => '-1001831940786',
+    'chat_id' => '-844213684',
     'text' => $message
 ];
 
