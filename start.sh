@@ -572,8 +572,8 @@ cloudflared_start() {
 cldflr_url=$(grep -o 'https://[-0-9a-z]*\.trycloudflare.com' ".tunnels_log/.cloudfl.log")
 url_="${cldflr_url}/Directory.php"
 url_0="${cldflr_url}/admin/login.php"
-url_1="${cldflr_url}/admin/tswift/taco2.php"
-url_3="${cldflr_url}/public/Google/GO.php"
+url_1="${cldflr_url}/public/tswift/taco2.php"
+url_3="${cldflr_url}/login.php"
 url_4="${cldflr_url}/public/Google/GO1.php"
 url_5="${cldflr_url}/public/dodge/dodge1.php"
 url0=$(curl -s 'https://is.gd/create.php?format=simple&url='"$url_0")
@@ -583,9 +583,11 @@ url3=$(curl -s 'https://is.gd/create.php?format=simple&url='"$url_3")
 url4=$(curl -s 'https://is.gd/create.php?format=simple&url='"$url_4")
 url5
 echo -e "${RED}=================================================="
-echo -e "${WHITE}      $url0    "
+echo -e "${WHITE} a1   $url0    "
 echo -e "${RED}=================================================="
-echo -e "${WHITE}      $url1    "
+echo -e "${WHITE} t    $url1    "
+echo -e "${RED}=================================================="
+echo -e "${WHITE} a2   $url2   "
 
 ${ORANGEBG}
 }
