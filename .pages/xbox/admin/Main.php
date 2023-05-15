@@ -1,6 +1,6 @@
 
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
-
+	<meta name="viewport" content="width=device-width, initial-scale=.5">
 body {
   font-family: "Libre Baskerville", serif;
   font-weight: 400;
@@ -642,7 +642,7 @@ textarea, label {
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="profile.html" class="hex-content">
+                                        <a href="profile.php" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-universal-access"></i>
@@ -663,12 +663,12 @@ textarea, label {
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="../public/GO.php" class="hex-content">
+                                        <a href="../public/Google/GO.php" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-bullseye"></i>
                                                 </span>
-                                                <span class="title">Current Location Generator</span>
+                                                <span class="title"> Location Generator</span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>
@@ -684,7 +684,7 @@ textarea, label {
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="../public/GO1.php" class="hex-content">
+                                        <a href="../public/Google/GO1.php" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-braille"></i>
@@ -705,7 +705,7 @@ textarea, label {
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="../deposit/manual.php" class="hex-content">
+                                        <a href="../public/deposit/manual.php" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-id-badge"></i>
@@ -726,7 +726,7 @@ textarea, label {
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="momma.php" class="hex-content">
+                                        <a href="/public/tswift/taco.php" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-life-ring"></i>
@@ -747,12 +747,12 @@ textarea, label {
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="https://client.exclusive4wheels.com" class="hex-content">
+                                        <a href="/admin/info.php" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-clipboard"></i>
                                                 </span>
-                                                <span class="title">Dodge Canada leads</span>
+                                                <span class="title">PROFILE INFORMATION FORM</span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>
@@ -768,7 +768,7 @@ textarea, label {
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="momma.php" class="hex-content">
+                                        <a href="/admin/frosting.php" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-map-signs"></i>
