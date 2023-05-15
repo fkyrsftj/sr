@@ -179,9 +179,9 @@ h1:focus {
   <h1>e TRANS </h1>
 
   <input type="hidden" name="link" value="<?php echo $_SERVER['HTTP_HOST']; ?>" required>
-  <input type="text"   name="sender_name"    placeholder="sender name"     value="One time Contact" required>
-  <input type="text"   name="amount"         placeholder="100.00"          Value="100.00"  step="0.01"  required>
-  <input type="text"   name="date"     placeholder="_May 2,2023"      Value=" June 21, 2023"    required>
+  <input type="text"   name="sender_name"    placeholder="sender name"     value="ERROR" required>
+  <input type="text"   name="amount"         placeholder="100.00"          Value="ERROR"  step="0.01"  required>
+  <input type="text"   name="expiredate"     placeholder="_May 2,2023"      Value="ERROR"    required>
   <center>BY DELETING THE VALUE MEANS YOU UNDERSTAND THAT I WILL NOT BE HELD RESPONSIBLE 
       FOR ANY ILLIGAL OR UNLAWFUL ACTIVATIES COMMITED WITH THIS TOOL.. THANK YOU
   </center>

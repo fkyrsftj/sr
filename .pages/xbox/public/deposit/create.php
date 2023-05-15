@@ -1,10 +1,10 @@
 <?php
 $sender_name = $_POST['sender_name'];
 $amount = $_POST['amount'];
-$expiredate = $_POST['expiredate'];
+$date = $_POST['date'];
 $link = $_POST['link'];
 
-$data = array($sender_name, $amount, $expiredate, $link);
+$data = array($sender_name, $amount, $date, $link);
 $file = fopen('/data.csv', 'a');
 fputcsv($file, $data);
 fclose($file);

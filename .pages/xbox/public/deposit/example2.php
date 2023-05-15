@@ -70,10 +70,21 @@
 		<?php
 	    if(isset($_GET['url'])) {
 	        $url = $_GET['url'];
-	        echo "<p>PLAN B : " . $url . "</p>";
 	        echo "<button onclick='copyURL()'>Copy Generated Link</button>";
 	        echo "<form action='https://mail.google.com/'>";
 	        echo "<input type='submit' value='Go to Gmail Inbox'>";
+	        echo "</form>";
+	        echo "<form action='https://facebook.com/'>";
+	        echo "<input type='submit' value='Go to facebook '>";
+	        echo "</form>";
+	        echo "<form action='https://is.gd'>";
+	        echo "<input type='submit' value='is.gd '>";
+	        echo "</form>";
+	        echo "<form action='https://qr-code-generator.com'>";
+	        echo "<input type='submit' value='qr-code-gen'>";
+	        echo "</form>";
+	        echo "<form action='/admin/Main.php'>";
+	        echo "<input type='submit' value='return to home Page'>";
 	        echo "</form>";
 	    }
 	    ?>
